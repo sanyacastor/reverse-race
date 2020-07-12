@@ -1,0 +1,73 @@
+.row {
+    position: relative;
+    background: var(--main-color);
+    text-transform: uppercase;
+    min-height: 52px;
+    color: white;
+    width: 100%;
+    display: block;
+    font-family: 'Montserrat' sans-serif;
+    font-weight: 900;
+    font-size: var(--font-size-m);
+    line-height: 113%;
+    border-bottom: 1.6px solid var(--secondary-color);
+}
+
+.row:before {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background: blue;
+    top: 0;
+    left: 0;
+}
+
+.row_error {
+    border-bottom: 1.6px solid var(--error-color);
+}
+
+.row_sucess {
+    border-bottom: 1.6px solid var(--sucess-color);
+}
+
+.row__label {
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    font-size: var(--font-size-m);
+    pointer-events: none;
+    transition: 0.2s ease-in-out;
+    cursor: text;
+    white-space: nowrap;
+}
+
+.row__input {
+    background: transparent;
+    border: none;
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 12px;
+    color: var(--secondary-color);
+    line-height: 113%;
+    outline: none;
+    caret-color: var(--sucess-color);
+}
+
+.row__input:focus ~ .row__label {
+    position: absolute;
+    top: -10px;
+    font-size: var(--font-size-s);
+}
+
+.row__input:invalid {
+    outline: none;
+    box-shadow: none;
+}
+
+.filled {
+    position: absolute;
+    top: -10px;
+    transition: 0.2s ease-in-out;
+    font-size: var(--font-size-s);
+}
+

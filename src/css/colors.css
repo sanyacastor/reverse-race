@@ -1,0 +1,9 @@
+:root {
+    --main-color:  #000000;
+    --secondary-color:  #ffffff;
+    --error-color: #FF0000;
+    --sucess-color: #BC9B16;
+    --font-size-s: 7px;
+    --font-size-m: 35px;
+    --font-size-xl: 201.5px;
+}
