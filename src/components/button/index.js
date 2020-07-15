@@ -58,14 +58,13 @@ const OkButton = styled.button`
   line-height: 100%;
   cursor: pointer;
 
-  &:disabled,
-  &:disabled &:active {
+  &:disabled {
   -webkit-text-stroke: 1px var(--main-color);
   -webkit-text-fill-color: white;
   opacity: 0.1;
   }
 
-  &:active {
+  &:enabled &:active {
     color: var(--main-color);
     -webkit-text-stroke: none;
     -webkit-text-fill-color: var(--main-color);
