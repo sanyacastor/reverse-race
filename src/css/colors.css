@@ -7,3 +7,11 @@
     --font-size-m: 35px;
     --font-size-xl: 201.5px;
 }
+
+
+@media (min-width: 1024px) {
+   :root {
+    --font-size-s: 19px;
+    --font-size-m: 96px;
+    --font-size-xl: 550px;
+   }}

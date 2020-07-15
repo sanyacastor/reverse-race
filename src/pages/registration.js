@@ -7,12 +7,11 @@ import Input from "../components/input";
 import Radio from "../components/radio";
 import CheckBox from "../components/checkbox";
 import Button from "../components/button";
+import Row from "../components/row";
+import RowLabel from "../components/rowLabel"
 import SEO from "../components/seo";
 
-import s from "../components/radio/radio.module.css";
-import { check } from "prettier";
-
-const phoneRegExp = /^((\+7|7|8)+([0-9]){10})$/
+const phoneRegExp = /^((\+7|7|8)+([0-9]){10})$/;
 
 const validationSchema = yup.object({
   firstName: yup.string().required("Ведите имя").min(3),
@@ -22,120 +21,130 @@ const validationSchema = yup.object({
     .required("Почта обязательна")
     .email("Введите корректный e-mail"),
   phone: yup
-  .string()
-  .required("Это обязательное поле")
-  .matches(phoneRegExp, 'Формат номрера +7 777 777 77 77'),
-  check: yup.bool().oneOf([true])
-    
+    .string()
+    .required("Это обязательное поле")
+    .matches(phoneRegExp, "Формат номрера +7 777 777 77 77"),
+  check: yup.bool().oneOf([true]),
+  category: yup.string().required(),
+  distance: yup.string().required(),
+  gen: yup.string().required(),
 });
+
+const renderForm = () => (
+  <Formik
+    initialValues={{
+      firstName: "",
+      lastName: "",
+      phone: "",
+      email: "",
+      gen: "",
+      category: "",
+      distance: "",
+      check: false,
+    }}
+    validationSchema={validationSchema}
+    validateOnMount={true}
+    onSubmit={(data) => console.log(data)}
+  >
+    {(values) => (
+      <Form>
+
+        <Field
+          value={values.firstName}
+          as={Input}
+          type="input"
+          name="firstName"
+          title="имя"
+        />
+        <Field
+          value={values.lastName}
+          as={Input}
+          name="lastName"
+          title="фамилия"
+        />
+
+        <Field value={values.email} as={Input} name="email" title="e-mail" />
+        <Field value={values.phone} as={Input} name="phone" title="телефон" />
+
+        <Row error={values.errors.gen} touched={values.touched.gen} onClick={()=>values.touched.gen = true}>
+          <RowLabel>Пол</RowLabel>
+          <Field
+            as={Radio}
+            name="gen"
+            type="radio"
+            value="male"
+            title="Мужской"
+          />
+          <Field
+            as={Radio}
+            name="gen"
+            type="radio"
+            value="female"
+            title="Женский"
+          />
+        </Row>
+
+        <Row error={values.errors.distance} touched={values.touched.distance} onClick={()=>values.touched.distance = true}>
+          <RowLabel>Дистанция</RowLabel>
+          <Field
+            as={Radio}
+            name="distance"
+            type="radio"
+            value="long"
+            title="Короткая"
+          />
+          <Field
+            as={Radio}
+            name="distance"
+            type="radio"
+            value="short"
+            title="Длинная"
+          />
+        </Row>
+
+        <Row error={!!values.errors.category} touched={!!values.touched.category} onClick={()=>values.touched.category = true}>
+        <RowLabel>Категория</RowLabel>
+          <Field
+            as={Radio}
+            name="category"
+            type="radio"
+            value="multi"
+            title="Мультиспид"
+          />
+          <Field
+            as={Radio}
+            name="category"
+            type="radio"
+            value="fix"
+            title="Фикс"
+          />
+          <Field
+            as={Radio}
+            name="category"
+            type="radio"
+            value="single"
+            title="Сингл"
+          />
+        </Row>
+
+        <Field
+          as={CheckBox}
+          title="мне есть 18 лет, мама знает где я"
+          label="Я согласен/а на обработку персональных данных"
+          name="check"
+          type="checkbox"
+        />
+
+        <Button type="submit" title="перейти к оплате" caption="ОК" disabled={!values.isValid}/>
+      </Form>
+    )}
+  </Formik>
+);
 
 const RegistrationPage = () => (
   <Layout>
     <SEO title="Регистрация на гонку" />
-    <Formik
-      initialValues={{
-        firstName: "",
-        lastName: "",
-        phone: "",
-        email: "",
-        gen: "",
-        check: false
-      }}
-      validationSchema={validationSchema}
-      onSubmit={(data) => console.log(data)}
-    >
-      {(values) => (
-        <Form>
-          <Field
-            value={values.firstName}
-            as={Input}
-            type="input"
-            name="firstName"
-            title="имя"
-          />
-          <Field
-            value={values.lastName}
-            as={Input}
-            name="lastName"
-            title="фамилия"
-          />
-          <Field value={values.email} as={Input} name="email" title="e-mail" />
-          <Field value={values.phone} as={Input} name="phone" title="телефон" />
-
-          <fieldset className={s.row}>
-          <span className={s.row__title}>Пол</span>
-            <Field
-              as={Radio}
-              name="gen"
-              type="radio"
-              value="male"
-              title={"Мужской"}
-            />
-            <Field
-              as={Radio}
-              name="gen"
-              type="radio"
-              value="female"
-              title={"Женский"}
-            />
-          </fieldset>
-          <fieldset className={s.row}>
-          <span className={s.row__title}>Дистанция</span>
-            <Field
-              as={Radio}
-              name="distance"
-              type="radio"
-              value="long"
-              title={"Короткая"}
-            />
-            <Field
-              as={Radio}
-              name="distance"
-              type="radio"
-              value="short"
-              title={"Длинная"}
-            />
-          </fieldset>
-          <fieldset className={s.row}>
-            <span className={s.row__title}>Категория</span>
-            <Field
-              as={Radio}
-              name="category"
-              type="radio"
-              value="multi"
-              title={"Мультиспид"}
-            />
-            <Field
-              as={Radio}
-              name="category"
-              type="radio"
-              value="single"
-              title={"Сингл"}
-            />
-            <Field
-              as={Radio}
-              name="category"
-              type="radio"
-              value="fix"
-              title={"Фикс"}
-            />
-          </fieldset>
-
-          <Field
-              required={true}
-              as={CheckBox}
-              title="мне есть 18 лет, мама знает где я"
-              label="Я согласен/а на обработку персональных данных"
-              name="check"
-              type="checkbox"
-            />
-       
-          <Button type="submit" title="перейти к оплате" caption="ОК"/>
-      <pre>{JSON.stringify(values, null, 2)}</pre>
-        </Form>
-        
-      )}
-    </Formik>
+    {renderForm()}
   </Layout>
 );
 
