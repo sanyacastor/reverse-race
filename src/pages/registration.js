@@ -8,7 +8,7 @@ import Radio from "../components/radio";
 import CheckBox from "../components/checkbox";
 import Button from "../components/button";
 import Row from "../components/row";
-import RowLabel from "../components/rowLabel"
+import RowLabel from "../components/rowLabel";
 import SEO from "../components/seo";
 
 const phoneRegExp = /^((\+7|7|8)+([0-9]){10})$/;
@@ -22,6 +22,7 @@ const validationSchema = yup.object({
     .email("Введите корректный e-mail"),
   phone: yup
     .string()
+    .transform((value, originalValue) => originalValue.replace(/\s/g, ""))
     .required("Это обязательное поле")
     .matches(phoneRegExp, "Формат номрера +7 777 777 77 77"),
   check: yup.bool().oneOf([true]),
@@ -48,7 +49,6 @@ const renderForm = () => (
   >
     {(values) => (
       <Form>
-
         <Field
           value={values.firstName}
           as={Input}
@@ -66,7 +66,11 @@ const renderForm = () => (
         <Field value={values.email} as={Input} name="email" title="e-mail" />
         <Field value={values.phone} as={Input} name="phone" title="телефон" />
 
-        <Row error={values.errors.gen} touched={values.touched.gen} onClick={()=>values.touched.gen = true}>
+        <Row
+          error={values.errors.gen}
+          touched={values.touched.gen}
+          onClick={() => (values.touched.gen = true)}
+        >
           <RowLabel>Пол</RowLabel>
           <Field
             as={Radio}
@@ -84,7 +88,11 @@ const renderForm = () => (
           />
         </Row>
 
-        <Row error={values.errors.distance} touched={values.touched.distance} onClick={()=>values.touched.distance = true}>
+        <Row
+          error={values.errors.distance}
+          touched={values.touched.distance}
+          onClick={() => (values.touched.distance = true)}
+        >
           <RowLabel>Дистанция</RowLabel>
           <Field
             as={Radio}
@@ -102,8 +110,12 @@ const renderForm = () => (
           />
         </Row>
 
-        <Row error={!!values.errors.category} touched={!!values.touched.category} onClick={()=>values.touched.category = true}>
-        <RowLabel>Категория</RowLabel>
+        <Row
+          error={!!values.errors.category}
+          touched={!!values.touched.category}
+          onClick={() => (values.touched.category = true)}
+        >
+          <RowLabel>Категория</RowLabel>
           <Field
             as={Radio}
             name="category"
@@ -135,7 +147,12 @@ const renderForm = () => (
           type="checkbox"
         />
 
-        <Button type="submit" title="перейти к оплате" caption="ОК" disabled={!values.isValid}/>
+        <Button
+          type="submit"
+          title="перейти к оплате"
+          caption="ОК"
+          disabled={!values.isValid}
+        />
       </Form>
     )}
   </Formik>
