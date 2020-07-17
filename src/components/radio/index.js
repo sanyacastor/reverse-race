@@ -46,7 +46,7 @@ const RadioInput = styled.input`
 `;
 
 const Radio = (props) => {
-  const { name, title, value } = props;
+  const { name, title, value, checked} = props;
 
   return (
     <>
@@ -56,6 +56,7 @@ const Radio = (props) => {
         name={name}
         {...props}
         value={value}
+        checked={checked}
       />
       <RadioLabel
         htmlFor={`${name}_${value}_input`}

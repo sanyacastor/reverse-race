@@ -39,7 +39,7 @@ const renderForm = () => (
       phone: "",
       email: "",
       gen: "",
-      category: "",
+      category: "multi",
       distance: "",
       check: false,
     }}
@@ -98,46 +98,48 @@ const renderForm = () => (
             as={Radio}
             name="distance"
             type="radio"
-            value="long"
+            value="short"
             title="Короткая"
           />
           <Field
             as={Radio}
             name="distance"
             type="radio"
-            value="short"
+            value="long"
             title="Длинная"
           />
         </Row>
 
-        <Row
-          error={!!values.errors.category}
-          touched={!!values.touched.category}
-          onClick={() => (values.touched.category = true)}
-        >
-          <RowLabel>Категория</RowLabel>
-          <Field
-            as={Radio}
-            name="category"
-            type="radio"
-            value="multi"
-            title="Мультиспид"
-          />
-          <Field
-            as={Radio}
-            name="category"
-            type="radio"
-            value="fix"
-            title="Фикс"
-          />
-          <Field
-            as={Radio}
-            name="category"
-            type="radio"
-            value="single"
-            title="Сингл"
-          />
-        </Row>
+        {values.values.distance === "long" && (
+          <Row
+            error={!!values.errors.category}
+            touched={!!values.touched.category}
+            onClick={() => (values.touched.category = true)}
+          >
+            <RowLabel>Категория</RowLabel>
+            <Field
+              as={Radio}
+              name="category"
+              type="radio"
+              value="multi"
+              title="Мультиспид"
+            />
+            <Field
+              as={Radio}
+              name="category"
+              type="radio"
+              value="fix"
+              title="Фикс"
+            />
+            <Field
+              as={Radio}
+              name="category"
+              type="radio"
+              value="single"
+              title="Сингл"
+            />
+          </Row>
+        )}
 
         <Field
           as={CheckBox}
