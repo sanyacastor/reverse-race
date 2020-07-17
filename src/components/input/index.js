@@ -5,22 +5,26 @@ import styled from "styled-components";
 import Row from '../row'
 
 const FormLabel = styled.label`
+  overflow: hidden;
   position: absolute;
   line-height: 100%;
-  left: 15px;
+  left: 16px;
   font-size: var(--font-size-m);
   pointer-events: none;
   transition: 0.2s ease-in-out;
   cursor: text;
   white-space: nowrap;
 
-  top: 12px;
+  top: ${(props) =>
+          props.touched ? "8px" : "20px"};
+
   font-size: ${(props) =>
     props.touched ? "var(--font-size-s)" : "var(--font-size-m)"};
 
   @media (min-width: 1024px) {
+    top: ${(props) =>
+    props.touched ? "8px" : "40px"};
     left: 41px;
-    top: 12px;
   }
 `;
 
@@ -29,6 +33,7 @@ const FormInput = styled.input`
   border: none;
   width: 100%;
   padding-top: 10px;
+  padding-bottom: 0;
   color: var(--secondary-color);
   line-height: 113%;
   outline: none;
@@ -39,7 +44,7 @@ const FormInput = styled.input`
   &:focus ~ ${FormLabel} {
     position: absolute;
     font-size: var(--font-size-s);
-    top: 12px;
+    top: 8px;
   }
 
   &:invalid {
@@ -48,6 +53,7 @@ const FormInput = styled.input`
   }
 
   @media (min-width: 1024px) {
+    padding-top: 18px;
     left: 41px;
   }
 

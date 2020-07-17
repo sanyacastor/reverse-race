@@ -45,7 +45,7 @@ const Label = styled.span`
 
 const OkButton = styled.button`
   display: block;
-  -webkit-text-stroke: 1px var(--main-color);
+  -webkit-text-stroke: 4.5px var(--main-color);
   -webkit-text-fill-color: white;
   color: var(--secondary-color);
   background: var(--secondary-color);
@@ -57,18 +57,31 @@ const OkButton = styled.button`
   min-height: 214px;
   line-height: 100%;
   cursor: pointer;
+  opacity: 1;
 
   &:disabled {
-  -webkit-text-stroke: 1px var(--main-color);
+  -webkit-text-stroke: 4.5px var(--main-color);
   -webkit-text-fill-color: white;
-  opacity: 0.1;
+  opacity: 0.2;
+  }
+  
+
+  &:enabled {
+    color: white;
+    -webkit-text-stroke: 4.5px var(--main-color);
+    -webkit-text-fill-color: white;
+    opacity: 1;
+
+    &:active {
+      -webkit-text-fill-color: var(--main-color);
+    }
   }
 
-  &:enabled &:active {
-    color: var(--main-color);
-    -webkit-text-stroke: none;
-    -webkit-text-fill-color: var(--main-color);
-  }
+ 
+
+
+
+
 `;
 
 export default function Button({ type, title, caption, disabled }) {

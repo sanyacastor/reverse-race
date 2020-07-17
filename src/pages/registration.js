@@ -23,7 +23,7 @@ const validationSchema = yup.object({
   phone: yup
     .string()
     .transform((value, originalValue) => originalValue.replace(/\s/g, ""))
-    .required("Это обязательное поле")
+    .required("Введите корректный номер телефона")
     .matches(phoneRegExp, "Формат номрера +7 777 777 77 77"),
   check: yup.bool().oneOf([true]),
   category: yup.string().required(),
@@ -41,7 +41,8 @@ const renderForm = () => (
       gen: "",
       category: "multi",
       distance: "",
-      check: false,
+      terms: false,
+      check: false
     }}
     validationSchema={validationSchema}
     validateOnMount={true}
@@ -144,8 +145,17 @@ const renderForm = () => (
         <Field
           as={CheckBox}
           title="мне есть 18 лет, мама знает где я"
-          label="Я согласен/а на обработку персональных данных"
+          label="я согласен/на обработку персональных данных и 
+          сам/ма несу ответственность за свою жизнь"
           name="check"
+          type="checkbox"
+        />
+
+        <Field
+          as={CheckBox}
+          title="условия"
+          label="Я согласен с правилами гонки"
+          name="terms"
           type="checkbox"
         />
 

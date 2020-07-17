@@ -22,7 +22,7 @@ const RadioLabel = styled.label`
     margin-left: 27px;
   }
 
-  @media (min-width: 1300px) {
+  @media (min-width: 1024px) {
     &:nth-child(3) {
       display: inline-block;
       margin-right: 74px;
@@ -34,6 +34,15 @@ const RadioLabel = styled.label`
       margin-left: 0;
     }
   }
+
+  @media (min-width: 1657px) {
+    &:nth-child(7) {
+      max-width: auto;
+      display: inline-block;
+      margin-left: 74px;
+    }
+  }
+
 `;
 
 const RadioInput = styled.input`

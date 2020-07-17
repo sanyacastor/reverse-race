@@ -29,7 +29,25 @@ const Row = styled.div`
   padding-left: 12px;
   padding-top: 5px;
 
+  &:after {
+    content: "";
+    display: block;
+    width: 160px;
+    height: 99.5%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      30%,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 1)
+    );
+  }
+
   @media (min-width: 1024px) {
+    min-height: 144px;
     padding-left: 41px;
     padding-top: 12px;
     padding-bottom: 0;
