@@ -1,5 +1,6 @@
 import React from "react";
 import { Formik, Form, Field } from "formik";
+import { navigate } from "gatsby";
 import * as yup from "yup";
 
 import Layout from "../components/layout";
@@ -43,7 +44,7 @@ const renderForm = () => (
       category: "multi",
       distance: "",
       terms: false,
-      check: false
+      check: false,
     }}
     validationSchema={validationSchema}
     validateOnMount={true}
@@ -67,8 +68,20 @@ const renderForm = () => (
           faded
         />
 
-        <Field value={values.email} as={Input} name="email" title="e-mail" faded={true} />
-        <Field value={values.phone} as={Input} name="phone" title="телефон" faded={true} />
+        <Field
+          value={values.email}
+          as={Input}
+          name="email"
+          title="e-mail"
+          faded={true}
+        />
+        <Field
+          value={values.phone}
+          as={Input}
+          name="phone"
+          title="телефон"
+          faded={true}
+        />
 
         <Row
           error={values.errors.gen}
@@ -154,7 +167,7 @@ const renderForm = () => (
           сам/ма несу ответственность за свою жизнь"
           name="check"
           type="checkbox"
-          link='/terms'
+          link="/terms"
         />
 
         <Field
@@ -163,7 +176,7 @@ const renderForm = () => (
           label="Я согласен с правилами гонки"
           name="terms"
           type="checkbox"
-          link='/rules'
+          link="/rules"
         />
 
         <Button
@@ -171,7 +184,6 @@ const renderForm = () => (
           title="перейти к оплате"
           caption="ОК"
           disabled={!values.isValid}
-          
         />
       </Form>
     )}
@@ -181,7 +193,7 @@ const renderForm = () => (
 const RegistrationPage = () => (
   <Layout>
     <SEO title="Регистрация на гонку" />
-    <CloseButton/>
+    <CloseButton action={()=>navigate('/')} />
     {renderForm()}
   </Layout>
 );
