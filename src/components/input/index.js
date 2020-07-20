@@ -64,7 +64,7 @@ const Input = (props) => {
   const errorText = meta.error && meta.touched ? meta.error : "";
 
   return (
-    <Row error={errorText} touched={meta.touched}>
+    <Row error={errorText} touched={meta.touched} faded={props.faded}>
       <FormInput
         placeholder={props.placeholder}
         name={props.name}

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "gatsby";
 
 const Row = styled.div`
   background: var(--main-color);
@@ -11,6 +12,7 @@ const Row = styled.div`
   @media (min-width: 1024px) {
     padding-left: 41px;
     padding-top: 12px;
+    border-width: 4.5px;
   }
 `;
 
@@ -23,7 +25,7 @@ const Title = styled.span`
   line-height: 100%;
 `;
 
-const Label = styled.label`
+const Label = styled(Link)`
   display: inline-block;
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
@@ -44,12 +46,11 @@ const Box = styled.input`
 `;
 
 const CheckBox = (props) => {
-  // const [meta, field] = useField(props);
-  const { title, name, label, required } = props;
+  const { title, name, label, required, link } = props;
 
   return (
     <Row>
-      <Title>{title}</Title>
+      <Title to={link}>{title}</Title>
       <Box required={required} type="checkbox" id={name} {...props} />
       <Label htmlFor={name}>{label}</Label>
     </Row>

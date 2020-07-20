@@ -3,6 +3,7 @@ import { Formik, Form, Field } from "formik";
 import * as yup from "yup";
 
 import Layout from "../components/layout";
+import CloseButton from "../components/crossButton";
 import Input from "../components/input";
 import Radio from "../components/radio";
 import CheckBox from "../components/checkbox";
@@ -56,16 +57,18 @@ const renderForm = () => (
           type="input"
           name="firstName"
           title="имя"
+          faded
         />
         <Field
           value={values.lastName}
           as={Input}
           name="lastName"
           title="фамилия"
+          faded
         />
 
-        <Field value={values.email} as={Input} name="email" title="e-mail" />
-        <Field value={values.phone} as={Input} name="phone" title="телефон" />
+        <Field value={values.email} as={Input} name="email" title="e-mail" faded={true} />
+        <Field value={values.phone} as={Input} name="phone" title="телефон" faded={true} />
 
         <Row
           error={values.errors.gen}
@@ -93,6 +96,7 @@ const renderForm = () => (
           error={values.errors.distance}
           touched={values.touched.distance}
           onClick={() => (values.touched.distance = true)}
+          faded={false}
         >
           <RowLabel>Дистанция</RowLabel>
           <Field
@@ -116,6 +120,7 @@ const renderForm = () => (
             error={!!values.errors.category}
             touched={!!values.touched.category}
             onClick={() => (values.touched.category = true)}
+            faded={false}
           >
             <RowLabel>Категория</RowLabel>
             <Field
@@ -149,6 +154,7 @@ const renderForm = () => (
           сам/ма несу ответственность за свою жизнь"
           name="check"
           type="checkbox"
+          link='/terms'
         />
 
         <Field
@@ -157,6 +163,7 @@ const renderForm = () => (
           label="Я согласен с правилами гонки"
           name="terms"
           type="checkbox"
+          link='/rules'
         />
 
         <Button
@@ -164,6 +171,7 @@ const renderForm = () => (
           title="перейти к оплате"
           caption="ОК"
           disabled={!values.isValid}
+          
         />
       </Form>
     )}
@@ -173,6 +181,7 @@ const renderForm = () => (
 const RegistrationPage = () => (
   <Layout>
     <SEO title="Регистрация на гонку" />
+    <CloseButton/>
     {renderForm()}
   </Layout>
 );

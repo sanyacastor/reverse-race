@@ -4,6 +4,8 @@ const Row = styled.div`
   position: relative;
   background: var(--main-color);
   text-transform: uppercase;
+  padding-left: 12px;
+  padding-top: 5px;
   min-height: 52px;
   color: white;
   width: 100%;
@@ -26,10 +28,9 @@ const Row = styled.div`
     }
   }};
 
-  padding-left: 12px;
-  padding-top: 5px;
-
-  &:after {
+  ${(props) =>
+    props.faded &&
+    `&:after {
     content: "";
     display: block;
     width: 160px;
@@ -42,9 +43,8 @@ const Row = styled.div`
       rgba(0, 0, 0, 0),
       30%,
       rgba(0, 0, 0, 1),
-      rgba(0, 0, 0, 1)
-    );
-  }
+      rgba(0, 0, 0, 1));
+      }`}
 
   @media (min-width: 1024px) {
     min-height: 144px;
