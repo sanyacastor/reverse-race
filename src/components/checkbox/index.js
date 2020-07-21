@@ -16,16 +16,15 @@ const Row = styled.div`
   }
 `;
 
-const Title = styled.span`
+const Title = styled(Link)`
   font-weight: 900;
   font-size: var(--font-size-s);
   color: var(--secondary-color);
-  display: block;
   text-transform: uppercase;
   line-height: 100%;
 `;
 
-const Label = styled(Link)`
+const Label = styled.label`
   display: inline-block;
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
@@ -50,7 +49,14 @@ const CheckBox = (props) => {
 
   return (
     <Row>
-      <Title to={link}>{title}</Title>
+      <Title
+        to={link}
+        state={{
+          modal: true
+        }}
+      >
+        {title}
+      </Title>
       <Box required={required} type="checkbox" id={name} {...props} />
       <Label htmlFor={name}>{label}</Label>
     </Row>

@@ -8,6 +8,17 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     {
+      resolve: `gatsby-plugin-modal-routing`,
+      options: {
+        appElement: "#___gatsby",
+        //http://reactcommunity.org/react-modal/#usage
+        modalProps: {
+          overlayClassName: "modal__custom-overlay",
+          className: "modal__custom-content",
+        },
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -32,4 +43,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};

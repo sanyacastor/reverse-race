@@ -1,10 +1,10 @@
 import React from "react";
 import { Formik, Form, Field } from "formik";
-import { navigate } from "gatsby";
+// import { navigate } from "gatsby";
 import * as yup from "yup";
 
 import Layout from "../components/layout";
-import CloseButton from "../components/crossButton";
+import CrossButton from "../components/crossButton";
 import Input from "../components/input";
 import Radio from "../components/radio";
 import CheckBox from "../components/checkbox";
@@ -12,6 +12,8 @@ import Button from "../components/button";
 import Row from "../components/row";
 import RowLabel from "../components/rowLabel";
 import SEO from "../components/seo";
+
+import { addNewClient } from '../servicies/qtickets'
 
 const phoneRegExp = /^((\+7|7|8)+([0-9]){10})$/;
 
@@ -31,6 +33,8 @@ const validationSchema = yup.object({
   category: yup.string().required(),
   distance: yup.string().required(),
   gen: yup.string().required(),
+  terms: yup.bool().required(),
+  faq: yup.bool().required()
 });
 
 const renderForm = () => (
@@ -48,7 +52,7 @@ const renderForm = () => (
     }}
     validationSchema={validationSchema}
     validateOnMount={true}
-    onSubmit={(data) => console.log(data)}
+    onSubmit={(user)=>addNewClient(user)}
   >
     {(values) => (
       <Form>
@@ -163,20 +167,28 @@ const renderForm = () => (
         <Field
           as={CheckBox}
           title="мне есть 18 лет, мама знает где я"
-          label="я согласен/на обработку персональных данных и 
-          сам/ма несу ответственность за свою жизнь"
+          label="я согласен/на обработку персональных данных"
           name="check"
           type="checkbox"
-          link="/terms"
+          link="/privacy-policy"
         />
 
         <Field
           as={CheckBox}
           title="условия"
-          label="Я согласен с правилами гонки"
+          label="я ознакомлен/а с условиями участия"
           name="terms"
           type="checkbox"
-          link="/rules"
+          link="/privacy-policy"
+        />
+
+        <Field
+          as={CheckBox}
+          title="faq"
+          label="Я согласен с правилами гонки"
+          name="faq"
+          type="checkbox"
+          link="/privacy-policy"
         />
 
         <Button
@@ -193,7 +205,7 @@ const renderForm = () => (
 const RegistrationPage = () => (
   <Layout>
     <SEO title="Регистрация на гонку" />
-    <CloseButton action={()=>navigate('/')} />
+    <CrossButton to='/' />
     {renderForm()}
   </Layout>
 );
