@@ -10,7 +10,6 @@ const CloseButton = styled(Link)`
   top: 42px;
   width: 70px;
   height: 70px;
-  /* z-index: 1; */
   background: transparent;
   border: none;
   outline: none;
@@ -42,12 +41,27 @@ const CloseButton = styled(Link)`
     }
   }
 
-  @media (min-width: 1024px) {
+  @media (max-width: 1024px) {
+    width: 25px;
+    height: 25px;
+    right: 14px;
+    top: 13px;
+
+    &:before,
+    &:after {
+      position: absolute;
+      right: 10px;
+      top: -5px;
+      content: " ";
+      height: 35px;
+      width: 1.6px;
+      background-color: var(--secondary-color);
+    }
   }
 `;
 
-const CrossButton = ({to}) => {
-  return <CloseButton to={to || '/'}></CloseButton>;
+const CrossButton = ({ to }) => {
+  return <CloseButton to={to || "/"}></CloseButton>;
 };
 
 export default CrossButton;
