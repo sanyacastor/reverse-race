@@ -1,12 +1,12 @@
 import React from "react";
-import { Link, navigate } from "gatsby";
+// import { Link, navigate } from "gatsby";
 import { ModalRoutingContext } from "gatsby-plugin-modal-routing";
 import styled from "styled-components";
 
 import CrossButton from "../components/crossButton";
 
-import Layout from "../components/layout";
-import SEO from "../components/seo";
+// import Layout from "../components/layout";
+// import SEO from "../components/seo";
 
 const Container = styled.section`
   max-width: 100vw;
@@ -54,12 +54,9 @@ const List = styled.ul`
 
 const TermsOfUse = () => (
   <ModalRoutingContext.Consumer>
-    <Layout>
-      <SEO title="Согласие О передаче персональных данных" />
       {(props) => (
         <Container>
           <CrossButton to={props.closeTo} />
-          {/* {props.modal && ( */}
           <>
             <Header>
               СОГЛАСИЕ О передаче персональных данных ПРИ УЧАСТИИ В
@@ -191,7 +188,6 @@ const TermsOfUse = () => (
           {/* )} */}
         </Container>
       )}
-    </Layout>
   </ModalRoutingContext.Consumer>
 );
 
