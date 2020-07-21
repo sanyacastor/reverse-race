@@ -29,7 +29,6 @@ select:-webkit-autofill:focus {
 
 .modal__custom-overlay {
   position: fixed;
-  overflow: auto;
   max-width: 100vw;
   min-height: 100vh;
   background: var(--main-color);
@@ -44,31 +43,28 @@ select:-webkit-autofill:focus {
   z-index: 10;
 }
 
-.ReactModal__Body--open {
+.modal__custom-content{
   max-width: 100%;
+  max-height: 100vh;
   overflow: auto;
 }
 
-::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: none;
-	border-radius: 0;
-	background-color: var(--main-color);
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: none;
+  border-radius: 0;
+  background-color: var(--main-color);
 }
 
-::-webkit-scrollbar
-{
+::-webkit-scrollbar {
   width: 4.5px;
-	background-color: blue;
+  background-color: blue;
 }
 
-::-webkit-scrollbar-thumb
-{
-	border-radius: 0;
-	-webkit-box-shadow: none;
-	background-color: var(--secondary-color);
+::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  background-color: var(--secondary-color);
 }
-
 
 article,
 aside,

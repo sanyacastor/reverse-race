@@ -21,7 +21,7 @@ const Container = styled.section`
   font-size: 19px;
   line-height: 23px;
   color: var(--secondary-color);
-  overflow: overlay;
+  overflow: auto;
 `;
 
 const Paragraph = styled.p`
@@ -45,7 +45,7 @@ const Header = styled.h2`
 
 const List = styled.ul`
   margin-bottom: 32px;
-  margin-left: 18px;
+  margin-left: 25px;
 
   & li {
     margin: 0;
