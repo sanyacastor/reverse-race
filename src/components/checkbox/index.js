@@ -55,9 +55,9 @@ const CheckBox = (props) => {
     <Row>
       <Title
         to={link}
-        // state={{
-        //   modal: true
-        // }}
+        state={{
+          modal: true
+        }}
       >
         {title}
       </Title>
