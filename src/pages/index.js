@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
+import { addHeat } from "../servicies/regPlace"
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -19,6 +20,7 @@ const RegistrationLink = styled(Link)`
   font-size: var(--font-size-s);
   text-transform: uppercase;
   text-decoration: none;
+  line-height: 120%;
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
 

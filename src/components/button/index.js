@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const Row = styled.div`
-  background: var(--secondary-color);
+  background: ${(props) =>
+    props.invert ? "var(--main-color)" : "var(--secondary-color)"};
   padding-left: 12px;
   padding-top: 5px;
   padding-bottom: 2px;
@@ -14,14 +15,14 @@ const Row = styled.div`
   overflow: hidden;
 
   @media (min-width: 1024px) {
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
   }
-
 `;
 
 const Label = styled.span`
+  z-index: 5;
   position: absolute;
   top: 12px;
   left: 15px;
@@ -45,10 +46,15 @@ const Label = styled.span`
 
 const OkButton = styled.button`
   display: block;
-  -webkit-text-stroke: 4.5px var(--main-color);
-  -webkit-text-fill-color: white;
-  color: var(--secondary-color);
-  background: var(--secondary-color);
+  -webkit-text-stroke: ${(props) =>
+    props.invert ? "4.5px var(--secondary-color)" : "4.5px var(--main-color)"};
+
+  -webkit-text-fill-color: ${(props) => (props.invert ? "black" : "white")};
+
+  color: ${(props) =>
+    props.invert ? "var(--main-color)" : "var(--secondary-color)"};
+
+  background: transparent;
   border: none;
   outline: none;
   font-family: "Montserrat", sans-serif;
@@ -57,38 +63,39 @@ const OkButton = styled.button`
   min-height: 214px;
   line-height: 100%;
   cursor: pointer;
+  z-index: 1;
   opacity: 1;
 
   &:disabled {
-  -webkit-text-stroke: 4.5px var(--main-color);
-  -webkit-text-fill-color: white;
-  opacity: 0.2;
+    -webkit-text-stroke: 4.5px var(--main-color);
+    -webkit-text-fill-color: "white";
+    opacity: 0.2;
   }
   
-
   &:enabled {
-    color: white;
-    -webkit-text-stroke: 4.5px var(--main-color);
-    -webkit-text-fill-color: white;
+    color: ${(props) => (props.invert ? "black" : "white")};
+    -webkit-text-stroke: ${(props) =>
+      props.invert
+        ? "4.5px var(--main-color)"
+        : "4.5px var(--secondary-color)"};
+
+    -webkit-text-fill-color: ${(props) => (props.invert ? "white" : "black")};
     opacity: 1;
+    }
 
     &:active {
-      -webkit-text-fill-color: var(--main-color);
+      -webkit-text-fill-color: ${(props) => (props.invert ? "black" : "white")};
     }
   }
-
- 
-
-
-
-
 `;
 
-export default function Button({ type, title, caption, disabled }) {
+export default function Button({ type, title, caption, disabled, invert }) {
   return (
-    <Row>
-      <Label>{title}</Label>
-      <OkButton type={type} disabled={disabled}>{caption}</OkButton>
+    <Row invert={invert}>
+      {title && <Label>{title}</Label>}
+      <OkButton type={type} disabled={disabled}>
+        {caption}
+      </OkButton>
     </Row>
   );
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import { Formik, Form, Field } from "formik";
-// import { navigate } from "gatsby";
+import { Link, navigate } from "gatsby";
+import styled from "styled-components";
 import * as yup from "yup";
 
 import Layout from "../components/layout";
@@ -13,7 +14,7 @@ import Row from "../components/row";
 import RowLabel from "../components/rowLabel";
 import SEO from "../components/seo";
 
-import { addNewClient } from '../servicies/qtickets'
+import { addHeat } from "../servicies/regPlace";
 
 const phoneRegExp = /^((\+7|7|8)+([0-9]){10})$/;
 
@@ -33,9 +34,36 @@ const validationSchema = yup.object({
   category: yup.string().required(),
   distance: yup.string().required(),
   gen: yup.string().required(),
-  terms: yup.bool().required(),
-  faq: yup.bool().required()
+  terms: yup.bool().oneOf([true]),
+  faq: yup.bool().oneOf([true]),
 });
+
+const formSubmitHandler = async (user) => {
+  try {
+    let url = await addHeat(user);
+    navigate(url);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+// const StyledLink = styled.div`
+//   display: block;
+//   background-color: var(--main-color);
+//   font-family: "Montserrat", sans-serif;
+//   text-decoration: none;
+//   text-transform: uppercase;
+//   font-weight: 900;
+//   line-height: 118%;
+
+//   color: var(--main-color);
+//   font-size: var(--font-size-xl);
+//   background-color: var(--main-color);
+//   -webkit-text-stroke: 4.5px var(--secondary-color);
+//   -webkit-text-fill-color: var(--main-color);
+//   padding: 0;
+//   margin: 0;
+// `;
 
 const renderForm = () => (
   <Formik
@@ -52,7 +80,7 @@ const renderForm = () => (
     }}
     validationSchema={validationSchema}
     validateOnMount={true}
-    onSubmit={(user)=>addNewClient(user)}
+    onSubmit={(user) => formSubmitHandler(user)}
   >
     {(values) => (
       <Form>
@@ -205,8 +233,12 @@ const renderForm = () => (
 const RegistrationPage = () => (
   <Layout>
     <SEO title="Регистрация на гонку" />
-    <CrossButton to='/' />
+    <CrossButton to="/" />
     {renderForm()}
+    <Button
+          caption="FAQ"
+          invert={true}
+        />
   </Layout>
 );
 

@@ -8,6 +8,8 @@ const Row = styled.div`
   padding-top: 5px;
   border-bottom: 1.6px solid var(--secondary-color);
   padding-bottom: 2px;
+  display: flex;
+  flex-direction: column;
 
   @media (min-width: 1024px) {
     padding-left: 41px;
@@ -17,6 +19,7 @@ const Row = styled.div`
 `;
 
 const Title = styled(Link)`
+  z-index: 3;
   font-weight: 900;
   font-size: var(--font-size-s);
   color: var(--secondary-color);
@@ -25,6 +28,7 @@ const Title = styled(Link)`
 `;
 
 const Label = styled.label`
+  z-index: 1;
   display: inline-block;
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
@@ -51,9 +55,9 @@ const CheckBox = (props) => {
     <Row>
       <Title
         to={link}
-        state={{
-          modal: true
-        }}
+        // state={{
+        //   modal: true
+        // }}
       >
         {title}
       </Title>
