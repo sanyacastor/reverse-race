@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "gatsby";
 import Header from "../components/header.js";
 import styled from "styled-components";
-import P5 from "../components/P5"
+import P5 from "../components/p5.js"
 
 import logoVk from "../images/social_vk.svg";
 import logoTg from "../images/social_tg.svg";
