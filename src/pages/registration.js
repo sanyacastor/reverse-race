@@ -1,7 +1,6 @@
 import React from "react";
 import { Formik, Form, Field } from "formik";
-import { Link, navigate } from "gatsby";
-import styled from "styled-components";
+import { navigate, Link } from "gatsby";
 import * as yup from "yup";
 
 import Layout from "../components/layout";
@@ -46,24 +45,6 @@ const formSubmitHandler = async (user) => {
     console.log(error);
   }
 };
-
-// const StyledLink = styled.div`
-//   display: block;
-//   background-color: var(--main-color);
-//   font-family: "Montserrat", sans-serif;
-//   text-decoration: none;
-//   text-transform: uppercase;
-//   font-weight: 900;
-//   line-height: 118%;
-
-//   color: var(--main-color);
-//   font-size: var(--font-size-xl);
-//   background-color: var(--main-color);
-//   -webkit-text-stroke: 4.5px var(--secondary-color);
-//   -webkit-text-fill-color: var(--main-color);
-//   padding: 0;
-//   margin: 0;
-// `;
 
 const renderForm = () => (
   <Formik
@@ -235,10 +216,9 @@ const RegistrationPage = () => (
     <SEO title="Регистрация на гонку" />
     <CrossButton to="/" />
     {renderForm()}
-    <Button
-          caption="FAQ"
-          invert={true}
-        />
+    <Link to="/faq" style={{ textDecoration: "none" }}>
+      <Button caption="FAQ" invert={true} />
+    </Link>
   </Layout>
 );
 

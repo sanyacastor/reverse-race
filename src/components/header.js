@@ -1,44 +1,39 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import React from "react";
+import { Link } from "gatsby";
+import styled from "styled-components";
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: 'var(--main-color)',
-      // marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        background: 'var(--main-color)',
-        // maxWidth: 960,
-        padding: `20px 41px`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-            textTransform: `uppercase`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
+const NavBar = styled.nav`
+  position: absolute;
+  display: flex;
+  width: 100%;
+  padding-top: 21px;
+  padding-left: 41px;
+  padding-right: 41px;
+  & a {
+    font-family: Montserrat, sans-serif;
+    font-weight: 900;
+    font-size: 19px;
+    line-height: 23px;
+    color: var(--sucess-color);
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:nth-child(2) {
+      margin-left: auto;
+      margin-right: 45px;
+    }
+  }
+`;
+
+
+const Header = () => (
+  <header>
+    <NavBar>
+      <Link to="/">Reverse side of the road</Link>
+      <Link to="/">Faq</Link>
+      <Link to="/registration">Регистрация</Link>
+    </NavBar>
   </header>
-)
+);
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
+export default Header;
