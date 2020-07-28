@@ -1,13 +1,9 @@
 import React from "react";
-import Sketch from "react-p5";
+
 import { Link } from "gatsby";
 import Header from "../components/header.js";
 import styled from "styled-components";
-
-import letterE from "../images/e-01.svg";
-import letterR from "../images/letterR.svg";
-import letterS from "../images/s-01.svg";
-import letterV from "../images/v-01.svg";
+import P5 from "../components/P5"
 
 import logoVk from "../images/social_vk.svg";
 import logoTg from "../images/social_tg.svg";
@@ -41,52 +37,12 @@ const SponsorBar = styled.div`
   }
 `;
 
-export default (props) => {
-  let letters = [];
-  let l = 0;
-
-  const preload = (p5) => {
-    const imgR = p5.loadImage(letterR);
-    const imgE = p5.loadImage(letterE);
-    const imgV = p5.loadImage(letterV);
-    const imgS = p5.loadImage(letterS);
-
-    letters = [imgR, imgE, imgV, imgE, imgR, imgS, imgE];
-  };
-
-  const setup = (p5, canvasParentRef) => {
-    p5.createCanvas(p5.windowWidth, 691).parent(canvasParentRef);
-    p5.background(0);
-  };
-
-  const mousePressed = (p5) => {
-    if (l < 6) {
-      l += 1;
-    } else {
-      l = 0;
-    }
-  };
-
-  const windowResized = (p5) => {
-    p5.resizeCanvas(p5.windowWidth, 691);
-  };
-
-  const draw = (p5) => {
-    p5.imageMode(p5.CENTER);
-    p5.image(letters[l], p5.mouseX, p5.mouseY);
-  };
-
+const FaqPage = () => {
   return (
     <>
       <Hero>
         <Header />
-        <Sketch
-          setup={setup}
-          draw={draw}
-          mousePressed={mousePressed}
-          preload={preload}
-          windowResized={windowResized}
-        />
+        <P5/>
       </Hero>
       <SponsorBar>
         <Link>
@@ -113,3 +69,5 @@ export default (props) => {
     </>
   );
 };
+
+export default FaqPage
