@@ -1,10 +1,11 @@
 import React, { Component } from "react"
-import {loadableP5 as P5Wrapper} from './loadable.js';
+import Loadable from "@loadable/component"
 import Letters from './Letters.js';
 
-export default class P5 extends Component{
+const P5Wrapper = Loadable(() => import('react-p5-wrapper'))
 
-  render() {
-    return <P5Wrapper sketch={Letters} />
-  }
+const P5 = props => {
+  return <P5Wrapper sketch={Letters} />
 }
+
+export default P5
