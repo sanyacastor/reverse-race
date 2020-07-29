@@ -1,4 +1,5 @@
 import React from "react";
+import Layout from '../components/layout'
 import { ModalRoutingContext } from "gatsby-plugin-modal-routing";
 import styled from "styled-components";
 
@@ -176,10 +177,12 @@ const renderPrivacyPolicy = () => {
 const TermsOfUse = () => (
   <ModalRoutingContext.Consumer>
     {({ modal, closeTo }) => (
+      <Layout>
       <Container>
         <CrossButton to={closeTo} />
         {renderPrivacyPolicy()}
       </Container>
+      </Layout>
     )}
   </ModalRoutingContext.Consumer>
 );

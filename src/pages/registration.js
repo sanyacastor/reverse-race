@@ -29,16 +29,17 @@ const validationSchema = yup.object({
     .transform((value, originalValue) => originalValue.replace(/\s/g, ""))
     .required("Введите корректный номер телефона")
     .matches(phoneRegExp, "Формат номрера +7 777 777 77 77"),
-  check: yup.bool().oneOf([true]),
   category: yup.string().required(),
   distance: yup.string().required(),
   gen: yup.string().required(),
+  check: yup.bool().oneOf([true]),
   terms: yup.bool().oneOf([true])
 });
 
 const formSubmitHandler = async (user) => {
   try {
     let url = await addHeat(user);
+    console.log(url)
     navigate(url);
   } catch (error) {
     console.log(error);
@@ -178,7 +179,7 @@ const renderForm = () => (
           label="я согласен/на на обработку персональных данных"
           name="check"
           type="checkbox"
-          link="/privacy-policy"
+          link="/privacyPolicy"
           modal={true}
         />
 
@@ -188,7 +189,7 @@ const renderForm = () => (
           label="я ознакомлен/а с условиями участия"
           name="terms"
           type="checkbox"
-          link="/privacy-policy"
+          link="/privacyPolicy"
           modal={true}
         />
 

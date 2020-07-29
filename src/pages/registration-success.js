@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Layout from '../components/layout'
 
 import CrossButton from "../components/crossButton";
 
@@ -24,12 +25,14 @@ const Paragraph = styled.p`
 `;
 
 const Success = () => (
+  <Layout>
   <Container>
     <CrossButton to='/' />
     <Paragraph>
         Спасибо за регистрацию! Подробная информация на твоей почте.
     </Paragraph>
   </Container>
+  </Layout>
 );
 
 export default Success;

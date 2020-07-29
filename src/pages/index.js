@@ -121,6 +121,11 @@ const FaqContainer = styled.section`
   & .aside__letter:first-child {
     line-height: 0.9;
     margin-bottom: 20px;
+
+    @media (max-width: 780px) {
+      margin-bottom: 0;
+      line-height: 9px;
+    }
   }
 
   & a {
