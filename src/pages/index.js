@@ -2,7 +2,6 @@ import React from "react";
 
 import { Link } from "gatsby";
 import Header from "../components/header.js";
-import Loader from "../components/Loader";
 import styled from "styled-components";
 import P5 from "../components/p5.js";
 

@@ -33,8 +33,7 @@ const validationSchema = yup.object({
   category: yup.string().required(),
   distance: yup.string().required(),
   gen: yup.string().required(),
-  terms: yup.bool().oneOf([true]),
-  faq: yup.bool().oneOf([true]),
+  terms: yup.bool().oneOf([true])
 });
 
 const formSubmitHandler = async (user) => {
@@ -130,14 +129,14 @@ const renderForm = () => (
             name="distance"
             type="radio"
             value="short"
-            title="Короткая"
+            title="73 КМ"
           />
           <Field
             as={Radio}
             name="distance"
             type="radio"
             value="long"
-            title="Длинная"
+            title="145 КМ"
           />
         </Row>
 
@@ -175,8 +174,8 @@ const renderForm = () => (
 
         <Field
           as={CheckBox}
-          title="мне есть 18 лет, мама знает где я"
-          label="я согласен/на обработку персональных данных"
+          title="мне есть 18 лет, мама знает где я, и"
+          label="я согласен/на на обработку персональных данных"
           name="check"
           type="checkbox"
           link="/privacy-policy"
@@ -191,16 +190,6 @@ const renderForm = () => (
           type="checkbox"
           link="/privacy-policy"
           modal={true}
-        />
-
-        <Field
-          as={CheckBox}
-          title="faq"
-          label="Я согласен с правилами гонки"
-          name="faq"
-          type="checkbox"
-          link="/faq"
-          modal={false}
         />
 
         <Button
@@ -219,7 +208,7 @@ const RegistrationPage = () => (
     <SEO title="Регистрация на гонку" />
     <CrossButton to="/" />
     {renderForm()}
-    <Link to="/faq" style={{ textDecoration: "none" }}>
+    <Link to="/" style={{ textDecoration: "none" }}>
       <Button caption="FAQ" invert={true} />
     </Link>
   </Layout>

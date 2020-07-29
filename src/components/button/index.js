@@ -46,6 +46,7 @@ const Label = styled.span`
 
 const OkButton = styled.button`
   display: block;
+
   -webkit-text-stroke: ${(props) =>
     props.invert ? "4.5px var(--secondary-color)" : "4.5px var(--main-color)"};
 
@@ -73,18 +74,19 @@ const OkButton = styled.button`
   }
   
   &:enabled {
-    color: ${(props) => (props.invert ? "black" : "white")};
+    color: ${(props) => (props.invert ? "white" : "black")};
+    
     -webkit-text-stroke: ${(props) =>
       props.invert
-        ? "4.5px var(--main-color)"
-        : "4.5px var(--secondary-color)"};
+        ? "4.5px var(--secondary-color)"
+        : "4.5px var(--main-color)"};
 
-    -webkit-text-fill-color: ${(props) => (props.invert ? "white" : "black")};
+    -webkit-text-fill-color: ${(props) => (props.invert ? "black": "white")};
     opacity: 1;
     }
 
     &:active {
-      -webkit-text-fill-color: ${(props) => (props.invert ? "black" : "white")};
+      -webkit-text-fill-color: ${(props) => (props.invert ? "white": "black")};
     }
   }
 `;
@@ -93,7 +95,7 @@ export default function Button({ type, title, caption, disabled, invert }) {
   return (
     <Row invert={invert}>
       {title && <Label>{title}</Label>}
-      <OkButton type={type} disabled={disabled}>
+      <OkButton type={type} disabled={disabled} invert={invert}>
         {caption}
       </OkButton>
     </Row>

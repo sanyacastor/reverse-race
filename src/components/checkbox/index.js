@@ -36,6 +36,7 @@ const Label = styled.label`
   text-transform: uppercase;
   line-height: 113%;
   color: var(--main-color);
+  cursor: pointer;
   text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
     1px 1px 0 #fff;
 `;
