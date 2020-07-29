@@ -2,6 +2,7 @@ import React from "react";
 
 import { Link } from "gatsby";
 import Header from "../components/header.js";
+import Layout from '../components/layout'
 import styled from "styled-components";
 import P5 from "../components/p5.js";
 
@@ -180,7 +181,7 @@ const Accent = styled.span`
 
 const FaqPage = () => {
   return (
-    <>
+    <Layout>
       <Hero>
         <Header />
         <P5 />
@@ -344,7 +345,7 @@ const FaqPage = () => {
           <Text>Определенно да.</Text>
         </div>
       </FaqContainer>
-    </>
+    </Layout>
   );
 };
 
