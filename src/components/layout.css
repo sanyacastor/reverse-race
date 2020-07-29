@@ -2,6 +2,7 @@ html {
   font-family: "Montserrat" sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -28,7 +29,7 @@ select:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
   background: var(--main-color);
 }
-/* 
+
 .modal__custom-overlay {
   position: fixed;
   max-width: 100vw;
@@ -46,14 +47,17 @@ select:-webkit-autofill:focus {
 }
 
 .modal__custom-content{
+  z-index: 10;
   max-width: 100%;
   max-height: 100vh;
   overflow: auto;
-} */
+  background: black;
+  color: white;
+}
 
 /* scrollbar */
 
-/* ::-webkit-scrollbar-track {
+ ::-webkit-scrollbar-track {
   -webkit-box-shadow: none;
   border-radius: 0;
   background-color: var(--main-color);
@@ -68,7 +72,7 @@ select:-webkit-autofill:focus {
   border-radius: 0;
   -webkit-box-shadow: none;
   background-color: var(--secondary-color);
-} */
+}
 
 article,
 aside,

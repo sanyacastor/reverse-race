@@ -1,12 +1,9 @@
 import React from "react";
-// import { Link, navigate } from "gatsby";
 import { ModalRoutingContext } from "gatsby-plugin-modal-routing";
+import { Link } from "gatsby";
 import styled from "styled-components";
 
 import CrossButton from "../components/crossButton";
-
-// import Layout from "../components/layout";
-// import SEO from "../components/seo";
 
 const Container = styled.section`
   max-width: 100vw;
@@ -52,10 +49,8 @@ const List = styled.ul`
   }
 `;
 
-const TermsOfUse = () => (
-  <ModalRoutingContext.Consumer>
-    {({ modal, closeTo }) => <Container>
-    <CrossButton to={closeTo} />
+const renderPrivacyPolicy = () => {
+  return (
     <>
       <Header>
         СОГЛАСИЕ О передаче персональных данных ПРИ УЧАСТИИ В СОРЕВНОВАНИЯХ
@@ -176,7 +171,17 @@ const TermsOfUse = () => (
         </li>
       </List>
     </>
-  </Container>}
+  );
+};
+
+const TermsOfUse = () => (
+  <ModalRoutingContext.Consumer>
+    {({ modal, closeTo }) => (
+      <Container>
+        <CrossButton to={closeTo} />
+        {renderPrivacyPolicy()}
+      </Container>
+    )}
   </ModalRoutingContext.Consumer>
 );
 

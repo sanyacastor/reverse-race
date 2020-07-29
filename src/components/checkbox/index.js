@@ -49,14 +49,14 @@ const Box = styled.input`
 `;
 
 const CheckBox = (props) => {
-  const { title, name, label, required, link } = props;
+  const { title, name, label, required, link, modal } = props;
 
   return (
     <Row>
       <Title
         to={link}
         state={{
-          modal: true
+          modal: modal,
         }}
       >
         {title}

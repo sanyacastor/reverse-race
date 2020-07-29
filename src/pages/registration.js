@@ -180,6 +180,7 @@ const renderForm = () => (
           name="check"
           type="checkbox"
           link="/privacy-policy"
+          modal={true}
         />
 
         <Field
@@ -189,6 +190,7 @@ const renderForm = () => (
           name="terms"
           type="checkbox"
           link="/privacy-policy"
+          modal={true}
         />
 
         <Field
@@ -197,7 +199,8 @@ const renderForm = () => (
           label="Я согласен с правилами гонки"
           name="faq"
           type="checkbox"
-          link="/privacy-policy"
+          link="/faq"
+          modal={false}
         />
 
         <Button

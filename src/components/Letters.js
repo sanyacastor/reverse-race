@@ -30,7 +30,7 @@ export default function Letters(p5){
     };
   
     p5.windowResized = () => {
-      p5.resizeCanvas(p5.windowWidth, 691);
+      p5.resizeCanvas(p5.windowWidth, p5.windowHeight-100);
     };
   
    p5.draw = () => {

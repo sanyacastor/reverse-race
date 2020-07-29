@@ -6,8 +6,8 @@ import CrossButton from "../components/crossButton";
 const Container = styled.section`
   max-width: 100vw;
   min-height: 100vh;
-  background: var(--main-color);
-  color: var(--secondary-color);
+  background: black;
+  color: white;
   padding: 54px 41px;
   padding-right: 110px;
   font-family: "Montserrat", sans-serif;
@@ -15,7 +15,6 @@ const Container = styled.section`
   font-weight: 900;
   font-size: var(--font-size-m);
   line-height: 118%;
-  color: var(--secondary-color);
   text-transform: uppercase;
 `;
 

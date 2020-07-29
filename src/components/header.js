@@ -9,8 +9,9 @@ const NavBar = styled.nav`
   padding-top: 21px;
   padding-left: 41px;
   padding-right: 41px;
+
   & a {
-    font-family: Montserrat, sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 900;
     font-size: 19px;
     line-height: 23px;
@@ -20,17 +21,29 @@ const NavBar = styled.nav`
 
     &:nth-child(2) {
       margin-left: auto;
-      margin-right: 45px;
+      margin-right: 2.3em;
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--secondary-color);
+    }
+  }
+
+  @media (max-width: 780px) {
+    padding-left: 14px;
+    padding-right: 14px;
+    & a {
+      font-size: 10px;
     }
   }
 `;
-
 
 const Header = () => (
   <header>
     <NavBar>
       <Link to="/">Reverse side of the road</Link>
-      <Link to="/">Faq</Link>
+      <Link to="#faq">Faq</Link>
       <Link to="/registration">Регистрация</Link>
     </NavBar>
   </header>
