@@ -15,11 +15,6 @@ const Row = styled.div`
   overflow: hidden;
   max-width: 100%;
 
-  /* @media (min-width: 1024px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  } */
 `;
 
 const Label = styled.span`
@@ -62,7 +57,7 @@ const OkButton = styled.button`
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
   font-size: var(--font-size-xl);
-  min-height: 214px;
+  /* min-height: 214px; */
   max-width: 100%;
   line-height: 100%;
   cursor: pointer;
