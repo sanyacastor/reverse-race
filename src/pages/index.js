@@ -2,6 +2,7 @@ import React from "react";
 
 import { Link } from "gatsby";
 import Header from "../components/header.js";
+import Portal from "../components/portal.js";
 import Layout from '../components/layout'
 import styled from "styled-components";
 import P5 from "../components/p5.js";
@@ -350,6 +351,7 @@ const FaqPage = () => {
           <Text>Определенно да.</Text>
         </div>
       </FaqContainer>
+      <Portal>loop</Portal>
     </Layout>
   );
 };

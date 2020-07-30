@@ -11,7 +11,6 @@ module.exports = {
       resolve: `gatsby-plugin-modal-routing`,
       options: {
         appElement: "#___gatsby",
-        //http://reactcommunity.org/react-modal/#usage
         modalProps: {
           overlayClassName: "modal__custom-overlay",
           className: "modal__custom-content",
@@ -29,6 +28,13 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: `gatsby-plugin-portal`,
+      options: {
+        key: 'portal',
+        id: 'portal',        
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,
@@ -37,7 +43,7 @@ module.exports = {
         background_color: `#000`,
         theme_color: `#000`,
         display: `minimal-ui`,
-        icon: `src/images/reverse-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/reverse-icon.png`,
       },
     },
     {

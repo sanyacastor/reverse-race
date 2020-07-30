@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Formik, Form, Field } from "formik";
 import { navigate, Link } from "gatsby";
 import * as yup from "yup";
@@ -14,6 +14,7 @@ import RowLabel from "../components/rowLabel";
 import SEO from "../components/seo";
 
 import { addHeat } from "../servicies/regPlace";
+import TermsOfUse from "../components/privacy-policy.js";
 
 const phoneRegExp = /^((\+7|7|8)+([0-9]){10})$/;
 
@@ -33,20 +34,20 @@ const validationSchema = yup.object({
   distance: yup.string().required(),
   gen: yup.string().required(),
   check: yup.bool().oneOf([true]),
-  terms: yup.bool().oneOf([true])
+  terms: yup.bool().oneOf([true]),
 });
 
 const formSubmitHandler = async (user) => {
   try {
     let url = await addHeat(user);
-    console.log(url)
+    console.log(url);
     navigate(url);
   } catch (error) {
     console.log(error);
   }
 };
 
-const renderForm = () => (
+const renderForm = (setVisible) => (
   <Formik
     initialValues={{
       firstName: "",
@@ -204,15 +205,21 @@ const renderForm = () => (
   </Formik>
 );
 
-const RegistrationPage = () => (
-  <Layout>
-    <SEO title="Регистрация на гонку" />
-    <CrossButton to="/" />
-    {renderForm()}
-    <Link to="/#faq" style={{ textDecoration: "none" }}>
-      <Button caption="FAQ" invert={true} />
-    </Link>
-  </Layout>
-);
+const RegistrationPage = () => {
+  const [visible, setVisible] = useState(false);
+
+  return (
+    <Layout>
+      <SEO title="Регистрация на гонку" />
+      <CrossButton to="/" />
+      {renderForm()}
+      <Link to="/#faq" style={{ textDecoration: "none" }}>
+        <Button caption="FAQ" invert={true} />
+      </Link>
+      {visible && <TermsOfUse />}
+      <button onClick={()=>setVisible(!visible)}>show</button>
+    </Layout>
+  );
+};
 
 export default RegistrationPage;
