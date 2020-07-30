@@ -209,7 +209,7 @@ const RegistrationPage = () => (
     <SEO title="Регистрация на гонку" />
     <CrossButton to="/" />
     {renderForm()}
-    <Link to="/" style={{ textDecoration: "none" }}>
+    <Link to="/#faq" style={{ textDecoration: "none" }}>
       <Button caption="FAQ" invert={true} />
     </Link>
   </Layout>

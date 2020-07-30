@@ -13,6 +13,7 @@ const Row = styled.div`
   border-right: none;
   position: relative;
   overflow: hidden;
+  max-width: 100%;
 
   @media (min-width: 1024px) {
     display: flex;
@@ -24,7 +25,7 @@ const Row = styled.div`
 const Label = styled.span`
   z-index: 5;
   position: absolute;
-  top: 12px;
+  top: 0;
   left: 15px;
   border: none;
   font-family: "Montserrat", sans-serif;
@@ -62,8 +63,10 @@ const OkButton = styled.button`
   font-weight: 900;
   font-size: var(--font-size-xl);
   min-height: 214px;
+  max-width: 100%;
   line-height: 100%;
   cursor: pointer;
+  white-space: nowrap;
   z-index: 1;
   opacity: 1;
 
@@ -72,22 +75,21 @@ const OkButton = styled.button`
     -webkit-text-fill-color: "white";
     opacity: 0.2;
   }
-  
+
   &:enabled {
     color: ${(props) => (props.invert ? "white" : "black")};
-    
+
     -webkit-text-stroke: ${(props) =>
       props.invert
         ? "4.5px var(--secondary-color)"
         : "4.5px var(--main-color)"};
 
-    -webkit-text-fill-color: ${(props) => (props.invert ? "black": "white")};
+    -webkit-text-fill-color: ${(props) => (props.invert ? "black" : "white")};
     opacity: 1;
-    }
+  }
 
-    &:active {
-      -webkit-text-fill-color: ${(props) => (props.invert ? "white": "black")};
-    }
+  &:active {
+    -webkit-text-fill-color: ${(props) => (props.invert ? "white" : "black")};
   }
 `;
 
