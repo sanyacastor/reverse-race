@@ -6,18 +6,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-styled-components`,
-    {
-      resolve: `gatsby-plugin-modal-routing`,
-      options: {
-        appElement: "#___gatsby",
-        modalProps: {
-          overlayClassName: "modal__custom-overlay",
-          className: "modal__custom-content",
-        },
-      },
-    },
-    
+    `gatsby-plugin-styled-components`,  
     {
       resolve: `gatsby-source-filesystem`,
       options: {

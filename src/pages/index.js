@@ -2,8 +2,7 @@ import React from "react";
 
 import { Link } from "gatsby";
 import Header from "../components/header.js";
-import Portal from "../components/portal.js";
-import Layout from '../components/layout'
+import Layout from "../components/layout";
 import styled from "styled-components";
 import P5 from "../components/p5.js";
 
@@ -230,7 +229,7 @@ const FaqPage = () => {
             <LogoTg className="social__logo" />
           </Link>
         </div>
-        <Link className='cityCycle' to="https://citycycle.ru" target="blank">
+        <Link className="cityCycle" to="https://citycycle.ru" target="blank">
           <img src={logoCity} alt="cityCycle" />
         </Link>
       </SponsorBar>
@@ -321,8 +320,15 @@ const FaqPage = () => {
             вероятно отсеиваем большой пласт туристических велосипедов, поэтому
             можно предварительно согласовать с организаторами ваше участие, если
             ваш велосипед не подходит под описанный выше критерий. Небольшой
-            гайд в картинках о подходящем велосипеде тут. Идеальным же будет
-            гравийный велосипед на 40C резине.
+            гайд в картинках о подходящем велосипеде{" "}
+            <Link
+              to="https://vk.com/wall-146494886_1109 "
+              target="blank"
+              style={{ display: "inline-block" }}
+            >
+              тут
+            </Link>
+            . Идеальным же будет гравийный велосипед на 40C резине.
           </Text>
           <Heading>ПРОФФЕСИОНАЛЬНАЯ ГОНКА?</Heading>
           <Text>
@@ -351,7 +357,6 @@ const FaqPage = () => {
           <Text>Определенно да.</Text>
         </div>
       </FaqContainer>
-      <Portal>loop</Portal>
     </Layout>
   );
 };

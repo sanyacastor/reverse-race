@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "gatsby";
+// import { Link } from "gatsby";
 
 const Row = styled.div`
   background: var(--main-color);
@@ -18,13 +18,15 @@ const Row = styled.div`
   }
 `;
 
-const Title = styled(Link)`
+const Title = styled.span`
+  cursor: pointer;
   z-index: 3;
   font-weight: 900;
   font-size: var(--font-size-s);
   color: var(--secondary-color);
   text-transform: uppercase;
   line-height: 100%;
+  text-decoration: underline;
 `;
 
 const Label = styled.label`
@@ -50,16 +52,11 @@ const Box = styled.input`
 `;
 
 const CheckBox = (props) => {
-  const { title, name, label, required, link, modal } = props;
+  const { title, name, label, required, action } = props;
 
   return (
     <Row>
-      <Title
-        to={link}
-        state={{
-          modal: modal,
-        }}
-      >
+      <Title onClick={action} >
         {title}
       </Title>
       <Box required={required} type="checkbox" id={name} {...props} />

@@ -1,13 +1,14 @@
 import React from "react";
-import Layout from "./layout.js";
+// import Layout from "./layout.js";
 import Portal from "./portal.js";
 import styled from "styled-components";
 
 import CrossButton from "./crossButton";
 
 const Container = styled.section`
- display: 'none';
-  max-width: 100vw;
+  display: "none";
+  width: 100%;
+  max-height: 100vh;
   background: var(--main-color);
   color: var(--secondary-color);
   padding: 54px 41px;
@@ -53,6 +54,23 @@ const List = styled.ul`
     margin: 0;
     padding: 0;
   }
+`;
+
+const PortalOverlay = styled.div`
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background: blue;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  overflow: hidden;
+`;
+
+const ModalWindow = styled.div`
+  width: 100%;
+  min-height: 100%;
+  overflow: auto;
 `;
 
 const renderPrivacyPolicy = () => {
@@ -180,14 +198,16 @@ const renderPrivacyPolicy = () => {
   );
 };
 
-const TermsOfUse = () => (
+const TermsOfUse = ({close}) => (
   <Portal>
-    <Layout>
-      <Container>
-        <CrossButton to={"/"} />
-        {renderPrivacyPolicy()}
-      </Container>
-    </Layout>
+    <PortalOverlay>
+      <ModalWindow>
+        <Container>
+          <CrossButton action={close}/>
+          {renderPrivacyPolicy()}
+        </Container>
+      </ModalWindow>
+    </PortalOverlay>
   </Portal>
 );
 

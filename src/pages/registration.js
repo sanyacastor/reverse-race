@@ -180,8 +180,7 @@ const renderForm = (setVisible) => (
           label="я согласен/на на обработку персональных данных"
           name="check"
           type="checkbox"
-          link="/privacy-policy"
-          modal={true}
+          action={setVisible}
         />
 
         <Field
@@ -190,8 +189,7 @@ const renderForm = (setVisible) => (
           label="я ознакомлен/а с условиями участия"
           name="terms"
           type="checkbox"
-          link="/privacy-policy"
-          modal={true}
+          action={setVisible}
         />
 
         <Button
@@ -208,16 +206,23 @@ const renderForm = (setVisible) => (
 const RegistrationPage = () => {
   const [visible, setVisible] = useState(false);
 
+  const showModal = () => {
+    setVisible(true);
+  }
+
+  const closeModal = () => {
+    setVisible(false);
+  }
+
   return (
     <Layout>
       <SEO title="Регистрация на гонку" />
-      <CrossButton to="/" />
-      {renderForm()}
+      <CrossButton action={()=>navigate('/')} />
+      {renderForm(showModal)}
       <Link to="/#faq" style={{ textDecoration: "none" }}>
         <Button caption="FAQ" invert={true} />
       </Link>
-      {visible && <TermsOfUse />}
-      <button onClick={()=>setVisible(!visible)}>show</button>
+      {visible && <TermsOfUse close={closeModal} />}
     </Layout>
   );
 };

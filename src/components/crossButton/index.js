@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "gatsby";
+// import { Link } from "gatsby";
 
-const CloseButton = styled(Link)`
+const CloseButton = styled.div`
   position: absolute;
   z-index: 1;
   padding: 0;
@@ -60,8 +60,8 @@ const CloseButton = styled(Link)`
   }
 `;
 
-const CrossButton = ({ to }) => {
-  return <CloseButton to={to || "/"}></CloseButton>;
+const CrossButton = ({ action }) => {
+  return <CloseButton onClick={action}></CloseButton>;
 };
 
 export default CrossButton;
