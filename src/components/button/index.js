@@ -15,11 +15,11 @@ const Row = styled.div`
   overflow: hidden;
   max-width: 100%;
 
-  @media (min-width: 1024px) {
+  /* @media (min-width: 1024px) {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+  } */
 `;
 
 const Label = styled.span`
