@@ -14,7 +14,7 @@ import RowLabel from "../components/rowLabel";
 import SEO from "../components/seo";
 
 import { addHeat } from "../servicies/regPlace";
-import TermsOfUse from "../components/privacy-policy.js";
+import TermsOfUse from "../components/TermsOfUse.js";
 
 const phoneRegExp = /^((\+7|7|8)+([0-9]){10})$/;
 
