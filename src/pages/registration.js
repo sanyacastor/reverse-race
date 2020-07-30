@@ -179,7 +179,7 @@ const renderForm = () => (
           label="я согласен/на на обработку персональных данных"
           name="check"
           type="checkbox"
-          link="/privacyPolicy"
+          link="/privacy-policy"
           modal={true}
         />
 
@@ -189,7 +189,7 @@ const renderForm = () => (
           label="я ознакомлен/а с условиями участия"
           name="terms"
           type="checkbox"
-          link="/privacyPolicy"
+          link="/privacy-policy"
           modal={true}
         />
 

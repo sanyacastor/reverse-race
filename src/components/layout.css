@@ -55,6 +55,10 @@ select:-webkit-autofill:focus {
   color: white;
 }
 
+.ReactModal__Body--open {
+  overflow-y: hidden;
+}
+
 /* scrollbar */
 
  ::-webkit-scrollbar-track {

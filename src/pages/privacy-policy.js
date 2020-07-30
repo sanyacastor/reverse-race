@@ -182,10 +182,10 @@ const renderPrivacyPolicy = () => {
 
 const TermsOfUse = () => (
   <ModalRoutingContext.Consumer>
-    {({ modal, closeTo }) => (
+  {({ modal, closeTo }) => (
       <Layout>
         <Container>
-          <CrossButton to={closeTo} />
+          <CrossButton to={'/'} />
           {renderPrivacyPolicy()}
         </Container>
       </Layout>
