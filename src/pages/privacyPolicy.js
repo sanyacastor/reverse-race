@@ -18,6 +18,12 @@ const Container = styled.section`
   line-height: 23px;
   color: var(--secondary-color);
   overflow: auto;
+
+  @media (max-width: 1024px) {
+    padding: 54px 18px;
+    padding-right: 41px;
+  }
+
 `;
 
 const Paragraph = styled.p`
@@ -178,10 +184,10 @@ const TermsOfUse = () => (
   <ModalRoutingContext.Consumer>
     {({ modal, closeTo }) => (
       <Layout>
-      <Container>
-        <CrossButton to={closeTo} />
-        {renderPrivacyPolicy()}
-      </Container>
+        <Container>
+          <CrossButton to={closeTo} />
+          {renderPrivacyPolicy()}
+        </Container>
       </Layout>
     )}
   </ModalRoutingContext.Consumer>
