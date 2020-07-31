@@ -10,7 +10,7 @@ const Container = styled.div`
 const P5Wrapper = Loadable(() => import("react-p5-wrapper"));
 
 const P5 = (props) => {
-  return  P5Wrapper ? <P5Wrapper sketch={Letters} /> : <Container>loading...</Container>;
+  return  <Container><P5Wrapper sketch={Letters} /></Container>
 };
 
 export default P5;
