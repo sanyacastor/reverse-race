@@ -15,8 +15,9 @@ import LogoInst from "../images/social_inst.inline.svg";
 import logoCity from "../images/logo_CityCycle.svg";
 import logoSpec from "../images/logo_specialized.svg";
 
-const Hero = styled(Div100vh)`
+const Hero = styled.div`
   min-width: 100%;
+  min-height: 90vh;
   overflow: hidden;
   position: relative;
 `;
@@ -197,11 +198,10 @@ const Accent = styled.span`
 const FaqPage = () => {
   return (
     <Layout>
-      <Div100vh style={{minHeight: '90rvh', overflow: 'hidden'}}>
+      <Hero>
         <Header/>
         <P5/>
-      </Div100vh >
-      <SponsorBar>
+        <SponsorBar>
           <Link
             className='specialized'
             to='https://www.specialized.com/ru/ru'
@@ -243,6 +243,8 @@ const FaqPage = () => {
             <img src={logoCity} alt='cityCycle' />
           </Link>
         </SponsorBar>
+      </Hero>
+      
 
       <FaqContainer id='faq'>
         <div className='aside'>
