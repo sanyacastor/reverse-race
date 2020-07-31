@@ -1,6 +1,8 @@
 import React from "react";
-
+import Div100vh from "react-div-100vh";
 import { Link } from "gatsby";
+import Button from "../components/button";
+
 import Header from "../components/header.js";
 import Layout from "../components/layout";
 import styled from "styled-components";
@@ -13,8 +15,8 @@ import LogoInst from "../images/social_inst.inline.svg";
 import logoCity from "../images/logo_CityCycle.svg";
 import logoSpec from "../images/logo_specialized.svg";
 
-const Hero = styled.div`
-  min-height: calc(100vh - 77px);
+const Hero = styled(Div100vh)`
+  // min-height: calc(100vh - 77px);
   min-width: 100%;
   overflow: hidden;
   position: relative;
@@ -81,7 +83,7 @@ const FaqContainer = styled.section`
   display: flex;
   flex-direction: row;
   overflow-y: hidden;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat-medium", sans-serif;
   font-style: normal;
   font-size: 19px;
   line-height: 23px;
@@ -157,9 +159,17 @@ const FaqContainer = styled.section`
 `;
 
 const Text = styled.p`
+  font-size: 19px;
+  line-height: 23px;
+
   margin: 0;
   padding: 0;
   margin-bottom: 1.57em;
+
+  @media (max-width: 780px) {
+    font-size: 8.5px;
+    line-height: 120%;
+  }
 `;
 
 const Heading = styled.h3`
@@ -190,56 +200,57 @@ const FaqPage = () => {
       <Hero>
         <Header />
         <P5 />
+        <SponsorBar>
+          <Link
+            className='specialized'
+            to='https://www.specialized.com/ru/ru'
+            target='blank'
+          >
+            <img src={logoSpec} alt='specialized' />
+          </Link>
+          <div className='social'>
+            <Link
+              className='social__link'
+              to='https://vk.com/reverse_race'
+              target='blank'
+            >
+              <LogoVk className='social__logo' />
+            </Link>
+            <Link
+              className='social__link'
+              to='https://www.instagram.com/reverse_race'
+              target='blank'
+            >
+              <LogoInst className='social__logo' />
+            </Link>
+            <Link
+              className='social__link'
+              to='https://www.facebook.com/reverserace'
+              target='blank'
+            >
+              <LogoFb className='social__logo' />
+            </Link>
+            <Link
+              className='social__link'
+              to='https://t.me/gravel_king'
+              target='blank'
+            >
+              <LogoTg className='social__logo' />
+            </Link>
+          </div>
+          <Link className='cityCycle' to='https://citycycle.ru' target='blank'>
+            <img src={logoCity} alt='cityCycle' />
+          </Link>
+        </SponsorBar>
       </Hero>
-      <SponsorBar>
-        <Link
-          className="specialized"
-          to="https://www.specialized.com/ru/ru"
-          target="blank"
-        >
-          <img src={logoSpec} alt="specialized" />
-        </Link>
-        <div className="social">
-          <Link
-            className="social__link"
-            to="https://vk.com/reverse_race"
-            target="blank"
-          >
-            <LogoVk className="social__logo" />
-          </Link>
-          <Link
-            className="social__link"
-            to="https://www.instagram.com/reverse_race"
-            target="blank"
-          >
-            <LogoInst className="social__logo" />
-          </Link>
-          <Link
-            className="social__link"
-            to="https://www.facebook.com/reverserace"
-            target="blank"
-          >
-            <LogoFb className="social__logo" />
-          </Link>
-          <Link
-            className="social__link"
-            to="https://t.me/gravel_king"
-            target="blank"
-          >
-            <LogoTg className="social__logo" />
-          </Link>
+
+      <FaqContainer id='faq'>
+        <div className='aside'>
+          <span className='aside__letter'>F</span>
+          <span className='aside__letter'>A</span>
+          <span className='aside__letter'>Q</span>
         </div>
-        <Link className="cityCycle" to="https://citycycle.ru" target="blank">
-          <img src={logoCity} alt="cityCycle" />
-        </Link>
-      </SponsorBar>
-      <FaqContainer id="faq">
-        <div className="aside">
-          <span className="aside__letter">F</span>
-          <span className="aside__letter">A</span>
-          <span className="aside__letter">Q</span>
-        </div>
-        <div className="text">
+        <div className='text'>
           <Heading>ЧТО ЭТО ЗА ГОНКА?</Heading>
           <Text>
             Гонка по красивейшим гравийным маршрутам Ленинградской области,
@@ -247,8 +258,8 @@ const FaqPage = () => {
             отдыха в палатках у костра и увлекательное гравийное приключение.
           </Text>
           <Heading>А ЧТО ТАМ ПО ДИСТАНЦИЯМ?</Heading>
-          <Text className="mb">
-            <span className="mb">Два варианта на выбор:</span>
+          <Text className='mb'>
+            <span className='mb'>Два варианта на выбор:</span>
             <br />
             <Accent>1.</Accent> Большой круг 145км и 1200м набора. Из них
             немного асфальта, а все остальное – лесные грунтовые дороги с
@@ -264,8 +275,8 @@ const FaqPage = () => {
             <Accent>2.</Accent> Малый круг 73км и 700м набора. На 70% совпадает
             с большим кругом. Как{" "}
             <Link
-              to="https://vk.com/sunday_chill_ride"
-              target="blank"
+              to='https://vk.com/sunday_chill_ride'
+              target='blank'
               style={{ display: "inline-block" }}
             >
               Sunday Chill Ride
@@ -322,8 +333,8 @@ const FaqPage = () => {
             ваш велосипед не подходит под описанный выше критерий. Небольшой
             гайд в картинках о подходящем велосипеде{" "}
             <Link
-              to="https://vk.com/wall-146494886_1109 "
-              target="blank"
+              to='https://vk.com/wall-146494886_1109 '
+              target='blank'
               style={{ display: "inline-block" }}
             >
               тут
@@ -357,6 +368,15 @@ const FaqPage = () => {
           <Text>Определенно да.</Text>
         </div>
       </FaqContainer>
+
+      <Link to='/registration' style={{ textDecoration: "none" }}>
+        <Button
+          caption='регистрация'
+          invert={true}
+          style={{ fontSize: "158px" }}
+          p={.2}
+        />
+      </Link>
     </Layout>
   );
 };

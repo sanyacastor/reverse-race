@@ -6,7 +6,7 @@ const Row = styled.div`
   background: ${(props) =>
     props.invert ? "var(--main-color)" : "var(--secondary-color)"};
   padding-left: 12px;
-  padding-top: 5px;
+  padding-top: 0;
   padding-bottom: 2px;
   margin-bottom: 0;
   border-top: none;
@@ -21,9 +21,10 @@ const Label = styled.span`
   z-index: 5;
   position: absolute;
   display: block;
-  top: 0;
+  top: 3px;
   left: 15px;
   border: none;
+  line-height: 1;
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
   color: var(--main-color);
@@ -43,29 +44,26 @@ const Label = styled.span`
 
 const OkButton = styled.button`
   display: block;
-
   -webkit-text-stroke: ${(props) =>
     props.invert ? "4.5px var(--secondary-color)" : "4.5px var(--main-color)"};
-
   -webkit-text-fill-color: ${(props) => (props.invert ? "black" : "white")};
-
   color: ${(props) =>
     props.invert ? "var(--main-color)" : "var(--secondary-color)"};
 
-  background: transparent;
+  background: rgba(255, 255, 255, 0);
   border: none;
   outline: none;
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
   font-size: var(--font-size-xl);
-  min-height: 214px;
-  line-height: 100%;
+  line-height: 0.9;
   cursor: pointer;
   white-space: nowrap;
   z-index: 1;
   opacity: 1;
   padding: 0;
   margin: 0;
+  text-transform: uppercase;
 
   &:disabled {
     -webkit-text-stroke: 4.5px var(--main-color);
@@ -75,7 +73,7 @@ const OkButton = styled.button`
 
   &:enabled {
     color: ${(props) => (props.invert ? "white" : "black")};
-
+    padding-bottom: ${(props) => `${props.p}em`};
     -webkit-text-stroke: ${(props) =>
       props.invert
         ? "4.5px var(--secondary-color)"
@@ -88,13 +86,30 @@ const OkButton = styled.button`
   &:active {
     -webkit-text-fill-color: ${(props) => (props.invert ? "white" : "black")};
   }
+
+  @media (max-width: 1024px) {
+    font-size: 156px;
+    line-height: 100%;
+    -webkit-text-stroke: ${(props) =>
+      props.invert
+        ? "1.6px var(--secondary-color)"
+        : "1.6px var(--main-color)"};
+
+    &:disabled,
+    &:enabled {
+      -webkit-text-stroke: ${(props) =>
+        props.invert
+          ? "1.6px var(--secondary-color)"
+          : "1.6px var(--main-color)"};
+    }
+  }
 `;
 
-export default function Button({ type, title, caption, disabled, invert }) {
+export default function Button({ type, title, caption, disabled, invert, p, style}) {
   return (
     <Row invert={invert}>
       {title && <Label>{title}</Label>}
-      <OkButton type={type} disabled={disabled} invert={invert}>
+      <OkButton type={type} disabled={disabled} invert={invert} p={p} lh={0.9} style={style}>
         {caption}
       </OkButton>
     </Row>

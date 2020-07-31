@@ -27,6 +27,10 @@ const Title = styled.span`
   text-transform: uppercase;
   line-height: 100%;
   text-decoration: underline;
+  &:hover,
+  &:focus {
+    color: var(--sucess-color);
+  }
 `;
 
 const Label = styled.label`
@@ -41,6 +45,7 @@ const Label = styled.label`
   cursor: pointer;
   text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
     1px 1px 0 #fff;
+  
 `;
 
 const Box = styled.input`

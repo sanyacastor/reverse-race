@@ -19,6 +19,7 @@ const Container = styled.section`
   text-transform: uppercase;
 `;
 
+
 const Paragraph = styled.p`
   margin: 0;
   padding: 0;
