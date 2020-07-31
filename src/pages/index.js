@@ -199,52 +199,51 @@ const FaqPage = () => {
   return (
     <Layout>
       <Hero>
-        <Header/>
-        <P5/>
-        <SponsorBar>
+        <Header />
+        <P5 />
+      </Hero>
+      <SponsorBar>
+        <Link
+          className='specialized'
+          to='https://www.specialized.com/ru/ru'
+          target='blank'
+        >
+          <img src={logoSpec} alt='specialized' />
+        </Link>
+        <div className='social'>
           <Link
-            className='specialized'
-            to='https://www.specialized.com/ru/ru'
+            className='social__link'
+            to='https://vk.com/reverse_race'
             target='blank'
           >
-            <img src={logoSpec} alt='specialized' />
+            <LogoVk className='social__logo' />
           </Link>
-          <div className='social'>
-            <Link
-              className='social__link'
-              to='https://vk.com/reverse_race'
-              target='blank'
-            >
-              <LogoVk className='social__logo' />
-            </Link>
-            <Link
-              className='social__link'
-              to='https://www.instagram.com/reverse_race'
-              target='blank'
-            >
-              <LogoInst className='social__logo' />
-            </Link>
-            <Link
-              className='social__link'
-              to='https://www.facebook.com/reverserace'
-              target='blank'
-            >
-              <LogoFb className='social__logo' />
-            </Link>
-            <Link
-              className='social__link'
-              to='https://t.me/gravel_king'
-              target='blank'
-            >
-              <LogoTg className='social__logo' />
-            </Link>
-          </div>
-          <Link className='cityCycle' to='https://citycycle.ru' target='blank'>
-            <img src={logoCity} alt='cityCycle' />
+          <Link
+            className='social__link'
+            to='https://www.instagram.com/reverse_race'
+            target='blank'
+          >
+            <LogoInst className='social__logo' />
           </Link>
-        </SponsorBar>
-      </Hero>
-      
+          <Link
+            className='social__link'
+            to='https://www.facebook.com/reverserace'
+            target='blank'
+          >
+            <LogoFb className='social__logo' />
+          </Link>
+          <Link
+            className='social__link'
+            to='https://t.me/gravel_king'
+            target='blank'
+          >
+            <LogoTg className='social__logo' />
+          </Link>
+        </div>
+        <Link className='cityCycle' to='https://citycycle.ru' target='blank'>
+          <img src={logoCity} alt='cityCycle' />
+        </Link>
+      </SponsorBar>
 
       <FaqContainer id='faq'>
         <div className='aside'>
