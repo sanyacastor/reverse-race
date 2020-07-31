@@ -16,10 +16,11 @@ import logoCity from "../images/logo_CityCycle.svg";
 import logoSpec from "../images/logo_specialized.svg";
 
 const Hero = styled.div`
-  min-width: 100%;
-  min-height: 90vh;
-  overflow: hidden;
-  position: relative;
+  // min-width: 100%;
+  // min-height: 80vh;
+  // max-height: 80vh;
+  // overflow: hidden;
+  // position: relative;
 `;
 
 const SponsorBar = styled.div`
@@ -27,6 +28,7 @@ const SponsorBar = styled.div`
   box-sizing: border-box;
   justify-content: space-between;
   align-items: flex-start;
+  // align-items: center;
   padding: 0 41px;
   max-height: 77px;
 
@@ -68,12 +70,12 @@ const SponsorBar = styled.div`
     }
 
     & .specialized {
-      transition: all 0.2s ease;
+      padding-top: 15px;
       max-width: 110px;
     }
 
     & .cityCycle {
-      transition: all 0.2s ease;
+      padding-top: 8px;
       max-width: 61px;
     }
   }
@@ -191,6 +193,49 @@ const Heading = styled.h3`
   }
 `;
 
+const RegButton = styled.button`
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 35px;
+  line-height: 120%;
+  background: none;
+  border: none;
+  outline: none;
+  margin-bottom: 16px;
+  width: 100%;
+  text-align: center;
+
+  -webkit-text-stroke: 0.7px var(--secondary-color);
+  -webkit-text-fill-color: var(--main-color);
+
+  & :hover,
+  & :focus {
+    -webkit-text-stroke: var(--main-color);
+    -webkit-text-fill-color: var(--secondary-color);
+  }
+
+  @media (min-width: 780px) {
+    padding-left: 0;
+    margin-bottom: 119px;
+    margin-left: 496px;
+    max-width: 294px;
+    text-align: left;
+    -webkit-text-stroke: 2px var(--secondary-color);
+  -webkit-text-fill-color: var(--main-color);
+  }
+
+  @media (min-width: 1330px) {
+    max-width: 100%;
+    padding-left: 41px;
+    margin-left: 0;
+    font-size: 158px;
+    margin-bottom: 44px;
+  }
+`;
+
 const Accent = styled.span`
   font-weight: 900;
 `;
@@ -198,10 +243,10 @@ const Accent = styled.span`
 const FaqPage = () => {
   return (
     <Layout>
-      <Hero>
+      <Div100vh style={{ minHeight: "90rvh", overflow: "hidden" }}>
         <Header />
         <P5 />
-      </Hero>
+      </Div100vh>
       <SponsorBar>
         <Link
           className='specialized'
@@ -369,14 +414,8 @@ const FaqPage = () => {
           <Text>Определенно да.</Text>
         </div>
       </FaqContainer>
-
-      <Link to='/registration' style={{ textDecoration: "none" }}>
-        <Button
-          caption='регистрация'
-          invert={true}
-          style={{ fontSize: "158px" }}
-          p={0.2}
-        />
+      <Link to='/registration'>
+        <RegButton>Регистрация</RegButton>
       </Link>
     </Layout>
   );
