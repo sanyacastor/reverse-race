@@ -197,6 +197,8 @@ const RegButton = styled.button`
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 900;
+  white-space: nowrap;
+  overflow:hidden;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 35px;
@@ -229,7 +231,7 @@ const RegButton = styled.button`
   }
 
   @media (min-width: 1330px) {
-    max-width: 1345px;
+    max-width: 1350px;
     padding-left: 41px;
     margin-left: 0;
     font-size: 158px;
