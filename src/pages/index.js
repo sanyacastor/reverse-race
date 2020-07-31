@@ -16,7 +16,6 @@ import logoCity from "../images/logo_CityCycle.svg";
 import logoSpec from "../images/logo_specialized.svg";
 
 const Hero = styled(Div100vh)`
-  // min-height: calc(100vh - 77px);
   min-width: 100%;
   overflow: hidden;
   position: relative;
@@ -159,6 +158,7 @@ const FaqContainer = styled.section`
 `;
 
 const Text = styled.p`
+  font-family: "Montserrat-medium", sans-serif;
   font-size: 19px;
   line-height: 23px;
 
@@ -374,7 +374,7 @@ const FaqPage = () => {
           caption='регистрация'
           invert={true}
           style={{ fontSize: "158px" }}
-          p={.2}
+          p={0.2}
         />
       </Link>
     </Layout>

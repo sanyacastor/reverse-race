@@ -27,6 +27,7 @@ const NavBar = styled.nav`
     &:hover,
     &:focus {
       color: var(--secondary-color);
+      -webkit-text-stroke: 0.8px black;
     }
   }
 

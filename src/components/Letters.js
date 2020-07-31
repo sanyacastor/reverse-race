@@ -41,15 +41,19 @@ export default function Letters(p5) {
     };
 
     const drawSmallLetters = () => {
-      p5.image(letters[l], p5.mouseX, p5.mouseY, letters[l].width/2, letters[l].height/2);
+      p5.image(
+        letters[l],
+        p5.mouseX,
+        p5.mouseY,
+        letters[l].width / 2,
+        letters[l].height / 2
+      );
     };
 
-    if(p5.windowWidth <= 1024) {
-       setTimeout(drawSmallLetters, 500);
+    if (p5.windowWidth <= 1024) {
+      setTimeout(drawSmallLetters, 500);
     } else {
       setTimeout(drawLetters, 500);
     }
-
-   
   };
 }
