@@ -200,13 +200,14 @@ const RegButton = styled.button`
   text-transform: uppercase;
   text-decoration: none;
   font-size: 35px;
-  line-height: 120%;
+  line-height: 90%;
   background: none;
   border: none;
   outline: none;
   margin-bottom: 16px;
   width: 100%;
   text-align: center;
+  cursor: pointer;
 
   -webkit-text-stroke: 0.7px var(--secondary-color);
   -webkit-text-fill-color: var(--main-color);
@@ -228,7 +229,7 @@ const RegButton = styled.button`
   }
 
   @media (min-width: 1330px) {
-    max-width: 100%;
+    max-width: 1345px;
     padding-left: 41px;
     margin-left: 0;
     font-size: 158px;
