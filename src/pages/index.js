@@ -197,10 +197,11 @@ const Accent = styled.span`
 const FaqPage = () => {
   return (
     <Layout>
-      <Hero>
-        <Header />
-        <P5 />
-        <SponsorBar>
+      <Div100vh style={{minHeight: '90rvh', overflow: 'hidden'}}>
+        <Header/>
+        <P5/>
+      </Div100vh >
+      <SponsorBar>
           <Link
             className='specialized'
             to='https://www.specialized.com/ru/ru'
@@ -242,7 +243,6 @@ const FaqPage = () => {
             <img src={logoCity} alt='cityCycle' />
           </Link>
         </SponsorBar>
-      </Hero>
 
       <FaqContainer id='faq'>
         <div className='aside'>
