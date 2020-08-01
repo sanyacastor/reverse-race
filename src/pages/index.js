@@ -156,6 +156,7 @@ const FaqContainer = styled.section`
       justify-content: center;
       font-size: 156px;
       flex-direction: row;
+      flex-wrap: nowrap;
     }
   }
 `;
@@ -249,7 +250,7 @@ const FaqPage = () => {
   return (
     <Layout>
       <SEO title='Reverse Race FAQ' />
-      <Div100vh style={{height: '89rvh', overflow: 'hidden'}}>
+      <Div100vh style={{minHeight: '89rvh', overflow: 'hidden'}}>
         <Header />
         <P5 />
       </Div100vh>
