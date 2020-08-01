@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { navigate, Link } from "gatsby";
+import { motion, AnimatePresence } from "framer-motion";
 
 import Layout from "../components/layout";
 import CrossButton from "../components/crossButton";
@@ -23,12 +24,21 @@ const RegistrationPage = () => {
   return (
     <Layout>
       <SEO title='Регистрация на гонку' />
-      <CrossButton action={() => navigate("/")} />
-      <RegistrationForm setVisible={showModal} />
-      <Link to='/#faq' style={{ textDecoration: "none" }}>
-        <Button caption='FAQ' invert={true} p={.1}/>
-      </Link>
-      {visible && <TermsOfUse close={closeModal} />}
+      <AnimatePresence>
+        <motion.div
+          initial={{ opacity: 0, y: -100}}
+          animate={{ opacity: 1, y: 0}}
+          exit={{ opacity: 0, y: 0, y: -100}}
+          transition={{ duration: .2 }}
+        >
+          <CrossButton action={() => navigate("/")} />
+          <RegistrationForm setVisible={showModal} />
+          <Link to='/#faq' style={{ textDecoration: "none" }}>
+            <Button caption='FAQ' invert={true} p={0.1} />
+          </Link>
+          {visible && <TermsOfUse close={closeModal} />}
+        </motion.div>
+      </AnimatePresence>
     </Layout>
   );
 };

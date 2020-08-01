@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const NavBar = styled.nav`
   position: absolute;
@@ -43,9 +44,9 @@ const NavBar = styled.nav`
 const Header = () => (
   <header>
     <NavBar>
-      <Link to="/">Reverse side of the road</Link>
-      <Link to="#faq">Faq</Link>
-      <Link to="/registration">Регистрация</Link>
+      <Link to='/'>Reverse side of the road</Link>
+      <Link to='#faq'>Faq</Link>
+      <Link to='/registration'>Регистрация</Link>
     </NavBar>
   </header>
 );

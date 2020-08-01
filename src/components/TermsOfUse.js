@@ -1,6 +1,7 @@
 import React from "react";
 // import Layout from "./layout.js";
 import Portal from "./portal.js";
+import { motion, AnimatePresence } from "framer-motion";
 import styled from "styled-components";
 
 import CrossButton from "./crossButton";
@@ -60,7 +61,7 @@ const PortalOverlay = styled.div`
   width: 100vw;
   height: 100vh;
   position: fixed;
-  background: blue;
+  background: black;
   top: 0;
   left: 0;
   z-index: 50;
@@ -198,15 +199,25 @@ const renderPrivacyPolicy = () => {
   );
 };
 
-const TermsOfUse = ({close}) => (
+
+const TermsOfUse = ({ close }) => (
   <Portal>
     <PortalOverlay>
-      <ModalWindow>
-        <Container>
-          <CrossButton action={close}/>
-          {renderPrivacyPolicy()}
-        </Container>
-      </ModalWindow>
+      <AnimatePresence>
+        <motion.div
+          initial={{ opacity: 0, y: -100}}
+          animate={{ opacity: 1, y: 0}}
+          exit={{ opacity: 0, y: 0, y: -100}}
+          transition={{ duration: .2 }}
+        >
+          <ModalWindow>
+            <Container>
+              <CrossButton action={close} />
+              {renderPrivacyPolicy()}
+            </Container>
+          </ModalWindow>
+        </motion.div>
+      </AnimatePresence>
     </PortalOverlay>
   </Portal>
 );

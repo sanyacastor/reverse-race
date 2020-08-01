@@ -36,10 +36,9 @@ const validationSchema = yup.object({
 const formSubmitHandler = async (user) => {
   try {
     let url = await addHeat(user);
-    console.log(url);
     navigate(url);
   } catch (error) {
-    console.log(error);
+    console.log('ERROR >>>', error);
   }
 };
 
@@ -61,7 +60,9 @@ const renderForm = (setVisible) => (
     onSubmit={(user) => formSubmitHandler(user)}
   >
     {(values) => (
+      
       <Form>
+      {console.log(values)}
         <Field
           value={values.firstName}
           as={Input}
