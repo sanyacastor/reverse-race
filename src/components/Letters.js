@@ -51,9 +51,9 @@ export default function Letters(p5) {
     };
 
     if (p5.windowWidth <= 1024) {
-      setTimeout(drawSmallLetters, 500);
+      setTimeout(drawSmallLetters, 600);
     } else {
-      setTimeout(drawLetters, 500);
+      setTimeout(drawLetters, 600);
     }
   };
 }

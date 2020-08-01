@@ -16,12 +16,12 @@ import LogoInst from "../images/social_inst.inline.svg";
 import logoCity from "../images/logo_CityCycle.svg";
 import logoSpec from "../images/logo_specialized.svg";
 
-const Hero = styled.div`
-  min-width: 100%;
-  height: 90vh;
-  overflow: hidden;
-  position: relative;
-`;
+// const Hero = styled.div`
+//   min-width: 100%;
+//   height: 90vh;
+//   overflow: hidden;
+//   position: relative;
+// `;
 
 const SponsorBar = styled.div`
   display: flex;
@@ -250,10 +250,10 @@ const FaqPage = () => {
   return (
     <Layout>
       <SEO title='Reverse Race FAQ' />
-      <Hero>
+      <Div100vh style={{height: '90rvh', minHeight: '90rvh', overflow: 'hidden'}}>
         <Header />
         <P5 />
-      </Hero>
+      </Div100vh>
       <SponsorBar>
         <Link
           className='specialized'
