@@ -191,6 +191,7 @@ const Heading = styled.h3`
   @media (max-width: 780px) {
     font-size: 7px;
     line-height: 9px;
+    font-weight: 900;
   }
 `;
 
@@ -252,7 +253,7 @@ const FaqPage = () => {
       <SEO title='Reverse Race FAQ' />
       <Div100vh style={{height: '90rvh', minHeight: '90rvh', overflow: 'hidden'}}>
         <Header />
-        <P5 />
+        <P5 style={{height: '100vh', minHeight: '100vh', overflow: 'hidden'}} />
       </Div100vh>
       <SponsorBar>
         <Link
