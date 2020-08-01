@@ -39,15 +39,17 @@ const getUserdata = (user) => {
 
 export const addHeat = async (user) => {
   let options = getUserdata(user);
+  let error = null
 
   try {
     let res = await axios(options);
+    
     if (res.data.status === "success") {
       return res.data.heat.payment_url;
     } else if (res.data.status === "error") {
-      throw new Error(res.data.error.message);
+      throw new Error(`${res.data.message}, проверьте номер телефона.`);
     }
-  } catch (error) {
-    console.log(error);
+  } catch (e) {
+    alert(e);
   }
 };
