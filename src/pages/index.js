@@ -2,6 +2,7 @@ import React from "react";
 import Div100vh from "react-div-100vh";
 import { Link } from "gatsby";
 import Button from "../components/button";
+import SEO from "../components/seo";
 
 import Header from "../components/header.js";
 import Layout from "../components/layout";
@@ -16,11 +17,10 @@ import logoCity from "../images/logo_CityCycle.svg";
 import logoSpec from "../images/logo_specialized.svg";
 
 const Hero = styled.div`
-  // min-width: 100%;
-  // min-height: 80vh;
-  // max-height: 80vh;
-  // overflow: hidden;
-  // position: relative;
+  min-width: 100%;
+  height: 90vh;
+  overflow: hidden;
+  position: relative;
 `;
 
 const SponsorBar = styled.div`
@@ -193,12 +193,13 @@ const Heading = styled.h3`
   }
 `;
 
-const RegButton = styled.button`
+const RegButton = styled(Link)`
   font-family: "Montserrat", sans-serif;
   font-style: normal;
+  display: block;
   font-weight: 900;
   white-space: nowrap;
-  overflow:hidden;
+  overflow: hidden;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 35px;
@@ -206,8 +207,10 @@ const RegButton = styled.button`
   background: none;
   border: none;
   outline: none;
-  margin-bottom: 16px;
+  margin: 0 auto;
+  padding-bottom: 16px;
   width: 100%;
+  max-width: 294px;
   text-align: center;
   cursor: pointer;
 
@@ -224,10 +227,9 @@ const RegButton = styled.button`
     padding-left: 0;
     margin-bottom: 119px;
     margin-left: 496px;
-    max-width: 294px;
     text-align: left;
     -webkit-text-stroke: 2px var(--secondary-color);
-  -webkit-text-fill-color: var(--main-color);
+    -webkit-text-fill-color: var(--main-color);
   }
 
   @media (min-width: 1330px) {
@@ -246,7 +248,8 @@ const Accent = styled.span`
 const FaqPage = () => {
   return (
     <Layout>
-      <Div100vh style={{ minHeight: "90rvh", overflow: "hidden" }}>
+      <SEO title='Reverse Race FAQ' />
+      <Div100vh style={{height: '89rvh', overflow: 'hidden'}}>
         <Header />
         <P5 />
       </Div100vh>
@@ -417,9 +420,9 @@ const FaqPage = () => {
           <Text>Определенно да.</Text>
         </div>
       </FaqContainer>
-      <Link to='/registration'>
-        <RegButton>Регистрация</RegButton>
-      </Link>
+      <div style={{maxWidth: '100%', overflow: 'hidden'}}>
+        <RegButton to='/registration' >Регистрация</RegButton>
+      </div>
     </Layout>
   );
 };

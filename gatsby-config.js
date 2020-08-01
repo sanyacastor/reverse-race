@@ -32,7 +32,7 @@ module.exports = {
         background_color: `#000`,
         theme_color: `#000`,
         display: `minimal-ui`,
-        icon: `src/images/reverse-icon.png`,
+        icon: `src/images/rr_favicon.png`,
       },
     },
     {

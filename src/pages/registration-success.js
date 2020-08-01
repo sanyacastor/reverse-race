@@ -1,6 +1,7 @@
 import React from "react";
+import { navigate } from "gatsby";
 import styled from "styled-components";
-import Layout from '../components/layout'
+import Layout from "../components/layout";
 
 import CrossButton from "../components/crossButton";
 
@@ -19,7 +20,6 @@ const Container = styled.section`
   text-transform: uppercase;
 `;
 
-
 const Paragraph = styled.p`
   margin: 0;
   padding: 0;
@@ -27,12 +27,12 @@ const Paragraph = styled.p`
 
 const Success = () => (
   <Layout>
-  <Container>
-    <CrossButton to='/' />
-    <Paragraph>
+    <Container>
+      <CrossButton action={() => navigate("/")} />
+      <Paragraph>
         Спасибо за регистрацию! Подробная информация на твоей почте.
-    </Paragraph>
-  </Container>
+      </Paragraph>
+    </Container>
   </Layout>
 );
 
