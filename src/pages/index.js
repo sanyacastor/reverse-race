@@ -253,9 +253,9 @@ const FaqPage = () => {
       <SEO title='Reverse Race FAQ' />
       <Div100vh style={{height: '90rvh', minHeight: '90rvh', overflow: 'hidden'}}>
         <Header />
-        <Div100vh style={{height: '90rvh', minHeight: '90rvh', overflow: 'hidden'}}>
+        <div style={{height: '90vh', minHeight: '90vh', overflow: 'hidden'}}>
           <P5 />
-        </Div100vh>
+        </div>
       </Div100vh>
       <SponsorBar>
         <Link
