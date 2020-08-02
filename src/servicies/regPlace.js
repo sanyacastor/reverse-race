@@ -39,7 +39,6 @@ const getUserdata = (user) => {
 
 export const addHeat = async (user) => {
   let options = getUserdata(user);
-  let error = null
 
   try {
     let res = await axios(options);

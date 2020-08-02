@@ -10,7 +10,7 @@ import CheckBox from "./checkbox";
 import Button from "./button";
 import Row from "./row";
 import RowLabel from "./rowLabel";
-import Notification from "../components/Notification";
+import Notification from "./Notification.js";
 
 import { addHeat } from "../servicies/regPlace";
 
