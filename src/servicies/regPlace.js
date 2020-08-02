@@ -47,9 +47,9 @@ export const addHeat = async (user) => {
     if (res.data.status === "success") {
       return res.data.heat.payment_url;
     } else if (res.data.status === "error") {
-      throw new Error(`${res.data.message}, проверьте номер телефона.`);
+      throw new Error(res.data.message);
     }
   } catch (e) {
-    alert(e);
+    throw new Error(e.message);
   }
 };
