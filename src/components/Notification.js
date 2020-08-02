@@ -21,7 +21,6 @@ const Message = styled.div`
   color: white;
   font-size: var(--font-size-s);
   line-height: 100%;
-  // background: black;
   text-transform: uppercase;
 `;
 

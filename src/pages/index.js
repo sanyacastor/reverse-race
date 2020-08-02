@@ -248,8 +248,6 @@ const Accent = styled.span`
 `;
 
 const FaqPage = () => {
-  
-
   return (
     <Layout>
       <SEO title='Reverse Race FAQ' />
@@ -343,7 +341,7 @@ const FaqPage = () => {
                 основных категориях.
                 <br />
               </Text>
-              <Text>
+              <Text className='mb'>
                 <Accent>2.</Accent> Малый круг 73км и 700м набора. На 70%
                 совпадает с большим кругом. Как{" "}
                 <Link
@@ -359,6 +357,9 @@ const FaqPage = () => {
               <Text>
                 Финиш обеих дистанций прямо у нашего лагеря, не нужно никуда
                 идти, можно сразу валиться на землю.
+              </Text>
+              <Text style={{ magrinTop: "2em", marginBottom: "2em" }}>
+                Стоимость участия 1700руб.
               </Text>
               <Heading>А ЧТО ТАМ ПО ПОКРЫТИЮ?</Heading>
               <Text>
