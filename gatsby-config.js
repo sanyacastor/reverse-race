@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Reverse side of the road`,
-    description: `Gravel race and camp.`,
-    author: `sanya3000`,
+    description: `Гонка по красивейшим гравийным маршрутам Ленинградской области, совмещенная с кемпингом у озера в приятной компании. Вас ждут 3 дня отдыха в палатках у костра и увлекательное гравийное приключение.`,
+    author: `shoplift_x_88/sanya3000`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
