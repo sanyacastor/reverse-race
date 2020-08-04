@@ -30,6 +30,8 @@ const FormLabel = styled.label`
 
 const FormInput = styled.input`
   background: transparent;
+  padding-left: 0;
+  margin-left: 0;
   border: none;
   width: 100%;
   padding-top: 10px;
@@ -39,7 +41,6 @@ const FormInput = styled.input`
   outline: none;
   text-transform: uppercase;
   caret-color: var(--sucess-color);
-  
 
   &:focus ~ ${FormLabel} {
     position: absolute;

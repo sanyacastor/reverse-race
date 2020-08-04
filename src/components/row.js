@@ -28,9 +28,10 @@ const Row = styled.div`
     }
   }};
 
-  ${(props) =>
-    props.faded &&
-    `&:after {
+  &:not(:focus-within) {
+    ${(props) =>
+      props.faded &&
+      `&:after {
     content: "";
     display: block;
     width: 160px;
@@ -45,6 +46,7 @@ const Row = styled.div`
       rgba(0, 0, 0, 1),
       rgba(0, 0, 0, 1));
       }`}
+  }
 
   @media (min-width: 1024px) {
     min-height: 144px;
