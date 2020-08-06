@@ -52,6 +52,10 @@ function SEO({ description, lang, meta, title }) {
           content: `website`,
         },
         {
+          property: `og:image`,
+          content: `https://www.reverside.ru/assets/preview.png`
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
