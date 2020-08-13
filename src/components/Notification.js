@@ -8,7 +8,7 @@ const Container = styled.div`
   left: 0;
   width: 100%;
   max-width: 100%;
-  owerflow: hidden;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   background: var(--sucess-color);
@@ -27,7 +27,7 @@ const Message = styled.div`
 export default function Notification({ msg }) {
   return (
     <Container>
-      <Message><strong>{msg}.</strong><br/>Проверьте номер телефона</Message>
+      <Message><strong>{msg}.</strong><br/>Регистрация закрыта</Message>
     </Container>
   );
 }
