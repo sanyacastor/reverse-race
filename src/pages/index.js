@@ -85,7 +85,7 @@ const FaqContainer = styled.section`
   display: flex;
   flex-direction: row;
   overflow-y: hidden;
-  font-family: "Montserrat-medium", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-size: 19px;
   line-height: 23px;
@@ -162,7 +162,7 @@ const FaqContainer = styled.section`
 `;
 
 const Text = styled.p`
-  font-family: "Montserrat-medium", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 19px;
   line-height: 23px;
 
@@ -443,7 +443,7 @@ const FaqPage = () => {
             </div>
           </FaqContainer>
           <div style={{ maxWidth: "100%", overflow: "hidden" }}>
-            <RegButton to='/registration'>Регистрация</RegButton>
+            <RegButton to='/camp'>МАРШРУТ’20</RegButton>
           </div>
         </motion.div>
       </AnimatePresence>
