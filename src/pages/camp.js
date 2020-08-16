@@ -430,7 +430,7 @@ const FaqPage = () => {
               73км
             </a>
           </DownloadLink>
-          <a href="/gpx/RevrerseS.gpx" target="blank"download>
+          <a href="/gpx/ReverseS.gpx" target="blank" download>
             скачать
           </a>
           <br />
@@ -439,7 +439,7 @@ const FaqPage = () => {
               143км
             </a>
           </DownloadLink>
-          <a href="/gpx/RevrerseB.gpx" target="blank" download>
+          <a href="/gpx/ReverseB.gpx" target="blank" download>
             скачать
           </a>
           <Heading>В сухих цифрах:</Heading>
