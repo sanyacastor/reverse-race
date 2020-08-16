@@ -441,7 +441,7 @@ const FaqPage = () => {
             Трек <span className="desktop_only track">трассы</span>
           </Header2>
           <DownloadLink>
-            <a href="https://www.komoot.com/tour/226519873" target="blank">
+            <a href="https://www.komoot.com/tour/209550872" target="blank">
               73км
             </a>
           </DownloadLink>
