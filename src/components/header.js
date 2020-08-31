@@ -21,7 +21,6 @@ const NavBar = styled.nav`
 
     &:nth-child(2) {
       margin-left: auto;
-      margin-right: 2.3em;
     }
 
     &:hover,
