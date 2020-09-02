@@ -10,6 +10,10 @@ const NavBar = styled.nav`
   padding-left: 41px;
   padding-right: 41px;
 
+   & .results {
+     display: none;
+   }
+
   & a {
     font-family: "Montserrat", sans-serif;
     font-weight: 900;
@@ -21,6 +25,7 @@ const NavBar = styled.nav`
 
     &:nth-child(2) {
       margin-left: auto;
+      margin-right: 2.3em;
     }
 
     &:hover,
@@ -28,6 +33,8 @@ const NavBar = styled.nav`
       color: var(--secondary-color);
       -webkit-text-stroke: 0.8px black;
     }
+
+    transition: all 0.2s ease-in-out;
   }
 
   @media (max-width: 780px) {
@@ -36,6 +43,16 @@ const NavBar = styled.nav`
     & a {
       font-size: 10px;
     }
+    
+    & .faq,
+    & .camp {
+      display: none;
+    }
+
+    & .results {
+     display: block;
+     margin-left: auto;
+   }
   }
 `;
 
@@ -43,8 +60,15 @@ const Header = () => (
   <header>
     <NavBar>
       <Link>Reverse side of the road 21 – 23.08.2020</Link>
-      <Link to='#faq'>Faq</Link>
-      {/* <Link to='/registration'>Регистрация</Link> */}
+      <Link className='faq' to='#faq'>
+        Faq
+      </Link>
+      <Link className='camp' to='/camp'>
+        Маршрут 2020
+      </Link>
+      <Link className='results' to='/results'>
+        Результаты 2020
+      </Link>
     </NavBar>
   </header>
 );

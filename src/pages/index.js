@@ -16,19 +16,11 @@ import LogoInst from "../images/social_inst.inline.svg";
 import logoCity from "../images/logo_CityCycle.svg";
 import logoSpec from "../images/logo_specialized.svg";
 
-// const Hero = styled.div`
-//   min-width: 100%;
-//   height: 90vh;
-//   overflow: hidden;
-//   position: relative;
-// `;
-
 const SponsorBar = styled.div`
   display: flex;
   box-sizing: border-box;
   justify-content: space-between;
-  align-items: flex-start;
-  // align-items: center;
+  align-items: center;
   padding: 0 41px;
   max-height: 77px;
 
@@ -37,14 +29,31 @@ const SponsorBar = styled.div`
   }
 
   & .specialized {
-    padding-top: 18px;
+    max-height: 35px;
+    /* padding-top: 18px; */
+    img {
+      margin-bottom: 0;
+    }
+  }
+
+  & .citycycle {
+    max-height: 35px;
+    img {
+      max-height: 55px;
+       margin-bottom: 0;
+    }
   }
 
   & .social {
     display: flex;
-    max-width: 158px;
+    /* max-width: 158px; */
     align-items: space-around;
-    padding-top: 15px;
+    /* padding-top: 15px; */
+    max-height: 35px;
+  }
+
+  & .results {
+    align-self: flex-end;
   }
 
   & .social__link + .social__link {
@@ -70,13 +79,19 @@ const SponsorBar = styled.div`
     }
 
     & .specialized {
-      padding-top: 15px;
+      /* padding-top: 15px; */
       max-width: 110px;
     }
 
-    & .cityCycle {
-      padding-top: 8px;
-      max-width: 61px;
+    & .citycycle {
+      /* padding-top: 8px; */
+      img {
+        max-height: 35px;
+      }
+    }
+
+    & .results {
+      display: none;
     }
   }
 `;
@@ -195,7 +210,7 @@ const Heading = styled.h3`
   }
 `;
 
-const RegButton = styled(Link)`
+const Button = styled(Link)`
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   display: block;
@@ -241,6 +256,24 @@ const RegButton = styled(Link)`
     font-size: 158px;
     margin-bottom: 44px;
   }
+`;
+
+const InternalLink = styled(Link)`
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 19px;
+  line-height: 23px;
+  color: var(--sucess-color);
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: var(--secondary-color);
+    /* -webkit-text-stroke: 0.8px black; */
+  }
+
+  transition: all 0.2s ease-in-out;
 `;
 
 const Accent = styled.span`
@@ -305,8 +338,11 @@ const FaqPage = () => {
                 <LogoTg className='social__logo' />
               </Link>
             </div>
+            <InternalLink className='results' to='/results'>
+              Результаты 2020
+            </InternalLink>
             <Link
-              className='cityCycle'
+              className='citycycle'
               to='https://citycycle.ru'
               target='blank'
             >
@@ -443,7 +479,7 @@ const FaqPage = () => {
             </div>
           </FaqContainer>
           <div style={{ maxWidth: "100%", overflow: "hidden" }}>
-            <RegButton to='/camp'>МАРШРУТ’20</RegButton>
+            <Button to='/results'>Результаты</Button>
           </div>
         </motion.div>
       </AnimatePresence>
