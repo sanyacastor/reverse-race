@@ -84,13 +84,13 @@ const StyledTable = styled.table`
     line-height: 23px;
     text-transform: uppercase;
     padding-bottom: 13px;
-    padding-right: 43px;
+    /* padding-right: 43px; */
   }
 
   @media (max-width: 780px) {
     font-size: 8.5px;
     line-height: 10px;
-    
+
     & th {
       font-size: 7px;
       line-height: 9px;
