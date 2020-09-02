@@ -130,9 +130,9 @@ const TableHeader = () => (
   </thead>
 );
 
-const User = (user) => (
+const User = ({user, index}) => (
   <>
-    <td>{user.place}</td>
+    <td>{index+1}</td>
     <td>{user.number}</td>
     <td>
       {user.firstName} {user.secondName}
@@ -149,7 +149,7 @@ const Category = ({ header, users, two }) => {
         <TableHeader />
         <tbody>
           {users.map((u, i) => (
-            <tr key={i}>{User(u)}</tr>
+            <tr key={i}>{<User user={u} index={i}/>}</tr>
           ))}
         </tbody>
       </StyledTable>
