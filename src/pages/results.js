@@ -87,6 +87,16 @@ const StyledTable = styled.table`
     padding-right: 43px;
   }
 
+  @media (max-width: 780px) {
+    font-size: 8.5px;
+    line-height: 10px;
+    
+    & th {
+      font-size: 7px;
+      line-height: 9px;
+    }
+  }
+
   & td {
     padding-top: 0;
     margin-bottom: 7px;
