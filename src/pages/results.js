@@ -25,6 +25,10 @@ const ResultsContainer = styled.section`
   padding-left: 35px;
   padding-top: 22px;
   margin-bottom: 28px;
+
+   @media (max-width: 780px) {
+   padding-left: 14px;
+  }
 `;
 
 const Header2 = styled.h2`
@@ -84,7 +88,8 @@ const StyledTable = styled.table`
     line-height: 23px;
     text-transform: uppercase;
     padding-bottom: 13px;
-    /* padding-right: 43px; */
+    padding-right: 43px;
+    
   }
 
   @media (max-width: 780px) {
@@ -94,6 +99,7 @@ const StyledTable = styled.table`
     & th {
       font-size: 7px;
       line-height: 9px;
+      padding-right: 0;
     }
   }
 
