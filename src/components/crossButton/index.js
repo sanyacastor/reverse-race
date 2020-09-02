@@ -14,6 +14,7 @@ const CloseButton = styled.div`
   border: none;
   outline: none;
   cursor: pointer;
+  transition: all 0.1s ease-in;
 
   &:before,
   &:after {
