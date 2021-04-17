@@ -6,9 +6,11 @@ const NavBar = styled.nav`
   position: absolute;
   display: flex;
   width: 100%;
-  padding-top: 21px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   padding-left: 41px;
   padding-right: 41px;
+  background: #000;
 
    & .results {
      display: none;
@@ -31,7 +33,6 @@ const NavBar = styled.nav`
     &:hover,
     &:focus {
       color: var(--secondary-color);
-      -webkit-text-stroke: 0.8px black;
     }
 
     transition: all 0.2s ease-in-out;
@@ -59,16 +60,16 @@ const NavBar = styled.nav`
 const Header = () => (
   <header>
     <NavBar>
-      <Link>Reverse side of the road 21 – 23.08.2020</Link>
+      <Link>Reverse side of the road 21 – 23.08.2021</Link>
       <Link className='faq' to='#faq'>
         Faq
       </Link>
-      <Link className='camp' to='/camp'>
-        Маршрут 2020
+      {/* <Link className='camp' to='/camp'>
+        Маршрут 202
       </Link>
       <Link className='results' to='/results'>
         Результаты 2020
-      </Link>
+      </Link> */}
     </NavBar>
   </header>
 );

@@ -33,7 +33,7 @@ const ResultsContainer = styled.section`
 
 const Header2 = styled.h2`
   display: block;
-  weight: 100%;
+  width: 100%;
   margin-left: 0;
   padding-left: 0;
   font-family: "Montserrat", sans-serif;
@@ -53,7 +53,7 @@ const Header2 = styled.h2`
 
 const Header3 = styled.h3`
   display: block;
-  weight: 100%;
+  width: 100%;
   margin-left: 0;
   padding-left: 0;
   font-family: "Montserrat", sans-serif;
