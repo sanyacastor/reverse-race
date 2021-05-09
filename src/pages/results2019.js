@@ -7,9 +7,9 @@ import SEO from "../components/seo";
 import Layout from "../components/layout";
 import CrossButton from "../components/crossButton";
 
-import JSONMulti from "../JSONData/ResultsMulti.json";
-import JSONAll from "../JSONData/ResultsOther.json";
-import JSONSmall from "../JSONData/Results73.json";
+import JSONMulti from "../JSONData/ResultsMulti19.json";
+import JSONAll from "../JSONData/ResultsOther19.json";
+// import JSONSmall from "../JSONData/Results73.json";
 
 const ResultsContainer = styled.section`
   display: flex;
@@ -181,13 +181,14 @@ const ResultsPage = () => {
             transition={{ duration: 0.4 }}
           >
             <ResultsContainer>
-              <Header2>Результаты 2020</Header2>
+              <Header2>РЕзультаты 2019</Header2>
               <Category header='Мультиспид муж.' users={JSONMulti} />
               <Category header='Мультиспид жен.' users={JSONAll.multiW} />
               <Category header='Фикс муж.' users={JSONAll.fixedM} />
               <Category header='Фикс жен.' users={JSONAll.fixedW} />
-              <Category header='сингл' users={JSONAll.singleM} />
-              <Category header='73км' users={JSONSmall} two />
+              <Category header='сингл муж.' users={JSONAll.singleM} />
+              <Category header='сингл жен.' users={JSONAll.singleW} />
+              {/* <Category header='73км' users={JSONSmall} two />  */}
             </ResultsContainer>
           </motion.div>
         )}
@@ -197,12 +198,3 @@ const ResultsPage = () => {
 };
 
 export default ResultsPage;
-
-
-// let final = initial.map(u => {
-//   let newObj = {...u}
-//     newObj['firstName'] = newObj['name'].split(' ')[1]
-//     newObj['secondName'] = newObj['name'].split(' ')[0]
-//     delete newObj.name;
-//   return newObj
-// })
