@@ -1,12 +1,11 @@
 import axios from "axios";
 
-const baseUrl = "https://api.reg.place/v1"; // events/reverse-side-of-the-road
-
+const baseUrl = "https://api.reg.place/v1"; // events/reverse-side-of-the-road-2021
 const getRaceId = (u) => {
-  if (u.distance === "short") return 4820;
-  if (u.distance === "long" && u.category === "multi") return 4817;
-  if (u.distance === "long" && u.category === "single") return 4818;
-  if (u.distance === "long" && u.category === "fix") return 4819;
+  if (u.distance === "short") return 6307;
+  if (u.distance === "long" && u.category === "multi") return 6308;
+  if (u.distance === "long" && u.category === "single") return 6305;
+  if (u.distance === "long" && u.category === "fix") return 6306;
 };
 
 const getUserdata = (user) => {
@@ -19,7 +18,7 @@ const getUserdata = (user) => {
       "personal.name_first": user.firstName,
       "personal.birthday": "1999-01-01",
       "personal.gender": user.gen,
-      "porsonal.category": "test",
+      "porsonal.category": user.category,
       "contacts.phone": user.phone,
       "contacts.email": user.email,
     },
@@ -46,6 +45,7 @@ export const addHeat = async (user) => {
     if (res.data.status === "success") {
       return res.data.heat.payment_url;
     } else if (res.data.status === "error") {
+      console.log('????', res)
       throw new Error(res.data.message);
     }
   } catch (e) {

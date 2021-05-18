@@ -12,7 +12,7 @@ const Container = styled.section`
   max-height: 100vh;
   background: var(--main-color);
   color: var(--secondary-color);
-  padding: 20px 130px;
+  padding: 20px 30px;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 900;
@@ -21,9 +21,9 @@ const Container = styled.section`
   color: var(--secondary-color);
   overflow: auto;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 780px) {
     /* padding: 54px 18px; */
-    padding: 20px 130px;
+    padding: 14px;
     /* padding-right: 41px; */
   }
 `;
