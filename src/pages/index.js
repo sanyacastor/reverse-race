@@ -10,6 +10,7 @@ import SwiperCore, { Thumbs } from "swiper";
 
 import Header from "../components/header";
 import Layout from "../components/layout";
+import YearMovie from "../components/yearMovie";
 import SliderPortal from "../components/SliderPortal";
 import P5 from "../components/p5.js";
 
@@ -109,12 +110,17 @@ const SponsorBar = styled.div`
 
 const InlineLink = styled.a`
   font-weight: 900;
+  /* font-size: 19px; */
   font-size: var(--font-size-s);
   /* line-height: 23px; */
   text-decoration-line: underline;
   text-transform: uppercase;
   color: #bc9b16;
   cursor: pointer;
+
+  @media (min-width: 780px) {
+    /* font-size: var(--font-size-s); */
+  }
 `;
 
 const Email = styled.a`
@@ -132,15 +138,24 @@ const Lead = styled.div`
   padding-bottom: 0;
 
   @media (min-width: 780px) {
-    grid-column: 3/5;
+    grid-column: 4/5;
     grid-row: 2/3;
     padding-bottom: 350px;
   }
 `;
 
 const FaqContainer = styled.section`
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 14px 1fr 14px;
+  transition: all 320ms ease;
+  border-top: ${(props) => (props.bordered ? "1.6px solid #fff" : "none")};
+
+  @media (min-width: 780px) {
+    grid-template-columns: 40px 1fr 40px 2fr 40px;
+    grid-template-rows: 30px max-content 37px;
+    border-top: ${(props) => (props.bordered ? "4.5px solid #fff" : "none")};
+  }
+
   overflow-y: hidden;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
@@ -156,6 +171,9 @@ const FaqContainer = styled.section`
     max-width: 828px;
     padding-top: 3.2em;
     line-height: 146%;
+    grid-column: 4/5;
+    grid-row: 2/3;
+    color: #fff;
   }
 
   & .mb {
@@ -165,6 +183,8 @@ const FaqContainer = styled.section`
   }
 
   & .aside {
+    grid-column: 1/3;
+    grid-row: 2/3;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -187,7 +207,6 @@ const FaqContainer = styled.section`
 
     @media (max-width: 780px) {
       margin-bottom: 0;
-      line-height: 9px;
     }
   }
 
@@ -207,7 +226,6 @@ const FaqContainer = styled.section`
     flex-direction: column;
     font-size: var(--font-size-s);
     padding-right: 14px;
-    line-height: 9px;
 
     & .aside {
       max-width: 100%;
@@ -249,7 +267,7 @@ const Heading = styled.h3`
 
   @media (max-width: 780px) {
     font-size: var(--font-size-s);
-    line-height: 9px;
+
     font-weight: 900;
   }
 `;
@@ -279,6 +297,9 @@ const Founders = styled.div`
   }
   & .mobile {
     display: none;
+  }
+  & .col-1 {
+    text-align: left;
   }
 
   & .col-2 .mobile {
@@ -358,6 +379,7 @@ const InternalLink = styled(Link)`
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
+  width: 33%;
 
   &:hover,
   &:focus {
@@ -390,23 +412,28 @@ const Container = styled.div`
   }
 `;
 
-const YearGallery = styled.div`
+const YearGallery = styled.ul`
   height: 100%;
   color: #fff;
   display: grid;
   grid-row: 2/4;
   grid-column: 1/4;
   grid-template-columns: repeat(2, 50%);
+  margin: 0;
+  padding: 0;
 
   & .thumb {
     overflow: hidden;
     cursor: pointer;
+    padding: 0;
+    margin: 0;
   }
   & .thumb:hover .gatsby-image-wrapper {
     transform: scale(1.2);
   }
   & .gatsby-image-wrapper {
     height: 100%;
+    transform: scale(1.1);
     transition: all 150ms ease-in-out;
   }
 
@@ -416,6 +443,8 @@ const YearGallery = styled.div`
     grid-row: 1/4;
   }
 `;
+
+// const YearMovie = styled.div``;
 
 const YearTitle = styled.div`
   color: #fff;
@@ -436,7 +465,7 @@ const YearTitle = styled.div`
   & .year__wrapper,
   & .year__wrapper a {
     margin-bottom: 0;
-    transition: color 250ms ease;
+    /* transition: color 250ms ease; */
   }
   & .year__wrapper:hover,
   & .year__wrapper:hover a {
@@ -492,6 +521,8 @@ const YearDescription = styled.div`
 
 const YearLinks = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   flex-direction: column;
   margin-top: 30px;
   font-size: var(--font-size-s);
@@ -503,7 +534,7 @@ const YearLinks = styled.div`
 
   @media (min-width: 780px) {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-top: ${(props) => (props.mt ? props.mt + "px" : "0")};
 
     & a {
@@ -520,7 +551,7 @@ const Accordion = styled.section`
 const Collapsed = styled.div`
   max-height: ${(props) => (props.hide ? "5000px" : "0px")};
   opacity: ${(props) => (props.hide ? "1" : "0")};
-  transition: all 250ms ease;
+  /* transition: all 250ms ease; */
 `;
 
 const YearFact = styled(Container)`
@@ -651,9 +682,19 @@ const FaqPage = (props) => {
   const [currentSlide, setCurrentSlide] = useState(null);
   const [collapsed, setCollapsed] = useState([0, 0, 0, 0]);
 
+  const [currentVideo, setCurrentVideo] = useState(null);
+  const [videoPopup, setVideoPopup] = useState(false);
+
   const showGallery = (y) => {
     setVisible(true);
     setCurrentYear(y);
+  };
+  const showVideoPopup = (y) => {
+    setVideoPopup(true);
+    setCurrentVideo(y);
+  };
+  const closeVideoPopup = (y) => {
+    setVideoPopup(false);
   };
   const closeGallery = () => {
     setVisible(false);
@@ -663,7 +704,7 @@ const FaqPage = (props) => {
     setCollapsed(state);
     setTimeout(() => {
       sections[n].current.scrollIntoView();
-    }, 500);
+    }, 150);
   };
 
   return (
@@ -725,7 +766,7 @@ const FaqPage = (props) => {
             </Lead>
           </Container>
           {/* YEAR 2020 */}
-          <Accordion ref={s1}>
+          <Accordion ref={s1} id="history">
             <Container bordered>
               <YearTitle onClick={() => handleYearSelect([1, 0, 0, 0], 0)}>
                 <p className="year__wrapper">
@@ -735,6 +776,31 @@ const FaqPage = (props) => {
                 </p>
               </YearTitle>
               <YearGallery>
+                {/* {videoPopup && currentVideo === 2020 && (
+                  <YearMovie
+                    iframeData={{
+                      width: 674,
+                      height: 379,
+                      src: "https://www.youtube.com/embed/wl2ul3yP4y0",
+                      title: "YouTube video player",
+                      frameborder: "0",
+                      allow:
+                        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+                      allowfullscreen: true,
+                    }}
+                    close={() => closeVideoPopup()}
+                  />
+                )}
+                <li
+                  className="thumb"
+                  onClick={() => {
+                    showVideoPopup(2020);
+                  }}
+                >
+                  <img
+                    src={`http://i3.ytimg.com/vi/wl2ul3yP4y0/maxresdefault.jpg`}
+                  />
+                </li> */}
                 {slides2020.edges.map((s, ndx) => {
                   return (
                     <div
@@ -779,73 +845,111 @@ const FaqPage = (props) => {
                   пробираться через реки, поля, леса и пересекать границу России
                   и Белоруссии. Дальнейшие события описываются двумя словами –
                   Гревел Дэнс. Легендарная «карельская тройка» стала пятеркой:{" "}
-                  <InlineLink to="#" target="blank">
+                  <InlineLink
+                    href="https://soundcloud.com/renks"
+                    target="_blank"
+                  >
                     Renks
                   </InlineLink>
                   ,{" "}
-                  <InlineLink to="#" target="blank">
-                    {" "}
+                  <InlineLink
+                    href="https://soundcloud.com/solid_angle"
+                    target="_blank"
+                  >
                     Solid Angle
                   </InlineLink>
                   ,{" "}
-                  <InlineLink to="#" target="blank">
+                  <InlineLink
+                    href="https://soundcloud.com/egest_music"
+                    target="_blank"
+                  >
                     e.Gest
                   </InlineLink>
                   ,{" "}
-                  <InlineLink to="#" target="blank">
+                  <InlineLink
+                    href="https://soundcloud.com/ptzoid"
+                    target="_blank"
+                  >
                     Ptzoid
                   </InlineLink>
                   ,{" "}
-                  <InlineLink to="#" target="blank">
+                  <InlineLink
+                    href="https://soundcloud.com/sfriedt"
+                    target="_blank"
+                  >
                     S.Friedt
                   </InlineLink>
                   . Рокешник от{" "}
-                  <InlineLink to="#" target="blank">
+                  <InlineLink href="#" target="_blank">
                     R.A.W.S.
                   </InlineLink>
                   . И, возможно, такого вы больше никогда не увидите, а те, кто
                   видел, будут рассказывать своим детям: группа{" "}
-                  <InlineLink to="#" target="blank">
+                  <InlineLink href="#" target="_blank">
                     ТРОЯР
                   </InlineLink>
                   ! Год был богат на крупные коллаборации. Специально для
                   Reverse Side of The Road 2020 пивоварня{" "}
-                  <InlineLink to="#" target="blank">
+                  <InlineLink href="http://paradox.beer/" target="_blank">
                     Paradox
                   </InlineLink>{" "}
                   сварила смородиновое гозе,{" "}
-                  <InlineLink to="#" target="blank">
+                  <InlineLink href="https://goshaorekhov.com/" target="_blank">
                     Гоша Орехов
                   </InlineLink>{" "}
                   сделал партию сумок с нашим дизайном, а{" "}
-                  <InlineLink to="#" target="blank">
+                  <InlineLink href="https://russianraketa.com/" target="_blank">
                     Russian Raketa
                   </InlineLink>{" "}
                   – стильные колеса и звезды. Гонку поддержали{" "}
-                  <InlineLink to="#" target="blank">
+                  <InlineLink
+                    href="https://www.specialized.com/ru/en"
+                    target="_blank"
+                  >
                     Specialized
-                  </InlineLink>{" "}
-                  и{" "}
-                  <InlineLink to="#" target="blank">
+                  </InlineLink>
+                  {" и "}
+                  <InlineLink href="https://citycycle.ru/" target="_blank">
                     CityCycle Moscow
                   </InlineLink>
                   , была выпущена большая партия фляг{" "}
-                  <InlineLink to="#" target="blank">
+                  <InlineLink
+                    href="http://www.specializedwaterbottles.com/water-bottles/the-purist"
+                    target="_blank"
+                  >
                     Purist
                   </InlineLink>{" "}
                   с символикой RSRS. Уже не первый год за дизайн в рамках
                   коллабораций и айдентику гонки отвечает студия{" "}
-                  <InlineLink to="#" target="blank">
+                  <InlineLink
+                    href="https://www.instagram.com/shoplift_x_88/"
+                    target="_blank"
+                  >
                     SHOPLIFT DESIGN
                   </InlineLink>
                   . Есть такое выражение: brother from another mother – и это
                   как раз про гонку и SHOPLIFT DESIGN. Лучшее сотрудничество за
                   всю нашу историю.
                   <YearLinks mt={42}>
-                    <InternalLink>трэк трассы 80км</InternalLink>
-                    <InternalLink>трэк трассы 150км</InternalLink>
-                    <InternalLink>плейлист</InternalLink>
+                    <InternalLink
+                      href="https://www.komoot.com/tour/226519873"
+                      target="blank"
+                    >
+                      трэк трассы 80км
+                    </InternalLink>
+                    <InternalLink
+                      href="https://www.komoot.com/tour/209550872"
+                      target="blank"
+                    >
+                      трэк трассы 150км
+                    </InternalLink>
+                    <InternalLink href="https://open.spotify.com/playlist/46zXP0yXBNJBvXsNTj3zDq?si=091ee98c8dd94fc9&nd=1">
+                      плейлист Solid Angle
+                    </InternalLink>
                     <br />
+                    <InternalLink href="https://open.spotify.com/playlist/68VPWMDq4gSAnKKVXvYsOa?si=215240c5840942dc&nd=1">
+                      плейлист E.gest
+                    </InternalLink>
                     <InternalLink>таблица результатов</InternalLink>
                   </YearLinks>
                 </YearDescription>
@@ -891,7 +995,7 @@ const FaqPage = (props) => {
               <YearFact bordered>
                 <div className="fact__wrapper">
                   <div className="fact__name">победитель</div>
-                  <div className="fact__value">Иван Шалахов</div>
+                  <div className="fact__value">Николай Миловидов</div>
                 </div>
                 <div className="fact__col-1">
                   <h2 className="fact__list-title">мультиспид</h2>
@@ -947,6 +1051,31 @@ const FaqPage = (props) => {
                 </p>
               </YearTitle>
               <YearGallery>
+                {videoPopup && currentVideo === 2019 && (
+                  <YearMovie
+                    iframeData={{
+                      width: 674,
+                      height: 379,
+                      src: "https://www.youtube.com/embed/wl2ul3yP4y0",
+                      title: "YouTube video player",
+                      frameborder: "0",
+                      allow:
+                        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+                      allowfullscreen: true,
+                    }}
+                    close={() => closeVideoPopup()}
+                  />
+                )}
+                <li
+                  className="thumb video"
+                  onClick={() => {
+                    showVideoPopup(2019);
+                  }}
+                >
+                  <img
+                    src={`http://i3.ytimg.com/vi/wl2ul3yP4y0/maxresdefault.jpg`}
+                  />
+                </li>
                 {slides2019.edges.map((s, ndx) => {
                   return (
                     <div
@@ -989,9 +1118,24 @@ const FaqPage = (props) => {
                   спирт – и его опять было недостаточно. Reverse всегда будет не
                   только гонкой.
                   <YearLinks mt={205}>
-                    <InternalLink>трэк трассы</InternalLink>
-                    <InternalLink>плейлист</InternalLink>
-                    <InternalLink>таблица результатов</InternalLink>
+                    <InternalLink
+                      href="https://www.strava.com/routes/19478321"
+                      target="_blank"
+                    >
+                      трэк трассы
+                    </InternalLink>
+                    <InternalLink
+                      href="https://open.spotify.com/playlist/6VyWLlQBrgNsvmdWSpoRzu?si=c4ace86ddd4845d4"
+                      target="_blank"
+                    >
+                      плейлист
+                    </InternalLink>
+                    <InternalLink
+                      href="https://www.strava.com/routes/19478321"
+                      target="_blank"
+                    >
+                      таблица результатов
+                    </InternalLink>
                   </YearLinks>
                 </YearDescription>
               </Container>
@@ -1080,9 +1224,34 @@ const FaqPage = (props) => {
                 </p>
               </YearTitle>
               <YearGallery>
+                {videoPopup && currentVideo === 2018 && (
+                  <YearMovie
+                    iframeData={{
+                      width: 674,
+                      height: 379,
+                      src: "https://player.vimeo.com/video/323116347",
+                      title: "vimeo-player",
+                      frameborder: "0",
+                      allow:
+                        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+                      allowfullscreen: true,
+                    }}
+                    close={() => closeVideoPopup()}
+                  />
+                )}
+                <li
+                  className="thumb"
+                  onClick={() => {
+                    showVideoPopup(2018);
+                  }}
+                >
+                  <img
+                    src={`https://i.vimeocdn.com/video/766071458?mw=960&mh=540`}
+                  />
+                </li>
                 {slides2018.edges.map((s, ndx) => {
                   return (
-                    <div
+                    <li
                       className="thumb"
                       onClick={() => {
                         setCurrentSlide(ndx);
@@ -1092,7 +1261,7 @@ const FaqPage = (props) => {
                       <GatsbyImage
                         image={s.node.childImageSharp.gatsbyImageData}
                       />
-                    </div>
+                    </li>
                   );
                 })}
               </YearGallery>
@@ -1125,8 +1294,15 @@ const FaqPage = (props) => {
                   каждого «Реверса» уникальна, и ее эпизоды – именно то, что
                   вспоминается и обсуждается весь следующий год.
                   <YearLinks mt={52}>
-                    <InternalLink>трэк трассы</InternalLink>
-                    <InternalLink>плейлист</InternalLink>
+                    <InternalLink
+                      href="https://www.komoot.com/tour/386899833"
+                      target="_blank"
+                    >
+                      трэк трассы
+                    </InternalLink>
+                    <InternalLink href="" target="_blank">
+                      плейлист
+                    </InternalLink>
                     <InternalLink>таблица результатов</InternalLink>
                   </YearLinks>
                 </YearDescription>
@@ -1209,6 +1385,31 @@ const FaqPage = (props) => {
                 </p>
               </YearTitle>
               <YearGallery>
+                {/* {videoPopup && currentVideo === 2017 && (
+                  <YearMovie
+                    iframeData={{
+                      width: 674,
+                      height: 379,
+                      src: "https://www.youtube.com/embed/A0CfYSVzAZI",
+                      title: "YouTube video player",
+                      frameborder: "0",
+                      allow:
+                        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+                      allowfullscreen: true,
+                    }}
+                    close={() => closeVideoPopup()}
+                  />
+                )}
+                <li
+                  className="thumb"
+                  onClick={() => {
+                    showVideoPopup(2017);
+                  }}
+                >
+                  <img
+                    src={`http://i3.ytimg.com/vi/A0CfYSVzAZI/maxresdefault.jpg`}
+                  />
+                </li> */}
                 {slides2017.edges.map((s, ndx) => {
                   return (
                     <div
@@ -1258,7 +1459,12 @@ const FaqPage = (props) => {
                   судьбу гонки, а участники начали вносить дату «Гревел Кинга» в
                   свои календари загодя.
                   <YearLinks mt={42}>
-                    <InternalLink>трэк трассы</InternalLink>
+                    <InternalLink
+                      href="https://www.komoot.com/tour/386898784"
+                      target="_blank"
+                    >
+                      трэк трассы
+                    </InternalLink>
                     <InternalLink>плейлист</InternalLink>
                     <InternalLink>таблица результатов</InternalLink>
                   </YearLinks>
@@ -1330,7 +1536,7 @@ const FaqPage = (props) => {
               </YearFact>
             </Collapsed>
           </Accordion>
-          <FaqContainer id="faq">
+          <FaqContainer id="faq" bordered>
             <div className="aside">
               <span className="aside__letter">F</span>
               <span className="aside__letter">A</span>
@@ -1459,9 +1665,9 @@ const FaqPage = (props) => {
               <Text>Определенно да.</Text>
             </div>
           </FaqContainer>
-          <div style={{ maxWidth: "100%", overflow: "hidden" }}>
+          {/* <div style={{ maxWidth: "100%", overflow: "hidden" }}>
             <Button to="/results">Результаты</Button>
-          </div>
+          </div> */}
           <Container>
             <div className="logo-wrapper">
               <img src={LogoRR} />
@@ -1469,7 +1675,7 @@ const FaqPage = (props) => {
           </Container>
           <Container>
             <Founders>
-              <div className="col-1">
+              <div className="col-1" id="founders">
                 <span className="desktop">
                   Александр бочков — организация гонки.
                 </span>

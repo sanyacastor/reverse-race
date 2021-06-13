@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
 
+import BurgerMenu from '../components/burgerMenu'
+
 const NavBar = styled.nav`
   position: absolute;
   display: flex;
@@ -26,8 +28,8 @@ const NavBar = styled.nav`
     text-decoration: none;
 
     &:nth-child(2) {
-      margin-left: auto;
-      margin-right: 2.3em;
+      margin-left: 6.5em;
+      margin-right: 6.5em;
     }
 
     &:hover,
@@ -60,16 +62,17 @@ const NavBar = styled.nav`
 const Header = () => (
   <header>
     <NavBar>
-      <Link>Reverse side of the road 21 – 23.08.2021</Link>
-      <Link className='faq' to='#faq'>
+      <Link>Reverse side of the road 16 - 18.08.2021</Link>
+      {/* <Link className='faq' to='#faq'>
         Faq
-      </Link>
-      {/* <Link className='camp' to='/camp'>
-        Маршрут 202
-      </Link>
-      <Link className='results' to='/results'>
-        Результаты 2020
       </Link> */}
+      {/* <Link className='shop' to='/shop'>
+        Магазин
+      </Link> */}
+      {/* <Link className='registration' to='/registration'>
+        Регистрация
+      </Link> */}
+      <BurgerMenu/>
     </NavBar>
   </header>
 );
