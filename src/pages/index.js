@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import { Link, graphql } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import { motion, AnimatePresence } from "framer-motion";
 import Div100vh from "react-div-100vh";
 import SEO from "../components/seo";
@@ -428,6 +428,11 @@ const YearGallery = styled.ul`
     padding: 0;
     margin: 0;
   }
+  & .thumb.video img {
+    transform: scale(1.1);
+    transition: all 150ms ease-in-out;
+  }
+  & .thumb.video:hover img,
   & .thumb:hover .gatsby-image-wrapper {
     transform: scale(1.2);
   }
@@ -443,8 +448,6 @@ const YearGallery = styled.ul`
     grid-row: 1/4;
   }
 `;
-
-// const YearMovie = styled.div``;
 
 const YearTitle = styled.div`
   color: #fff;
@@ -1240,7 +1243,7 @@ const FaqPage = (props) => {
                   />
                 )}
                 <li
-                  className="thumb"
+                  className="thumb video"
                   onClick={() => {
                     showVideoPopup(2018);
                   }}

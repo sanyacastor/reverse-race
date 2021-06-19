@@ -69,9 +69,9 @@ const Header = () => (
       {/* <Link className='shop' to='/shop'>
         Магазин
       </Link> */}
-      {/* <Link className='registration' to='/registration'>
+      <Link className='registration' to='/registration'>
         Регистрация
-      </Link> */}
+      </Link>
       <BurgerMenu/>
     </NavBar>
   </header>
