@@ -10,17 +10,16 @@ import RowLabel from "../components/rowLabel";
 import Layout from "./layout";
 
 const Container = styled.div`
-  margin-top: ${(props) => props.mt + "px"};
+  margin-top: 94px;
   color: #fff;
   display: grid;
   grid-template-columns: 14px 1fr 14px;
   transition: all 320ms ease;
-  border-top: ${(props) => (props.bordered ? "1.6px solid #fff" : "none")};
 
   @media (min-width: 780px) {
+    margin-top: ${(props) => props.mt + "px"};
     grid-template-columns: 40px 1fr 40px 2fr 40px;
     grid-template-rows: 30px max-content;
-    border-top: ${(props) => (props.bordered ? "4.5px solid #fff" : "none")};
   }
 
   & fieldset {
@@ -36,8 +35,12 @@ const List = styled.ul`
   font-size: var(--font-size-s);
   line-height: 23px;
   margin-left: 0;
+  margin-bottom: 73px;
   & li {
     margin-bottom: 0;
+  }
+  @media (min-width: 780px) {
+    margin-bottom: 38px;
   }
 `;
 
@@ -69,7 +72,7 @@ const DonateButton = styled.a`
   text-align: center;
   text-transform: uppercase;
   padding-top: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 11px;
   background: white;
   font-size: var(--font-size-m);
   font-weight: 900;
@@ -78,7 +81,12 @@ const DonateButton = styled.a`
   margin-top: 16px;
   cursor: pointer;
   text-decoration: none;
-  margin-top: 128px;
+  margin-bottom: -60px;
+
+  @media (min-width: 780px) {
+    margin-top: 128px;
+    padding-bottom: 20px;
+  }
 `;
 
 const NextButton = styled.button`
@@ -100,13 +108,21 @@ const NextButton = styled.button`
 const Price = styled.span`
   color: #bc9b16;
   position: absolute;
-  right: 42px;
+  bottom: 17px;
+  @media (min-width: 780px) {
+    top: 21px;
+    right: 42px;
+  }
 `;
 
 const StepForm = styled.form`
   grid-row: 2/3;
   grid-column: 1/6;
-  border-top: 4px solid var(--secondary-color);
+  border-top: 1.6px solid var(--secondary-color);
+
+  @media (min-width: 780px) {
+    border-top: 4.5px solid var(--secondary-color);
+  }
 `;
 
 const FirstStep = ({ nextStepHandler, updateHandler }) => {
