@@ -103,6 +103,20 @@ const NextButton = styled.button`
     1px 1px 0 #000;
   text-transform: uppercase;
   cursor: pointer;
+
+  & :disabled {
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2), 1px -1px 0 rgba(0, 0, 0, 0.2),
+      -1px 1px 0 rgba(0, 0, 0, 0.2), 1px 1px 0 rgba(0, 0, 0, 0.2);
+    color: #fff;
+  }
+  &[disabled]:hover {
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2), 1px -1px 0 rgba(0, 0, 0, 0.2),
+      -1px 1px 0 rgba(0, 0, 0, 0.2), 1px 1px 0 rgba(0, 0, 0, 0.2);
+    color: #fff;
+  }
+  & :hover {
+    color: #000;
+  }
 `;
 
 const Price = styled.span`
@@ -144,10 +158,11 @@ const FirstStep = ({ nextStepHandler, updateHandler }) => {
   );
 
   const [pack, setPack] = useState();
-  const [size, setSize] = useState();
+  const [size, setSize] = useState("");
 
   const submitStepHandler = (e) => {
     e.preventDefault();
+    updateHandler({ pack, size });
     nextStepHandler();
   };
 
@@ -248,7 +263,13 @@ const FirstStep = ({ nextStepHandler, updateHandler }) => {
               </fieldset>
             </Row>
           )}
-          <NextButton>Выбрать</NextButton>
+          <NextButton
+            disabled={
+              !((pack === "supporter" && size.length) || pack === "starter")
+            }
+          >
+            Выбрать
+          </NextButton>
         </StepForm>
       </Container>
     </Layout>

@@ -163,7 +163,6 @@ const FaqContainer = styled.section`
   /* line-height: 23px; */
   font-weight: 500;
   color: var(--secondary-color);
-  padding-right: 41px;
   border-top: 4.5px solid #fff;
 
   & .text {
@@ -171,9 +170,13 @@ const FaqContainer = styled.section`
     max-width: 828px;
     padding-top: 3.2em;
     line-height: 146%;
-    grid-column: 4/5;
+    grid-column: 2/3;
     grid-row: 2/3;
     color: #fff;
+    @media (min-width: 780px) {
+      grid-column: 4/5;
+      grid-row: 2/3;
+    }
   }
 
   & .mb {
@@ -184,7 +187,6 @@ const FaqContainer = styled.section`
 
   & .aside {
     grid-column: 1/3;
-    grid-row: 2/3;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -199,6 +201,11 @@ const FaqContainer = styled.section`
     line-height: 1;
     text-transform: uppercase;
     color: var(--secondary-color);
+
+    @media (min-width: 780px) {
+      grid-column: 2/3;
+      grid-row: 2/3;
+    }
   }
 
   & .aside__letter:first-child {

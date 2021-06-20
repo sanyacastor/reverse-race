@@ -41,11 +41,10 @@ export const addHeat = async (user) => {
 
   try {
     let res = await axios(options);
-    
+
     if (res.data.status === "success") {
       return res.data.heat.payment_url;
     } else if (res.data.status === "error") {
-      console.log('????', res)
       throw new Error(res.data.message);
     }
   } catch (e) {

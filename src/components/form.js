@@ -3,6 +3,7 @@ import { Formik, Form, Field } from "formik";
 import { motion, AnimatePresence } from "framer-motion";
 import * as yup from "yup";
 import { navigate } from "gatsby";
+import { createNewUser } from "../servicies/fauna";
 
 import Input from "./input";
 import Radio from "./radio";
@@ -64,31 +65,31 @@ const renderForm = (setVisible, formSubmitHandler) => (
         <Field
           value={values.firstName}
           as={Input}
-          type='input'
-          name='firstName'
-          title='имя'
+          type="input"
+          name="firstName"
+          title="имя"
           faded
         />
         <Field
           value={values.lastName}
           as={Input}
-          name='lastName'
-          title='фамилия'
+          name="lastName"
+          title="фамилия"
           faded
         />
 
         <Field
           value={values.email}
           as={Input}
-          name='email'
-          title='e-mail'
+          name="email"
+          title="e-mail"
           faded={true}
         />
         <Field
           value={values.phone}
           as={Input}
-          name='phone'
-          title='телефон'
+          name="phone"
+          title="телефон"
           faded={true}
         />
 
@@ -100,17 +101,17 @@ const renderForm = (setVisible, formSubmitHandler) => (
           <RowLabel>Пол</RowLabel>
           <Field
             as={Radio}
-            name='gen'
-            type='radio'
-            value='male'
-            title='Мужской'
+            name="gen"
+            type="radio"
+            value="male"
+            title="Мужской"
           />
           <Field
             as={Radio}
-            name='gen'
-            type='radio'
-            value='female'
-            title='Женский'
+            name="gen"
+            type="radio"
+            value="female"
+            title="Женский"
           />
         </Row>
 
@@ -123,17 +124,17 @@ const renderForm = (setVisible, formSubmitHandler) => (
           <RowLabel>Дистанция</RowLabel>
           <Field
             as={Radio}
-            name='distance'
-            type='radio'
-            value='short'
-            title='Короткая'
+            name="distance"
+            type="radio"
+            value="short"
+            title="Короткая"
           />
           <Field
             as={Radio}
-            name='distance'
-            type='radio'
-            value='long'
-            title='Полная'
+            name="distance"
+            type="radio"
+            value="long"
+            title="Полная"
           />
         </Row>
 
@@ -147,50 +148,50 @@ const renderForm = (setVisible, formSubmitHandler) => (
             <RowLabel>Категория</RowLabel>
             <Field
               as={Radio}
-              name='category'
-              type='radio'
-              value='multi'
-              title='Мультиспид'
+              name="category"
+              type="radio"
+              value="multi"
+              title="Мультиспид"
             />
             <Field
               as={Radio}
-              name='category'
-              type='radio'
-              value='fix'
-              title='Фикс'
+              name="category"
+              type="radio"
+              value="fix"
+              title="Фикс"
             />
             <Field
               as={Radio}
-              name='category'
-              type='radio'
-              value='single'
-              title='Сингл'
+              name="category"
+              type="radio"
+              value="single"
+              title="Сингл"
             />
           </Row>
         )}
 
         <Field
           as={CheckBox}
-          title='мне есть 18 лет, мама знает где я, и'
-          label='я согласен/на на обработку персональных данных'
-          name='check'
-          type='checkbox'
+          title="мне есть 18 лет, мама знает где я, и"
+          label="я согласен/на на обработку персональных данных"
+          name="check"
+          type="checkbox"
           action={setVisible}
         />
 
         <Field
           as={CheckBox}
-          title='условия'
-          label='я ознакомлен/а с условиями участия'
-          name='terms'
-          type='checkbox'
+          title="условия"
+          label="я ознакомлен/а с условиями участия"
+          name="terms"
+          type="checkbox"
           action={setVisible}
         />
 
         <Button
-          type='submit'
-          title='перейти к оплате'
-          caption='ОК'
+          type="submit"
+          title="перейти к оплате"
+          caption="ОК"
           disabled={!values.isValid}
         />
       </Form>
@@ -198,12 +199,13 @@ const renderForm = (setVisible, formSubmitHandler) => (
   </Formik>
 );
 
-export default function RegistrationForm({ setVisible }) {
+export default function RegistrationForm({ setVisible, userPack }) {
   const [error, setError] = useState(null);
 
   const formSubmitHandler = async (user) => {
     try {
       let url = await addHeat(user);
+      createNewUser({ ...user, ...userPack });
       navigate(url);
     } catch (error) {
       setError(error.message);

@@ -16,6 +16,7 @@ import TermsOfUse from "../components/TermsOfUse.js";
 const RegistrationPage = () => {
   const [visible, setVisible] = useState(false);
   const [step, setStep] = useState(1);
+  const [pack, setPack] = useState({});
 
   const showModal = () => {
     setVisible(true);
@@ -40,11 +41,16 @@ const RegistrationPage = () => {
           exit={{ opacity: 0, y: -100 }}
           transition={{ duration: 0.2 }}
         >
-          {step === 1 && <FirstStep nextStepHandler={() => goToStep(2)} />}
+          {step === 1 && (
+            <FirstStep
+              nextStepHandler={() => goToStep(2)}
+              updateHandler={setPack}
+            />
+          )}
           {step === 2 && (
             <>
               <CrossButton action={() => navigate("/")} />
-              <RegistrationForm setVisible={showModal} />
+              <RegistrationForm setVisible={showModal} userPack={pack} />
               <Link to="/#faq" style={{ textDecoration: "none" }}>
                 <Button caption="FAQ" invert={true} p={0.1} />
               </Link>
