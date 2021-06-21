@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-
 import Portal from "./portal.js";
-import Slider from "./Slider.js";
-
 import CrossButton from "./crossButton";
 
 const Container = styled.section`
@@ -54,13 +51,7 @@ const ModalWindow = styled.div`
   overflow: auto;
 `;
 
-const PortalWrapper = styled.div`
-  display: none;
-`;
-
 const YearMovie = ({ close, iframeData }) => {
-  const [init, setInit] = useState(false);
-
   return (
     <Portal>
       <PortalOverlay>
@@ -101,15 +92,3 @@ const YearMovie = ({ close, iframeData }) => {
 };
 
 export default YearMovie;
-
-// style={{
-//   position: "relative",
-//   paddingBottom: "56.25%" /* 16:9 */,
-//   paddingTop: 25,
-//   height: 0,
-
-//   display: "flex",
-//   alignItems: "center",
-//   justifyContent: "center",
-//   border: "none",
-// }}

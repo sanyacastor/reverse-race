@@ -63,7 +63,6 @@ const SwiperContainer = styled.div`
 `;
 
 function Slider({ images, ndx }) {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [controlledSwiper, setControlledSwiper] = useState(null);
 
   const slides = [];

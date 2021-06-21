@@ -279,10 +279,6 @@ const Heading = styled.h3`
   }
 `;
 
-const SliderPortalWrapper = styled.div`
-  display: none;
-`;
-
 const Founders = styled.div`
   width: 100%;
   color: #fff;
@@ -668,7 +664,14 @@ const YearFact = styled(Container)`
 `;
 
 const FaqPage = (props) => {
-  const posters = props.data.posters.edges;
+  // console.log(":??", props.data.poster2017.edges);
+  // const posters = [
+  //   props.data.poster2017.edges,
+  //   props.data.poster2018.edges,
+  //   props.data.poster2019.edges,
+  //   props.data.poster2020.edges,
+  // ];
+
   const s1 = useRef(null);
   const s2 = useRef(null);
   const s3 = useRef(null);
@@ -815,6 +818,8 @@ const FaqPage = (props) => {
                   return (
                     <div
                       className="thumb"
+                      role="button"
+                      tabIndex="1"
                       onClick={() => {
                         setCurrentSlide(ndx);
                         showGallery(2020);
@@ -832,7 +837,10 @@ const FaqPage = (props) => {
               <Container bordered>
                 <YearPoster>
                   <GatsbyImage
-                    image={posters[2].node.childImageSharp.gatsbyImageData}
+                    image={
+                      props.data.poster2020.edges[0].node.childImageSharp
+                        .gatsbyImageData
+                    }
                   />
                 </YearPoster>
                 <YearDescription>
@@ -960,7 +968,7 @@ const FaqPage = (props) => {
                     <InternalLink href="https://open.spotify.com/playlist/68VPWMDq4gSAnKKVXvYsOa?si=215240c5840942dc&nd=1">
                       плейлист E.gest
                     </InternalLink>
-                    <InternalLink>таблица результатов</InternalLink>
+                    {/* <InternalLink>таблица результатов</InternalLink> */}
                   </YearLinks>
                 </YearDescription>
               </Container>
@@ -1078,6 +1086,8 @@ const FaqPage = (props) => {
                 )}
                 <li
                   className="thumb video"
+                  role="button"
+                  tabIndex="1"
                   onClick={() => {
                     showVideoPopup(2019);
                   }}
@@ -1090,6 +1100,8 @@ const FaqPage = (props) => {
                   return (
                     <div
                       className="thumb"
+                      role="button"
+                      tabIndex="1"
                       onClick={() => {
                         setCurrentSlide(ndx);
                         showGallery(2019);
@@ -1107,7 +1119,10 @@ const FaqPage = (props) => {
               <Container bordered>
                 <YearPoster>
                   <GatsbyImage
-                    image={posters[3].node.childImageSharp.gatsbyImageData}
+                    image={
+                      props.data.poster2019.edges[0].node.childImageSharp
+                        .gatsbyImageData
+                    }
                   />
                 </YearPoster>
                 <YearDescription>
@@ -1140,12 +1155,10 @@ const FaqPage = (props) => {
                     >
                       плейлист
                     </InternalLink>
-                    <InternalLink
-                      href="https://www.strava.com/routes/19478321"
-                      target="_blank"
+                    {/* <InternalLink
                     >
                       таблица результатов
-                    </InternalLink>
+                    </InternalLink> */}
                   </YearLinks>
                 </YearDescription>
               </Container>
@@ -1251,6 +1264,8 @@ const FaqPage = (props) => {
                 )}
                 <li
                   className="thumb video"
+                  role="button"
+                  tabIndex="1"
                   onClick={() => {
                     showVideoPopup(2018);
                   }}
@@ -1263,6 +1278,8 @@ const FaqPage = (props) => {
                   return (
                     <li
                       className="thumb"
+                      role="button"
+                      tabIndex="1"
                       onClick={() => {
                         setCurrentSlide(ndx);
                         showGallery(2018);
@@ -1280,7 +1297,10 @@ const FaqPage = (props) => {
               <Container bordered>
                 <YearPoster>
                   <GatsbyImage
-                    image={posters[1].node.childImageSharp.gatsbyImageData}
+                    image={
+                      props.data.poster2018.edges[0].node.childImageSharp
+                        .gatsbyImageData
+                    }
                   />
                 </YearPoster>
                 <YearDescription>
@@ -1313,7 +1333,7 @@ const FaqPage = (props) => {
                     <InternalLink href="" target="_blank">
                       плейлист
                     </InternalLink>
-                    <InternalLink>таблица результатов</InternalLink>
+                    {/* <InternalLink>таблица результатов</InternalLink> */}
                   </YearLinks>
                 </YearDescription>
               </Container>
@@ -1424,6 +1444,8 @@ const FaqPage = (props) => {
                   return (
                     <div
                       className="thumb"
+                      role="button"
+                      tabIndex="1"
                       onClick={() => {
                         setCurrentSlide(ndx);
                         showGallery(2017);
@@ -1441,7 +1463,10 @@ const FaqPage = (props) => {
               <Container bordered className={collapsed[3] ? null : "hide"}>
                 <YearPoster>
                   <GatsbyImage
-                    image={posters[0].node.childImageSharp.gatsbyImageData}
+                    image={
+                      props.data.poster2017.edges[0].node.childImageSharp
+                        .gatsbyImageData
+                    }
                   />
                 </YearPoster>
                 <YearDescription>
@@ -1476,7 +1501,7 @@ const FaqPage = (props) => {
                       трэк трассы
                     </InternalLink>
                     <InternalLink>плейлист</InternalLink>
-                    <InternalLink>таблица результатов</InternalLink>
+                    {/* <InternalLink>таблица результатов</InternalLink> */}
                   </YearLinks>
                 </YearDescription>
               </Container>
@@ -1680,7 +1705,7 @@ const FaqPage = (props) => {
           </div> */}
           <Container>
             <div className="logo-wrapper">
-              <img src={LogoRR} />
+              <img src={LogoRR} alt="reverse logo" />
             </div>
           </Container>
           <Container>
@@ -1789,7 +1814,7 @@ export default FaqPage;
 
 export const query = graphql`
   {
-    posters: allFile(filter: { name: { regex: "/poster.*/" } }) {
+    poster2017: allFile(filter: { name: { regex: "/poster_2017.*/" } }) {
       edges {
         node {
           id
@@ -1799,6 +1824,37 @@ export const query = graphql`
         }
       }
     }
+    poster2018: allFile(filter: { name: { regex: "/poster_2018.*/" } }) {
+      edges {
+        node {
+          id
+          childImageSharp {
+            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+          }
+        }
+      }
+    }
+    poster2019: allFile(filter: { name: { regex: "/poster_2019.*/" } }) {
+      edges {
+        node {
+          id
+          childImageSharp {
+            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+          }
+        }
+      }
+    }
+    poster2020: allFile(filter: { name: { regex: "/poster_2020.*/" } }) {
+      edges {
+        node {
+          id
+          childImageSharp {
+            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+          }
+        }
+      }
+    }
+
     logoFooter: allFile(filter: { name: { eq: "logo_footer" } }) {
       edges {
         node {

@@ -6,7 +6,6 @@ import V from "../images/letterV.svg";
 export default function Letters(p5) {
   let letters = [];
   let l = 0;
-  let timer = 0;
 
   p5.preload = () => {
     const imgR = p5.loadImage(R);
@@ -39,7 +38,6 @@ export default function Letters(p5) {
 
     const drawLetters = () => {
       p5.image(letters[l], p5.mouseX, p5.mouseY);
-      timer++
     };
 
     const drawSmallLetters = () => {

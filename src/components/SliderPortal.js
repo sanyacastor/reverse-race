@@ -45,10 +45,6 @@ const ModalWindow = styled.div`
   overflow: auto;
 `;
 
-const PortalWrapper = styled.div`
-  display: none;
-`;
-
 const SliderModal = ({ close, images, slide }) => {
   const [init, setInit] = useState(false);
 

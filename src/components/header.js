@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
 
-import BurgerMenu from '../components/burgerMenu'
+import BurgerMenu from "../components/burgerMenu";
 
 const NavBar = styled.nav`
   position: absolute;
@@ -14,9 +14,9 @@ const NavBar = styled.nav`
   padding-right: 41px;
   background: #000;
 
-   & .results {
-     display: none;
-   }
+  & .results {
+    display: none;
+  }
 
   & a {
     font-family: "Montserrat", sans-serif;
@@ -46,16 +46,16 @@ const NavBar = styled.nav`
     & a {
       font-size: 10px;
     }
-    
+
     & .faq,
     & .camp {
       display: none;
     }
 
     & .results {
-     display: block;
-     margin-left: auto;
-   }
+      display: block;
+      margin-left: auto;
+    }
   }
 `;
 
@@ -69,16 +69,12 @@ const Header = () => (
       {/* <Link className='shop' to='/shop'>
         Магазин
       </Link> */}
-      <Link className='registration' to='/registration'>
+      {/* <Link className='registration' to='/registration'>
         Регистрация
-      </Link>
-      <BurgerMenu/>
+      </Link> */}
+      <BurgerMenu />
     </NavBar>
   </header>
 );
 
 export default Header;
-
-
-
-

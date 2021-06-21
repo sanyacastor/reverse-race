@@ -30,11 +30,11 @@ const Container = styled.section`
 
 const NotFoundPage = () => (
   <Layout>
-    <SEO title='404: Страница не найдена' />
+    <SEO title="404: Страница не найдена" />
     <Container>
       <h1>NOT FOUND</h1>
       <p>Этой страницы не существует или она была удалена.</p>
-      <Link to='/'>на главную</Link>
+      <Link to="/">на главную</Link>
     </Container>
   </Layout>
 );

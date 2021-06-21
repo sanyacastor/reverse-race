@@ -26,8 +26,8 @@ const ResultsContainer = styled.section`
   padding-top: 22px;
   margin-bottom: 28px;
 
-   @media (max-width: 780px) {
-   padding-left: 14px;
+  @media (max-width: 780px) {
+    padding-left: 14px;
   }
 `;
 
@@ -89,7 +89,6 @@ const StyledTable = styled.table`
     text-transform: uppercase;
     padding-bottom: 13px;
     padding-right: 43px;
-    
   }
 
   @media (max-width: 780px) {
@@ -130,9 +129,9 @@ const TableHeader = () => (
   </thead>
 );
 
-const User = ({user, index}) => (
+const User = ({ user, index }) => (
   <>
-    <td>{index+1}</td>
+    <td>{index + 1}</td>
     <td>{user.number}</td>
     <td>
       {user.firstName} {user.secondName}
@@ -149,7 +148,7 @@ const Category = ({ header, users, two }) => {
         <TableHeader />
         <tbody>
           {users.map((u, i) => (
-            <tr key={i}>{<User user={u} index={i}/>}</tr>
+            <tr key={i}>{<User user={u} index={i} />}</tr>
           ))}
         </tbody>
       </StyledTable>
@@ -171,7 +170,7 @@ const ResultsPage = () => {
   return (
     <Layout>
       <CrossButton action={goToHomePage} />
-      <SEO title='Results' />
+      <SEO title="Results 2019" />
       <AnimatePresence>
         {visible && (
           <motion.div
@@ -182,12 +181,12 @@ const ResultsPage = () => {
           >
             <ResultsContainer>
               <Header2>РЕзультаты 2019</Header2>
-              <Category header='Мультиспид муж.' users={JSONMulti} />
-              <Category header='Мультиспид жен.' users={JSONAll.multiW} />
-              <Category header='Фикс муж.' users={JSONAll.fixedM} />
-              <Category header='Фикс жен.' users={JSONAll.fixedW} />
-              <Category header='сингл муж.' users={JSONAll.singleM} />
-              <Category header='сингл жен.' users={JSONAll.singleW} />
+              <Category header="Мультиспид муж." users={JSONMulti} />
+              <Category header="Мультиспид жен." users={JSONAll.multiW} />
+              <Category header="Фикс муж." users={JSONAll.fixedM} />
+              <Category header="Фикс жен." users={JSONAll.fixedW} />
+              <Category header="сингл муж." users={JSONAll.singleM} />
+              <Category header="сингл жен." users={JSONAll.singleW} />
               {/* <Category header='73км' users={JSONSmall} two />  */}
             </ResultsContainer>
           </motion.div>

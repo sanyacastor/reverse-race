@@ -2,10 +2,31 @@ import axios from "axios";
 
 const baseUrl = "https://api.reg.place/v1"; // events/reverse-side-of-the-road-2021
 const getRaceId = (u) => {
-  if (u.distance === "short") return 6307;
-  if (u.distance === "long" && u.category === "multi") return 6308;
-  if (u.distance === "long" && u.category === "single") return 6305;
-  if (u.distance === "long" && u.category === "fix") return 6306;
+  //short
+  if (u.distance === "short" && u.pack === "starter") return 6307;
+  if (u.distance === "short" && u.pack === "supporter") return 6473;
+
+  //muilti
+  if (u.distance === "long" && u.category === "multi" && u.pack === "starter")
+    return 6308;
+  if (u.distance === "long" && u.category === "multi" && u.pack === "supporter")
+    return 6474;
+
+  //single
+  if (u.distance === "long" && u.category === "single" && u.pack === "starter")
+    return 6305;
+  if (
+    u.distance === "long" &&
+    u.category === "single" &&
+    u.pack === "supporter"
+  )
+    return 6476;
+
+  //fix
+  if (u.distance === "long" && u.category === "fix" && u.pack === "starter")
+    return 6306;
+  if (u.distance === "long" && u.category === "fix" && u.pack === "supporter")
+    return 6475;
 };
 
 const getUserdata = (user) => {
