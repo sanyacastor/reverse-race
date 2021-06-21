@@ -201,11 +201,10 @@ const renderForm = (setVisible, formSubmitHandler) => (
 
 export default function RegistrationForm({ setVisible, userPack }) {
   const [error, setError] = useState(null);
-
   const formSubmitHandler = async (user) => {
     try {
-      let url = await addHeat(user);
-      createNewUser({ ...user, ...userPack });
+      let url = await addHeat({ ...user, ...userPack });
+      await createNewUser({ ...user, ...userPack });
       navigate(url);
     } catch (error) {
       setError(error.message);
@@ -226,7 +225,7 @@ export default function RegistrationForm({ setVisible, userPack }) {
             exit={{ opacity: 0, y: -100 }}
             transition={{ duration: 0.2 }}
           >
-            <Notification msg={error} />}
+            <Notification msg={error} />
           </motion.div>
         )}
       </AnimatePresence>
