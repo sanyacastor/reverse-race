@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const RadioLabel = styled.label`
   display: inline-block;
+  cursor: pointer;
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
   font-size: var(--font-size-m);

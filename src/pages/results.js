@@ -33,7 +33,7 @@ const ResultsContainer = styled.section`
 
 const Header2 = styled.h2`
   display: block;
-  weight: 100%;
+  width: 100%;
   margin-left: 0;
   padding-left: 0;
   font-family: "Montserrat", sans-serif;
@@ -53,7 +53,7 @@ const Header2 = styled.h2`
 
 const Header3 = styled.h3`
   display: block;
-  weight: 100%;
+  width: 100%;
   margin-left: 0;
   padding-left: 0;
   font-family: "Montserrat", sans-serif;
@@ -181,7 +181,7 @@ const ResultsPage = () => {
             transition={{ duration: 0.4 }}
           >
             <ResultsContainer>
-              <Header2>РЕзультаты 2020</Header2>
+              <Header2>Результаты 2020</Header2>
               <Category header='Мультиспид муж.' users={JSONMulti} />
               <Category header='Мультиспид жен.' users={JSONAll.multiW} />
               <Category header='Фикс муж.' users={JSONAll.fixedM} />
@@ -197,3 +197,12 @@ const ResultsPage = () => {
 };
 
 export default ResultsPage;
+
+
+// let final = initial.map(u => {
+//   let newObj = {...u}
+//     newObj['firstName'] = newObj['name'].split(' ')[1]
+//     newObj['secondName'] = newObj['name'].split(' ')[0]
+//     delete newObj.name;
+//   return newObj
+// })

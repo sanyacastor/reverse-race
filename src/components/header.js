@@ -2,17 +2,21 @@ import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
 
+import BurgerMenu from "../components/burgerMenu";
+
 const NavBar = styled.nav`
   position: absolute;
   display: flex;
   width: 100%;
-  padding-top: 21px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   padding-left: 41px;
   padding-right: 41px;
+  background: #000;
 
-   & .results {
-     display: none;
-   }
+  & .results {
+    display: none;
+  }
 
   & a {
     font-family: "Montserrat", sans-serif;
@@ -24,14 +28,13 @@ const NavBar = styled.nav`
     text-decoration: none;
 
     &:nth-child(2) {
-      margin-left: auto;
-      margin-right: 2.3em;
+      margin-left: 6.5em;
+      margin-right: 6.5em;
     }
 
     &:hover,
     &:focus {
       color: var(--secondary-color);
-      -webkit-text-stroke: 0.8px black;
     }
 
     transition: all 0.2s ease-in-out;
@@ -43,32 +46,33 @@ const NavBar = styled.nav`
     & a {
       font-size: 10px;
     }
-    
+
     & .faq,
     & .camp {
       display: none;
     }
 
     & .results {
-     display: block;
-     margin-left: auto;
-   }
+      display: block;
+      margin-left: auto;
+    }
   }
 `;
 
 const Header = () => (
   <header>
     <NavBar>
-      <Link>Reverse side of the road 21 – 23.08.2020</Link>
-      <Link className='faq' to='#faq'>
+      <Link>Reverse side of the road 16 - 18.07.2021</Link>
+      {/* <Link className='faq' to='#faq'>
         Faq
-      </Link>
-      <Link className='camp' to='/camp'>
-        Маршрут 2020
-      </Link>
-      <Link className='results' to='/results'>
-        Результаты 2020
-      </Link>
+      </Link> */}
+      {/* <Link className='shop' to='/shop'>
+        Магазин
+      </Link> */}
+      {/* <Link className='registration' to='/registration'>
+        Регистрация
+      </Link> */}
+      <BurgerMenu />
     </NavBar>
   </header>
 );

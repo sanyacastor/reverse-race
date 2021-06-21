@@ -1,10 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-// import { Link } from "gatsby";
 
 const CloseButton = styled.div`
   position: absolute;
-  z-index: 1;
+  z-index: 10;
   padding: 0;
   right: 41px;
   top: 42px;
@@ -42,7 +41,7 @@ const CloseButton = styled.div`
     }
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 780px) {
     width: 25px;
     height: 25px;
     right: 14px;
