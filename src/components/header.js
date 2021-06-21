@@ -62,7 +62,7 @@ const NavBar = styled.nav`
 const Header = () => (
   <header>
     <NavBar>
-      <Link>Reverse side of the road 16 - 18.08.2021</Link>
+      <Link>Reverse side of the road 16 - 18.07.2021</Link>
       {/* <Link className='faq' to='#faq'>
         Faq
       </Link> */}
