@@ -1,12 +1,13 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+
 :root {
   --main-color: #000000;
   --secondary-color: #ffffff;
   --error-color: #ff0000;
   --sucess-color: #bc9b16;
-  --font-size-s: 7px;
+  --font-size-s: 13px;
   --font-size-m: 35px;
   --font-size-xl: 201.5px;
   --font-size-rg: 35px;
