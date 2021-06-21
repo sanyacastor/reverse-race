@@ -16,7 +16,7 @@ import TermsOfUse from "../components/TermsOfUse.js";
 const RegistrationPage = () => {
   const [visible, setVisible] = useState(false);
   const [step, setStep] = useState(1);
-  const [pack, setPack] = useState({});
+  const [pack, setPack] = useState();
 
   const showModal = () => {
     setVisible(true);
@@ -44,7 +44,7 @@ const RegistrationPage = () => {
           {step === 1 && (
             <FirstStep
               nextStepHandler={() => goToStep(2)}
-              updateHandler={setPack}
+              updateHandler={(p) => setPack(p)}
             />
           )}
           {step === 2 && (

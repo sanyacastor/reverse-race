@@ -1,8 +1,7 @@
 import axios from "axios";
 
-const baseUrl = "https://api.reg.place/v1"; // events/reverse-side-of-the-road-2021
+const baseUrl = "https://api.reg.place/v1";
 const getRaceId = (u) => {
-  //short
   if (u.distance === "short" && u.pack === "starter") return 6307;
   if (u.distance === "short" && u.pack === "supporter") return 6473;
 
@@ -58,6 +57,7 @@ const getUserdata = (user) => {
 };
 
 export const addHeat = async (user) => {
+  console.log(console.log("@@@@", getRaceId(user)));
   let options = getUserdata(user);
 
   try {
