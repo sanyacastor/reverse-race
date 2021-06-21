@@ -82,13 +82,13 @@ export default function BurgerMenu() {
                 FAQ
               </Link>
             </li>
-            <li className="burger__item">
+            {/* <li className="burger__item">
               <Link className="burger__link">
                 SIN X
               </Link>
-            </li>
+            </li> */}
             <li className="burger__item">
-              <Link className="burger__link"  href="#founders">
+              <Link className="burger__link" href="#founders">
                 Контакты
               </Link>
             </li>
