@@ -1585,7 +1585,7 @@ const FaqPage = (props) => {
                 дня отдыха в палатках у костра и увлекательное гравийное
                 приключение.
               </Text>
-              <Heading>А ЧТО ТАМ ПО ДИСТАНЦИЯМ?</Heading>
+              {/* <Heading>А ЧТО ТАМ ПО ДИСТАНЦИЯМ?</Heading>
               <Text className="mb">
                 <span className="mb">Два варианта на выбор:</span>
                 <br />
@@ -1618,7 +1618,7 @@ const FaqPage = (props) => {
               </Text>
               <Text style={{ magrinTop: "2em", marginBottom: "2em" }}>
                 Стоимость участия 1700руб.
-              </Text>
+              </Text> */}
               <Heading>А ЧТО ТАМ ПО ПОКРЫТИЮ?</Heading>
               <Text>
                 На всех маршрутах вас ждут быстрые грунтовые дороги, непростые
