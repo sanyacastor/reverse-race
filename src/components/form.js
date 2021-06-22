@@ -127,14 +127,14 @@ const renderForm = (setVisible, formSubmitHandler) => (
             name="distance"
             type="radio"
             value="short"
-            title="Короткая"
+            title="Короткая — 90"
           />
           <Field
             as={Radio}
             name="distance"
             type="radio"
             value="long"
-            title="Полная"
+            title="Длинная — 170"
           />
         </Row>
 

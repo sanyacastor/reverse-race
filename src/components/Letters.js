@@ -7,8 +7,6 @@ export default function Letters(p5) {
   let letters = [];
   let l = 0;
 
-  let a = 20; //Set up the horizontal amplitute
-  let b = 50; //Set up the vertical amplitute
   let angle = 0;
   let cfx = 0.4;
 
@@ -54,8 +52,8 @@ export default function Letters(p5) {
     const drawSmallLetters = () => {
       p5.image(
         letters[l],
-        p5.mouseX,
-        p5.mouseY,
+        x + p5.windowWidth / 2,
+        y + p5.windowHeight / 2,
         letters[l].width / 2,
         letters[l].height / 2
       );

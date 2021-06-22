@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { motion, AnimatePresence } from "framer-motion";
 import Div100vh from "react-div-100vh";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 
 import SwiperCore, { Thumbs } from "swiper";
 
@@ -30,6 +30,11 @@ const SponsorBar = styled.div`
   align-items: center;
   padding-top: 15px;
   padding-bottom: 27px;
+  margin-top: 0;
+
+  @media (max-width: 780px) {
+    margin-top: ${(props) => props.mt + "px"};
+  }
 
   & a {
     display: block;
@@ -326,50 +331,50 @@ const Founders = styled.div`
   }
 `;
 
-const Button = styled(Link)`
-  font-family: "Montserrat", sans-serif;
-  font-style: normal;
-  display: block;
-  font-weight: 900;
-  white-space: nowrap;
-  overflow: hidden;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 158px;
-  line-height: 106.4%;
-  background: none;
-  border: none;
-  outline: none;
-  margin: 0 auto;
-  padding-bottom: 16px;
-  width: 100%;
-  text-align: center;
-  cursor: pointer;
+// const Button = styled(Link)`
+//   font-family: "Montserrat", sans-serif;
+//   font-style: normal;
+//   display: block;
+//   font-weight: 900;
+//   white-space: nowrap;
+//   overflow: hidden;
+//   text-transform: uppercase;
+//   text-decoration: none;
+//   font-size: 158px;
+//   line-height: 106.4%;
+//   background: none;
+//   border: none;
+//   outline: none;
+//   margin: 0 auto;
+//   padding-bottom: 16px;
+//   width: 100%;
+//   text-align: center;
+//   cursor: pointer;
 
-  -webkit-text-stroke: 0.7px var(--secondary-color);
-  -webkit-text-fill-color: var(--main-color);
+//   -webkit-text-stroke: 0.7px var(--secondary-color);
+//   -webkit-text-fill-color: var(--main-color);
 
-  & :hover,
-  & :focus {
-    -webkit-text-stroke: var(--main-color);
-    -webkit-text-fill-color: var(--secondary-color);
-  }
+//   & :hover,
+//   & :focus {
+//     -webkit-text-stroke: var(--main-color);
+//     -webkit-text-fill-color: var(--secondary-color);
+//   }
 
-  @media (min-width: 780px) {
-    padding-left: 0;
-    margin-bottom: 109px;
-    text-align: center;
-    -webkit-text-stroke: 2px var(--secondary-color);
-    -webkit-text-fill-color: var(--main-color);
-  }
+//   @media (min-width: 780px) {
+//     padding-left: 0;
+//     margin-bottom: 109px;
+//     text-align: center;
+//     -webkit-text-stroke: 2px var(--secondary-color);
+//     -webkit-text-fill-color: var(--main-color);
+//   }
 
-  @media (min-width: 1330px) {
-    padding-left: 41px;
-    margin-left: 0;
-    font-size: 158px;
-    margin-bottom: 44px;
-  }
-`;
+//   @media (min-width: 1330px) {
+//     padding-left: 41px;
+//     margin-left: 0;
+//     font-size: 158px;
+//     margin-bottom: 44px;
+//   }
+// `;
 
 const InternalLink = styled(Link)`
   font-family: "Montserrat", sans-serif;
@@ -391,9 +396,9 @@ const InternalLink = styled(Link)`
   transition: all 0.2s ease-in-out;
 `;
 
-const Accent = styled.span`
-  font-weight: 900;
-`;
+// const Accent = styled.span`
+//   font-weight: 900;
+// `;
 
 const Container = styled.div`
   display: grid;
@@ -407,10 +412,21 @@ const Container = styled.div`
     margin: 0 auto;
   }
 
+  & .email-container {
+    grid-column: 2/5;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
   @media (min-width: 780px) {
     grid-template-columns: 40px 1fr 40px 2fr 40px;
     grid-template-rows: 30px max-content 37px;
     border-top: ${(props) => (props.bordered ? "4.5px solid #fff" : "none")};
+
+    & .email-container {
+      margin-top: 10px;
+    }
   }
 `;
 
@@ -721,7 +737,7 @@ const FaqPage = (props) => {
 
   return (
     <Layout>
-      <SEO title="Reverse Race FAQ" />
+      <Seo title="Reverse Race FAQ" />
       <AnimatePresence>
         <motion.div
           initial={{ opacity: 0 }}
@@ -811,7 +827,7 @@ const FaqPage = (props) => {
                     <div
                       className="thumb"
                       role="button"
-                      tabIndex="1"
+                      tabIndex="0"
                       onClick={() => {
                         setCurrentSlide(ndx);
                         showGallery(2020);
@@ -1079,12 +1095,13 @@ const FaqPage = (props) => {
                 <li
                   className="thumb video"
                   role="button"
-                  tabIndex="1"
+                  tabIndex="0"
                   onClick={() => {
                     showVideoPopup(2019);
                   }}
                 >
                   <img
+                    alt="Youtube preview"
                     src={`http://i3.ytimg.com/vi/wl2ul3yP4y0/maxresdefault.jpg`}
                   />
                 </li>
@@ -1093,7 +1110,7 @@ const FaqPage = (props) => {
                     <div
                       className="thumb"
                       role="button"
-                      tabIndex="1"
+                      tabIndex="0"
                       onClick={() => {
                         setCurrentSlide(ndx);
                         showGallery(2019);
@@ -1257,12 +1274,13 @@ const FaqPage = (props) => {
                 <li
                   className="thumb video"
                   role="button"
-                  tabIndex="1"
+                  tabIndex="0"
                   onClick={() => {
                     showVideoPopup(2018);
                   }}
                 >
                   <img
+                    alt="Vimeo preview"
                     src={`https://i.vimeocdn.com/video/766071458?mw=960&mh=540`}
                   />
                 </li>
@@ -1271,7 +1289,7 @@ const FaqPage = (props) => {
                     <li
                       className="thumb"
                       role="button"
-                      tabIndex="1"
+                      tabIndex="0"
                       onClick={() => {
                         setCurrentSlide(ndx);
                         showGallery(2018);
@@ -1437,7 +1455,7 @@ const FaqPage = (props) => {
                     <div
                       className="thumb"
                       role="button"
-                      tabIndex="1"
+                      tabIndex="0"
                       onClick={() => {
                         setCurrentSlide(ndx);
                         showGallery(2017);
@@ -1697,7 +1715,7 @@ const FaqPage = (props) => {
           </div> */}
           <Container>
             <div className="logo-wrapper">
-              <img src={LogoRR} alt="reverse logo" />
+              <img src={LogoRR} alt="Reverse race logo" />
             </div>
           </Container>
           <Container>
@@ -1724,6 +1742,7 @@ const FaqPage = (props) => {
           </Container>
           <Container>
             <SponsorBar
+              mt="40"
               style={{
                 "grid-column": "2/5",
                 "text-align": "center",
@@ -1757,7 +1776,7 @@ const FaqPage = (props) => {
             </SponsorBar>
           </Container>
           <Container>
-            <span style={{ "grid-column": "2/5", "text-align": "center" }}>
+            <span className="email-container">
               <Email href="mailto:INFO@REVERSIDE.RU">INFO@REVERSIDE.RU</Email>
             </span>
           </Container>

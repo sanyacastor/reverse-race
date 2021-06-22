@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 
 const Container = styled.section`
   max-width: 100vw;
@@ -30,7 +30,7 @@ const Container = styled.section`
 
 const NotFoundPage = () => (
   <Layout>
-    <SEO title="404: Страница не найдена" />
+    <Seo title="404: Страница не найдена" />
     <Container>
       <h1>NOT FOUND</h1>
       <p>Этой страницы не существует или она была удалена.</p>

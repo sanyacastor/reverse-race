@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { navigate } from "gatsby";
 import { motion, AnimatePresence } from "framer-motion";
 
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 import Layout from "../components/layout";
 import CrossButton from "../components/crossButton";
 
@@ -170,7 +170,7 @@ const ResultsPage = () => {
   return (
     <Layout>
       <CrossButton action={goToHomePage} />
-      <SEO title="Results 2019" />
+      <Seo title="Results 2019" />
       <AnimatePresence>
         {visible && (
           <motion.div

@@ -1,6 +1,6 @@
 import React from "react";
 import { navigate } from "gatsby";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 import CrossButton from "../components/crossButton";
 
 import Layout from "../components/layout";
@@ -196,7 +196,7 @@ const FaqPage = () => {
   return (
     <Layout>
       <CrossButton action={goToHomePage} />
-      <SEO title="Camp" />
+      <Seo title="Camp" />
       <FaqContainer id="faq">
         <div className="aside desktop_only">
           <span className="aside__letter">Л</span>
@@ -546,9 +546,9 @@ const FaqPage = () => {
           <Text>
             Если вы пробились и не взяли с собой запасную камеру, поздравляем.
             Идите пешком до ближайшего пункта питания, возможно, там вам
-            помогут. Дальнейшее попадание в лагерь уже ваша забота и ваша
-            личная ответственность. Мы вас конечно не бросим, но забрать сможем
-            по мере возможностей.
+            помогут. Дальнейшее попадание в лагерь уже ваша забота и ваша личная
+            ответственность. Мы вас конечно не бросим, но забрать сможем по мере
+            возможностей.
           </Text>
           <Text>
             <Accent>P.S.</Accent> Там будет место, где вероятнее всего будет
