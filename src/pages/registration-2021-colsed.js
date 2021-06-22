@@ -58,9 +58,9 @@ const RegistrationPage = () => {
           >
             <CrossButton action={() => navigate("/")} />
             <RegistrationForm setVisible={showModal} userPack={pack} />
-            <Link to="/#faq" style={{ textDecoration: "none" }}>
+            <a href="/#faq" target="_blank" style={{ textDecoration: "none" }}>
               <Button caption="FAQ" invert={true} p={0.1} />
-            </Link>
+            </a>
           </motion.div>
         )}
         {visible && <TermsOfUse close={closeModal} />}
