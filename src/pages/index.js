@@ -14,7 +14,6 @@ import YearMovie from "../components/yearMovie";
 import SliderPortal from "../components/SliderPortal";
 import P5 from "../components/p5.js";
 
-import LogoVk from "../images/social_vk.inline.svg";
 import LogoTg from "../images/social_tg.inline.svg";
 import LogoFb from "../images/social_fb.inline.svg";
 import LogoInst from "../images/social_inst.inline.svg";
@@ -734,13 +733,6 @@ const FaqPage = (props) => {
             <P5 />
             <SponsorBar>
               <div className="social">
-                <Link
-                  className="social__link"
-                  to="https://vk.com/reverse_race"
-                  target="blank"
-                >
-                  <LogoVk className="social__logo" />
-                </Link>
                 <Link
                   className="social__link"
                   to="https://www.instagram.com/reverse_race"
@@ -1586,13 +1578,8 @@ const FaqPage = (props) => {
                 приключение.
               </Text>
               {/* <Heading>А ЧТО ТАМ ПО ДИСТАНЦИЯМ?</Heading>
-<<<<<<< HEAD
               <Text className='mb'>
                 <span className='mb'>Два варианта на выбор:</span>
-=======
-              <Text className="mb">
-                <span className="mb">Два варианта на выбор:</span>
->>>>>>> 92c7d3ee2f2c3ea45d3899e2d8272841fd45b22d
                 <br />
                 <Accent>1.</Accent> Большой круг 145км и 1200м набора. Из них
                 немного асфальта, а все остальное – лесные грунтовые дороги с
@@ -1745,13 +1732,6 @@ const FaqPage = (props) => {
               }}
             >
               <div className="social">
-                <Link
-                  className="social__link"
-                  to="https://vk.com/reverse_race"
-                  target="blank"
-                >
-                  <LogoVk className="social__logo" />
-                </Link>
                 <Link
                   className="social__link"
                   to="https://www.instagram.com/reverse_race"

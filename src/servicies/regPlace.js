@@ -57,9 +57,7 @@ const getUserdata = (user) => {
 };
 
 export const addHeat = async (user) => {
-  console.log(console.log("@@@@", getRaceId(user)));
   let options = getUserdata(user);
-
   try {
     let res = await axios(options);
 
