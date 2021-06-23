@@ -56,15 +56,21 @@ const DonateButton = styled.a`
   background: white;
   font-size: var(--font-size-m);
   font-weight: 900;
-  color: #000;
+  color: #fff;
   line-height: 106.4%;
   margin-top: 16px;
   cursor: pointer;
   text-decoration: none;
   margin-bottom: -60px;
+  transition: all 320ms ease;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  &:hover {
+    color: var(--main-color);
+  }
 
   @media (min-width: 780px) {
-    margin-top: 128px;
+    margin-top: 20px;
     padding-bottom: 20px;
   }
 `;
@@ -84,6 +90,7 @@ const NextButton = styled.button`
     1px 1px 0 #000;
   text-transform: uppercase;
   cursor: pointer;
+  transition: all 320ms ease;
 
   & :disabled {
     text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2), 1px -1px 0 rgba(0, 0, 0, 0.2),
@@ -259,7 +266,7 @@ const FirstStep = ({ nextStepHandler, updateHandler }) => {
 
   return (
     <Layout>
-      <Container mt="175">
+      <Container mt="150">
         <YearPoster>
           <GatsbyImage
             image={p2021.edges[0].node.childImageSharp.gatsbyImageData}
