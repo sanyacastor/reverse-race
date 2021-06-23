@@ -9,38 +9,18 @@ import RowLabel from "../components/rowLabel";
 
 import Layout from "./layout";
 
-const Container = styled.div`
-  margin-top: 94px;
-  color: #fff;
-  display: grid;
-  grid-template-columns: 14px 1fr 14px;
-  transition: all 320ms ease;
-
-  @media (min-width: 780px) {
-    margin-top: ${(props) => props.mt + "px"};
-    grid-template-columns: 40px 1fr 40px 2fr 40px;
-    grid-template-rows: 30px max-content;
-  }
-
-  & fieldset {
-    border: none;
-  }
-  & fieldset label {
-    margin-right: 20px;
-  }
-`;
-
 const List = styled.ul`
   list-style: none;
   font-size: var(--font-size-s);
   line-height: 23px;
   margin-left: 0;
   margin-bottom: 73px;
+  padding-right: 41px;
   & li {
     margin-bottom: 0;
   }
   @media (min-width: 780px) {
-    margin-bottom: 38px;
+    margin-bottom: 12px;
   }
 `;
 
@@ -90,10 +70,11 @@ const DonateButton = styled.a`
 `;
 
 const NextButton = styled.button`
+  position: relative;
   background: #fff;
   width: 100%;
   border: none;
-  font-size: var(--font-size-m);
+  font-size: var(--font-size-xl);
   line-height: 106.4%;
   padding: 15px 0;
   text-align: center;
@@ -120,11 +101,54 @@ const NextButton = styled.button`
 `;
 
 const Price = styled.span`
-  color: #bc9b16;
   position: absolute;
   bottom: 17px;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+  color: #000;
+  transition: all 320ms ease;
+  top: auto;
+  bottom: 0;
+
   @media (min-width: 780px) {
-    top: 21px;
+    top: 14px;
+    right: 42px;
+  }
+
+  @media (min-width: 1024px) {
+    top: 32px;
+  }
+`;
+
+const OkLabel = styled.span`
+  font-weight: 900;
+  font-size: var(--font-size-s);
+  color: var(--main-color);
+  text-transform: uppercase;
+  text-shadow: none;
+  position: absolute;
+  top: 5px;
+  left: 12px;
+  line-height: 1;
+  margin-bottom: 14px;
+
+  @media (min-width: 1024px) {
+    top: 12px;
+    left: 41px;
+  }
+`;
+
+const SizeLink = styled.a`
+  text-decoration: underline;
+  position: absolute;
+  bottom: 0;
+  right: 14px;
+  font-size: var(--font-size-s);
+  color: var(--sucess-color);
+  line-height: 1;
+  margin-bottom: 14px;
+
+  @media (min-width: 780px) {
     right: 42px;
   }
 `;
@@ -136,6 +160,63 @@ const StepForm = styled.form`
 
   @media (min-width: 780px) {
     border-top: 4.5px solid var(--secondary-color);
+  }
+`;
+
+const Container = styled.div`
+  margin-top: 94px;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 14px 1fr 14px;
+  transition: all 320ms ease;
+
+  & .next-button-wrapper {
+    position: relative;
+  }
+
+  @media (min-width: 780px) {
+    margin-top: ${(props) => props.mt + "px"};
+    grid-template-columns: 40px 1fr 40px 2fr 40px;
+    grid-template-rows: 30px max-content;
+  }
+
+  & fieldset {
+    border: none;
+    margin-bottom: 0;
+  }
+  & fieldset label {
+    margin-right: 20px;
+  }
+  & fieldset label:hover {
+    color: var(--sucess-color);
+    text-shadow: none;
+  }
+`;
+
+const PackRow = styled(Row)`
+  cursor: pointer;
+  min-height: 110px;
+
+  &:hover ${Price} {
+    color: var(--sucess-color);
+    text-shadow: none;
+  }
+  &:hover #pack_starter_label {
+    color: var(--sucess-color);
+    text-shadow: none;
+  }
+  &:hover #pack_supporter_label {
+    color: var(--sucess-color);
+    text-shadow: none;
+  }
+
+  & input:checked + label + span {
+    color: var(--secondary-color);
+    text-shadow: none;
+  }
+
+  @media (min-width: 780px) {
+    min-height: 52px;
   }
 `;
 
@@ -217,59 +298,105 @@ const FirstStep = ({ nextStepHandler, updateHandler }) => {
           onSubmit={submitStepHandler}
           onChange={(e) => changeHandler(e)}
         >
-          <Row>
+          <PackRow onClick={() => setPack("starter")}>
             <RowLabel>Pack</RowLabel>
+            <Radio
+              name="pack"
+              type="radio"
+              value="starter"
+              title="Starter"
+              checked={pack === "starter"}
+            />
             <Price>2500₽</Price>
-            <Radio name="pack" type="radio" value="starter" title="Starter" />
-            <List>
-              <li>1. стартовый номер</li>
-              <li>2. карта</li>
-              <li>3. Значок Reverse by Масть</li>
-              <li>4. Welcome drink от Laboratorio Distilita</li>
-              <li>5. два стикерпака</li>
-            </List>
-          </Row>
-          <Row>
+            {pack === "starter" && (
+              <List>
+                <li>1. стартовый номер</li>
+                <li>2. карта</li>
+                <li>3. Значок Reverse by Масть</li>
+                <li>4. Welcome drink от Laboratorio Distilita</li>
+                <li>5. два стикерпака</li>
+              </List>
+            )}
+          </PackRow>
+          <PackRow onClick={() => setPack("supporter")}>
             <RowLabel>Pack</RowLabel>
-            <Price>7000₽</Price>
+
             <Radio
               name="pack"
               type="radio"
               value="supporter"
               title="Supporter"
+              checked={pack === "supporter"}
             />
-            <List>
-              <li>1. стартовый номер</li>
-              <li>2. карта</li>
-              <li>3. Значок Reverse by Масть</li>
-              <li>4. Welcome drink от Laboratorio Distilita</li>
-              <li>5. два стикерпака</li>
-              <li>6. Topcap reverse</li>
-              <li>
-                7. 0,5 л настойки «Булыга» от Laboratorio Distilita, созданной
-                специально для Reverse Raсe
-              </li>
-              <li>8. Футболка Reverse Race </li>
-            </List>
-          </Row>
+            <Price>7000₽</Price>
+
+            {pack === "supporter" && (
+              <List>
+                <li>1. стартовый номер</li>
+                <li>2. карта</li>
+                <li>3. Значок Reverse by Масть</li>
+                <li>4. Welcome drink от Laboratorio Distilita</li>
+                <li>5. два стикерпака</li>
+                <li>6. Topcap reverse</li>
+                <li>
+                  7. 0,5 л настойки «Булыга» от Laboratorio Distilita, созданной
+                  специально для Reverse Raсe
+                </li>
+                <li>8. Футболка Reverse Race </li>
+              </List>
+            )}
+          </PackRow>
           {pack === "supporter" && (
             <Row>
               <RowLabel>размер футболки</RowLabel>
               <fieldset>
-                <Radio name="size" type="radio" value="S" title="S" />
-                <Radio name="size" type="radio" value="M" title="M" />
-                <Radio name="size" type="radio" value="L" title="L" />
-                <Radio name="size" type="radio" value="XL" title="XL" />
+                <Radio
+                  name="size"
+                  type="radio"
+                  value="S"
+                  title="S"
+                  checked={size === "S"}
+                />
+                <Radio
+                  name="size"
+                  type="radio"
+                  value="M"
+                  title="M"
+                  checked={size === "M"}
+                />
+                <Radio
+                  name="size"
+                  type="radio"
+                  value="L"
+                  title="L"
+                  checked={size === "L"}
+                />
+                <Radio
+                  name="size"
+                  type="radio"
+                  value="XL"
+                  title="XL"
+                  checked={size === "XL"}
+                />
               </fieldset>
+              <SizeLink
+                href="https://www.mygildan.com/store/eu/browse/productDetailsPage.jsp?productId=H000"
+                target="_blank"
+              >
+                размерная сетка
+              </SizeLink>
             </Row>
           )}
-          <NextButton
-            disabled={
-              !((pack === "supporter" && size.length) || pack === "starter")
-            }
-          >
-            Выбрать
-          </NextButton>
+          <div className="next-button-wrapper">
+            <NextButton
+              disabled={
+                !((pack === "supporter" && size.length) || pack === "starter")
+              }
+            >
+              ОК
+            </NextButton>
+            <OkLabel>Перейти к регистрации</OkLabel>
+          </div>
         </StepForm>
       </Container>
     </Layout>

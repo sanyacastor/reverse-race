@@ -6,6 +6,7 @@ import V from "../images/letterV.svg";
 export default function Letters(p5) {
   let letters = [];
   let l = 0;
+  let base = 0;
 
   let angle = 0;
   let cfx = 0.4;
@@ -42,11 +43,20 @@ export default function Letters(p5) {
     let x = 0.9 * (p5.windowWidth / 2) * p5.sin(angle) * cfx;
     let y = cfx * (p5.windowHeight / 2) * p5.cos(angle) * cfx;
     angle += 2;
+    base = base - 0.2;
+
+    if (y < 200 || y > -200) {
+      base = base * -1;
+    }
 
     p5.imageMode(p5.CENTER);
 
     const drawLetters = () => {
-      p5.image(letters[l], x + p5.windowWidth / 2, y + p5.windowHeight / 2);
+      p5.image(
+        letters[l],
+        x + p5.windowWidth / 2,
+        base + y + p5.windowHeight / 2
+      );
     };
 
     const drawSmallLetters = () => {
