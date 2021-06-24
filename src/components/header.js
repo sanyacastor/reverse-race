@@ -26,6 +26,7 @@ const NavBar = styled.nav`
     color: var(--sucess-color);
     text-transform: uppercase;
     text-decoration: none;
+    cursor: pointer;
 
     &:nth-child(2) {
       margin-left: 6.5em;
@@ -69,9 +70,9 @@ const Header = () => (
       {/* <Link className='shop' to='/shop'>
         Магазин
       </Link> */}
-      {/* <Link className='registration' to='/registration'>
+      <Link className="registration" to="/registration-2021">
         Регистрация
-      </Link> */}
+      </Link>
       <BurgerMenu />
     </NavBar>
   </header>

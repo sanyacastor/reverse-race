@@ -65,6 +65,8 @@ const DonateButton = styled.a`
   transition: all 320ms ease;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
+  letter-spacing: 2px;
+
   &:hover {
     color: var(--main-color);
   }
@@ -86,20 +88,16 @@ const NextButton = styled.button`
   text-align: center;
   font-weight: 900;
   color: #fff;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
+  -webkit-text-stroke: 1.6px var(--main-color);
   text-transform: uppercase;
   cursor: pointer;
   transition: all 320ms ease;
 
   & :disabled {
-    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2), 1px -1px 0 rgba(0, 0, 0, 0.2),
-      -1px 1px 0 rgba(0, 0, 0, 0.2), 1px 1px 0 rgba(0, 0, 0, 0.2);
-    color: #fff;
+    -webkit-text-stroke: 1.6px rgba(0, 0, 0, 0.2);
   }
   &[disabled]:hover {
-    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2), 1px -1px 0 rgba(0, 0, 0, 0.2),
-      -1px 1px 0 rgba(0, 0, 0, 0.2), 1px 1px 0 rgba(0, 0, 0, 0.2);
+    -webkit-text-stroke: 1.6px rgba(0, 0, 0, 0.2);
     color: #fff;
   }
   & :hover {
@@ -153,9 +151,10 @@ const SizeLink = styled.a`
   font-size: var(--font-size-s);
   color: var(--sucess-color);
   line-height: 1;
-  margin-bottom: 14px;
+  margin-bottom: 8px;
 
-  @media (min-width: 780px) {
+  @media (min-width: 1024px) {
+    margin-bottom: 14px;
     right: 42px;
   }
 `;
@@ -222,8 +221,16 @@ const PackRow = styled(Row)`
     text-shadow: none;
   }
 
+  & label:nth-child(3) {
+    margin-top: 8px;
+  }
+
   @media (min-width: 780px) {
     min-height: 52px;
+
+    & label:nth-child(3) {
+    margin-top: 0;
+  }
   }
 `;
 
