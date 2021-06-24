@@ -5,6 +5,7 @@ import * as yup from "yup";
 import { navigate } from "gatsby";
 import { createNewUser } from "../servicies/fauna";
 
+import Loader from "./loader";
 import Input from "./input";
 import Radio from "./radio";
 import CheckBox from "./checkbox";
@@ -201,13 +202,18 @@ const renderForm = (setVisible, formSubmitHandler) => (
 
 export default function RegistrationForm({ setVisible, userPack }) {
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
+
   const formSubmitHandler = async (user) => {
+    setLoading(true);
     try {
       let url = await addHeat({ ...user, ...userPack });
       await createNewUser({ ...user, ...userPack });
+      setLoading(false);
       navigate(url);
     } catch (error) {
       setError(error.message);
+      setLoading(false);
 
       setTimeout(() => {
         setError(null);
@@ -229,7 +235,7 @@ export default function RegistrationForm({ setVisible, userPack }) {
           </motion.div>
         )}
       </AnimatePresence>
-      {renderForm(setVisible, formSubmitHandler)}
+      {!loading ? renderForm(setVisible, formSubmitHandler) : <Loader />}
     </>
   );
 }

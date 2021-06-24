@@ -41,7 +41,7 @@ const CloseButton = styled.div`
     }
   }
 
-  @media (max-width: 780px) {
+  @media (max-width: 1024px) {
     width: 25px;
     height: 25px;
     right: 14px;
