@@ -331,50 +331,50 @@ const Founders = styled.div`
   }
 `;
 
-// const Button = styled(Link)`
-//   font-family: "Montserrat", sans-serif;
-//   font-style: normal;
-//   display: block;
-//   font-weight: 900;
-//   white-space: nowrap;
-//   overflow: hidden;
-//   text-transform: uppercase;
-//   text-decoration: none;
-//   font-size: 158px;
-//   line-height: 106.4%;
-//   background: none;
-//   border: none;
-//   outline: none;
-//   margin: 0 auto;
-//   padding-bottom: 16px;
-//   width: 100%;
-//   text-align: center;
-//   cursor: pointer;
+const Button = styled(Link)`
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  display: block;
+  font-weight: 900;
+  white-space: nowrap;
+  overflow: hidden;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 158px;
+  line-height: 106.4%;
+  background: none;
+  border: none;
+  outline: none;
+  margin: 0 auto;
+  padding-bottom: 16px;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
 
-//   -webkit-text-stroke: 0.7px var(--secondary-color);
-//   -webkit-text-fill-color: var(--main-color);
+  -webkit-text-stroke: 0.7px var(--secondary-color);
+  -webkit-text-fill-color: var(--main-color);
 
-//   & :hover,
-//   & :focus {
-//     -webkit-text-stroke: var(--main-color);
-//     -webkit-text-fill-color: var(--secondary-color);
-//   }
+  & :hover,
+  & :focus {
+    -webkit-text-stroke: var(--main-color);
+    -webkit-text-fill-color: var(--secondary-color);
+  }
 
-//   @media (min-width: 780px) {
-//     padding-left: 0;
-//     margin-bottom: 109px;
-//     text-align: center;
-//     -webkit-text-stroke: 2px var(--secondary-color);
-//     -webkit-text-fill-color: var(--main-color);
-//   }
+  @media (min-width: 780px) {
+    padding-left: 0;
+    margin-bottom: 109px;
+    text-align: center;
+    -webkit-text-stroke: 2px var(--secondary-color);
+    -webkit-text-fill-color: var(--main-color);
+  }
 
-//   @media (min-width: 1330px) {
-//     padding-left: 41px;
-//     margin-left: 0;
-//     font-size: 158px;
-//     margin-bottom: 44px;
-//   }
-// `;
+  @media (min-width: 1330px) {
+    padding-left: 41px;
+    margin-left: 0;
+    font-size: 158px;
+    margin-bottom: 44px;
+  }
+`;
 
 const InternalLink = styled(Link)`
   font-family: "Montserrat", sans-serif;
@@ -445,12 +445,28 @@ const YearGallery = styled.ul`
     cursor: pointer;
     padding: 0;
     margin: 0;
+    position: relative;
   }
+
+  & .thumb.video::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 42px;
+    height: 48px;
+    transform: scale(1) translateX(-50%) translateY(-50%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='42' height='48' viewBox='0 0 42 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M42 24L0.750002 47.3827L0.750004 0.617313L42 24Z' fill='white'/%3E%3C/svg%3E");
+    z-index: 99;
+  }
+
   & .thumb.video img {
-    transform: scale(1.1);
+    transform: scale(1.2);
     transition: all 150ms ease-in-out;
   }
-  & .thumb.video:hover img,
+
   & .thumb:hover .gatsby-image-wrapper {
     transform: scale(1.2);
   }
@@ -976,7 +992,9 @@ const FaqPage = (props) => {
                     <InternalLink href="https://open.spotify.com/playlist/68VPWMDq4gSAnKKVXvYsOa?si=215240c5840942dc&nd=1">
                       плейлист E.gest
                     </InternalLink>
-                    {/* <InternalLink>таблица результатов</InternalLink> */}
+                    <InternalLink to="/results">
+                      таблица результатов
+                    </InternalLink>
                   </YearLinks>
                 </YearDescription>
               </Container>
@@ -1164,10 +1182,9 @@ const FaqPage = (props) => {
                     >
                       плейлист
                     </InternalLink>
-                    {/* <InternalLink
-                    >
+                    <InternalLink to="/results2019">
                       таблица результатов
-                    </InternalLink> */}
+                    </InternalLink>
                   </YearLinks>
                 </YearDescription>
               </Container>
@@ -1343,7 +1360,9 @@ const FaqPage = (props) => {
                     <InternalLink href="" target="_blank">
                       плейлист
                     </InternalLink>
-                    {/* <InternalLink>таблица результатов</InternalLink> */}
+                    <InternalLink to="/results2018">
+                      таблица результатов
+                    </InternalLink>
                   </YearLinks>
                 </YearDescription>
               </Container>
@@ -1702,9 +1721,6 @@ const FaqPage = (props) => {
               <Text>Определенно да.</Text>
             </div>
           </FaqContainer>
-          {/* <div style={{ maxWidth: "100%", overflow: "hidden" }}>
-            <Button to="/results">Результаты</Button>
-          </div> */}
           <Container>
             <div className="logo-wrapper">
               <img src={LogoRR} alt="Reverse race logo" />

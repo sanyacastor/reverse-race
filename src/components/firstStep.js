@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 
@@ -229,16 +229,76 @@ const PackRow = styled(Row)`
     min-height: 52px;
 
     & label:nth-child(3) {
-    margin-top: 0;
+      margin-top: 0;
+    }
   }
+`;
+
+const BannerFrame = styled.div`
+  overflow: hidden;
+
+  @media (min-width: 780px) {
+    margin-bottom: 0;
+  }
+  @media (max-width: 1024px) {
+  }
+`;
+
+const glide = keyframes`
+  0%, 30% {
+    transform: translateY(0%);
+  }
+  70%, 100% {
+    transform: translateY(-100%);
+  }
+`;
+
+const pseudoGlide = keyframes`
+  0%, 30% {
+    transform: translateY(100%);
+  }
+  70%, 100% {
+    transform: translateY(0%);
+  }
+`;
+
+const BannerSlide = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: ${(props) => `url(` + props.pseudoImage + `)`};
+    background-size: 100%;
+    bottom: 0;
+    transform: translateY(-100%);
+    animation: 4s ease-in-out 0s infinite alternate ${pseudoGlide};
+  }
+
+  & .poster_v1 {
+    animation: 4s ease-in-out 0s infinite alternate ${glide};
   }
 `;
 
 const FirstStep = ({ nextStepHandler, updateHandler }) => {
-  const { p2021 } = useStaticQuery(
+  const { p2021v1, p2021v2 } = useStaticQuery(
     graphql`
       query post {
-        p2021: allFile(filter: { name: { regex: "/poster_2021.*/" } }) {
+        p2021v1: allFile(filter: { name: { regex: "/poster_2021_v1.*/" } }) {
+          edges {
+            node {
+              id
+              childImageSharp {
+                gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+              }
+            }
+          }
+        }
+        p2021v2: allFile(filter: { name: { regex: "/poster_2021_v2.*/" } }) {
           edges {
             node {
               id
@@ -275,9 +335,20 @@ const FirstStep = ({ nextStepHandler, updateHandler }) => {
     <Layout>
       <Container mt="150">
         <YearPoster>
-          <GatsbyImage
-            image={p2021.edges[0].node.childImageSharp.gatsbyImageData}
-          />
+          <BannerFrame>
+            <BannerSlide
+              pseudoImage={
+                p2021v2.edges[0].node.childImageSharp.gatsbyImageData.images
+                  .fallback.src
+              }
+            >
+              <GatsbyImage
+                className="poster_v1"
+                objectFit="cover"
+                image={p2021v1.edges[0].node.childImageSharp.gatsbyImageData}
+              />
+            </BannerSlide>
+          </BannerFrame>
         </YearPoster>
         <YearDescription>
           Вместе мы сделали два Гревелкинга и после этого сделали два Реверса.

@@ -1,0 +1,344 @@
+{
+  "fixedM": [
+    {
+      "number": 109,
+      "firstName": "Крапивин",
+      "secondName": "👑 Даниил",
+      "time": "",
+      "place": 1
+    },
+    {
+      "number": 99,
+      "firstName": "Тананов",
+      "secondName": "Александр",
+      "time": "",
+      "place": 2
+    },
+    {
+      "number": 102,
+      "firstName": "Алексахин",
+      "secondName": "Георгий",
+      "time": "",
+      "place": 3
+    },
+    {
+      "number": 115,
+      "firstName": "Семенихин",
+      "secondName": "Никита",
+      "time": "",
+      "place": 4
+    },
+    {
+      "number": 114,
+      "firstName": "Сазонкин",
+      "secondName": "Семен",
+      "time": "",
+      "place": 5
+    },
+    {
+      "number": 120,
+      "firstName": "Тверской",
+      "secondName": "Гриша",
+      "time": "",
+      "place": 6
+    },
+    {
+      "number": 57,
+      "firstName": "Фатеев",
+      "secondName": "Илья",
+      "time": "",
+      "place": 7
+    },
+    {
+      "number": 112,
+      "firstName": "Богатыренко",
+      "secondName": "Дмитрий",
+      "time": "",
+      "place": 8
+    },
+    {
+      "number": 111,
+      "firstName": "Апаршин",
+      "secondName": "Евгений",
+      "time": "",
+      "place": 9
+    },
+    {
+      "number": 118,
+      "firstName": "Швец",
+      "secondName": "Владимир",
+      "time": "",
+      "place": 10
+    },
+    {
+      "number": 107,
+      "firstName": "Скворцов",
+      "secondName": "Андрей",
+      "time": "",
+      "place": 11
+    },
+    {
+      "number": 116,
+      "firstName": "Заикин",
+      "secondName": "Владимир",
+      "time": "5:01:07",
+      "place": 12
+    },
+    {
+      "number": 119,
+      "firstName": "Luck",
+      "secondName": "Loki",
+      "time": "5:09:45",
+      "place": 13
+    },
+    {
+      "number": 98,
+      "firstName": "Гурьев",
+      "secondName": "Егор",
+      "time": "",
+      "place": 14
+    },
+    {
+      "number": 103,
+      "firstName": "Вихлянцев",
+      "secondName": "Андрей",
+      "time": "5:31:33",
+      "place": 15
+    },
+    {
+      "number": 101,
+      "firstName": "Карпов",
+      "secondName": "Юра",
+      "time": "5:32:43",
+      "place": 16
+    },
+    {
+      "number": 105,
+      "firstName": "Внукевич",
+      "secondName": "Виктор",
+      "time": "",
+      "place": "x"
+    },
+    {
+      "number": 136,
+      "firstName": "Григорьев",
+      "secondName": "Антон",
+      "time": "",
+      "place": "x"
+    },
+    {
+      "number": 117,
+      "firstName": "Кокин",
+      "secondName": "Стас",
+      "time": "",
+      "place": "x"
+    },
+    {
+      "number": 104,
+      "firstName": "Корниленко",
+      "secondName": "Григорий",
+      "time": "",
+      "place": "x"
+    },
+    {
+      "number": 94,
+      "firstName": "Лилло",
+      "secondName": "Карстен",
+      "time": "",
+      "place": "x"
+    },
+    {
+      "number": 106,
+      "firstName": "Мухин",
+      "secondName": "Виталий",
+      "time": "6:21:09",
+      "place": "x"
+    },
+    {
+      "number": 100,
+      "firstName": "Овсянников",
+      "secondName": "Никиточка",
+      "time": "",
+      "place": "x"
+    },
+    {
+      "number": 96,
+      "firstName": "Рыбий",
+      "secondName": "Дмитрий",
+      "time": "5:22:29",
+      "place": "x"
+    },
+    {
+      "number": 113,
+      "firstName": "Вертоло",
+      "secondName": "Всеволод",
+      "time": "",
+      "place": "x"
+    }
+  ],
+  "singleM": [
+    {
+      "number": 134,
+      "firstName": "Плужников",
+      "secondName": "Андрей",
+      "time": "",
+      "place": 1
+    },
+    {
+      "number": 124,
+      "firstName": "Кузьмин",
+      "secondName": "Илья",
+      "time": "",
+      "place": 2
+    },
+    {
+      "number": 133,
+      "firstName": "Карпухин",
+      "secondName": "Александр",
+      "time": "",
+      "place": 3
+    },
+    {
+      "number": 126,
+      "firstName": "Домбровский",
+      "secondName": "Роман",
+      "time": "",
+      "place": 4
+    },
+    {
+      "number": 97,
+      "firstName": "Лялин",
+      "secondName": "Николай",
+      "time": "",
+      "place": 5
+    },
+    {
+      "number": 130,
+      "firstName": "Попов",
+      "secondName": "Влад",
+      "time": "",
+      "place": 6
+    },
+    {
+      "number": 123,
+      "firstName": "Кравцов",
+      "secondName": "Максим",
+      "time": "",
+      "place": 7
+    },
+    {
+      "number": 122,
+      "firstName": "Баштан",
+      "secondName": "Максим",
+      "time": "",
+      "place": 8
+    },
+    {
+      "number": 132,
+      "firstName": "Котов",
+      "secondName": "Евгений",
+      "time": "",
+      "place": "x"
+    },
+    {
+      "number": 135,
+      "firstName": "М",
+      "secondName": "Никита",
+      "time": "",
+      "place": "x"
+    },
+    {
+      "number": 131,
+      "firstName": "Максимов",
+      "secondName": "Иван",
+      "time": "6:44:07",
+      "place": "x"
+    },
+    {
+      "number": 121,
+      "firstName": "Пест",
+      "secondName": "Саша",
+      "time": "6:46:35",
+      "place": "x"
+    }
+  ],
+  "singleW": [
+    {
+      "number": 142,
+      "firstName": "👑 Борилкевич",
+      "secondName": "Екатерина",
+      "time": "",
+      "place": 1
+    },
+    {
+      "number": 143,
+      "firstName": "Ройтман",
+      "secondName": "Мария",
+      "time": "",
+      "place": 2
+    },
+    {
+      "number": 141,
+      "firstName": "Маскова",
+      "secondName": "Александра",
+      "time": "4:55:47",
+      "place": 3
+    },
+    {
+      "number": "б\\н",
+      "firstName": "Шмакова",
+      "secondName": "Татьяна",
+      "time": "5:10:57",
+      "place": 4
+    },
+    {
+      "number": 145,
+      "firstName": "Царёва",
+      "secondName": "Полина",
+      "time": "5:43:46",
+      "place": 5
+    },
+    {
+      "number": 144,
+      "firstName": "Кирилова",
+      "secondName": "Ксения",
+      "time": "6:08:55",
+      "place": "x"
+    },
+    {
+      "number": 146,
+      "firstName": "Кобцева",
+      "secondName": "Людмила",
+      "time": "",
+      "place": "x"
+    },
+    {
+      "number": 148,
+      "firstName": "Семенова",
+      "secondName": "Анастасия",
+      "time": "",
+      "place": "x"
+    },
+    {
+      "number": 149,
+      "firstName": "Федорова",
+      "secondName": "Даша",
+      "time": "",
+      "place": "x"
+    },
+    {
+      "number": 138,
+      "firstName": "Буль",
+      "secondName": "Полина",
+      "time": "7:02:47",
+      "place": "x"
+    },
+    {
+      "number": 147,
+      "firstName": "Нефедова",
+      "secondName": "Мария",
+      "time": "8:10:00",
+      "place": "x"
+    }
+  ]
+}
