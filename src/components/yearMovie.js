@@ -22,12 +22,14 @@ const Container = styled.section`
     position: "absolute";
     top: 0;
     left: 0;
-    width: "100%";
-    height: "100%";
     border: "none";
+    margin: 0 80px;
   }
 
   @media (max-width: 780px) {
+    & .video {
+      margin: 0;
+    }
     /* padding: 54px 18px; */
     padding: 14px;
     /* padding-right: 41px; */
@@ -49,6 +51,8 @@ const ModalWindow = styled.div`
   width: 100%;
   min-height: 100%;
   overflow: auto;
+  display: flex;
+  align-items: center;
 `;
 
 const YearMovie = ({ close, iframeData }) => {
@@ -66,7 +70,6 @@ const YearMovie = ({ close, iframeData }) => {
                 paddingBottom: "56.25%" /* 16:9 */,
                 paddingTop: 25,
                 height: 0,
-                margin: "0 80px",
               }}
             >
               <iframe
@@ -76,6 +79,8 @@ const YearMovie = ({ close, iframeData }) => {
                   left: 0,
                   width: "100%",
                   height: "100%",
+                  maxHeight: "640px",
+                  maxWidth: "1024px",
                 }}
                 src={iframeData.src}
                 title={iframeData.title}

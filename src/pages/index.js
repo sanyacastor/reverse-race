@@ -456,7 +456,7 @@ const YearGallery = styled.ul`
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url("data:image/svg+xml,%3Csvg width='42' height='48' viewBox='0 0 42 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M42 24L0.750002 47.3827L0.750004 0.617313L42 24Z' fill='white'/%3E%3C/svg%3E");
-    z-index: 99;
+    z-index: 2;
   }
 
   & .thumb.video img {
@@ -692,14 +692,6 @@ const YearFact = styled(Container)`
 `;
 
 const FaqPage = (props) => {
-  // console.log(":??", props.data.poster2017.edges);
-  // const posters = [
-  //   props.data.poster2017.edges,
-  //   props.data.poster2018.edges,
-  //   props.data.poster2019.edges,
-  //   props.data.poster2020.edges,
-  // ];
-
   const s1 = useRef(null);
   const s2 = useRef(null);
   const s3 = useRef(null);
@@ -728,17 +720,25 @@ const FaqPage = (props) => {
 
   const showGallery = (y) => {
     setVisible(true);
+    document.body.style.overflowY = "hidden";
+    document.body.style.maxHeight = "100vh";
     setCurrentYear(y);
   };
   const showVideoPopup = (y) => {
     setVideoPopup(true);
+    document.body.style.overflowY = "hidden";
+    document.body.style.maxHeight = "100vh";
     setCurrentVideo(y);
   };
   const closeVideoPopup = (y) => {
     setVideoPopup(false);
+    document.body.style.overflowY = "auto";
+    document.body.style.maxHeight = "initial";
   };
   const closeGallery = () => {
     setVisible(false);
+    document.body.style.overflowY = "auto";
+    document.body.style.maxHeight = "initial";
   };
 
   const handleYearSelect = (state, n) => {
