@@ -288,19 +288,22 @@ const Founders = styled.div`
   color: #fff;
   grid-column: 2/5;
   grid-row: 2/3;
-  text-align: center;
+  text-align: left;
   font-weight: 900;
   font-size: var(--font-size-s);
   line-height: 146%;
   text-transform: uppercase;
 
-  display: grid;
-  grid-template-rows: max-content;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  & a {
+    color: white;
+  }
 
   & span + span {
-    margin-left: auto;
-    text-align: right;
+    margin-left: 100px;
   }
   & .mobile {
     display: none;
@@ -322,12 +325,6 @@ const Founders = styled.div`
   }
 
   @media (max-width: 780px) {
-    & .desktop {
-      display: none;
-    }
-    & .mobile {
-      display: block;
-    }
   }
 `;
 
@@ -1728,22 +1725,46 @@ const FaqPage = (props) => {
           </Container>
           <Container>
             <Founders>
-              <div className="col-1" id="founders">
-                <span className="desktop">
-                  Александр бочков — организация гонки.
+              <div id="founders">
+                <span className="founder-person">
+                  <a href="https://www.instagram.com/narmalna/" target="_blank">
+                    Александр бочков{" "}
+                  </a>
+                  — организация гонки{" "}
                 </span>
-                <span className="mobile">
-                  <p>Александр бочков — </p>
-                  <p>Дмитрий Шевченко — </p>
+                <span className="founder-person">
+                  <a
+                    href="https://www.instagram.com/shoplift.design/"
+                    target="_blank"
+                  >
+                    SHOPLIFT{" "}
+                  </a>
+                  — дизайн{" "}
                 </span>
-              </div>
-              <div className="col-2">
-                <span className="desktop">
-                  Дмитрий Шевченко — поиск трассы, помощь в организации.
+                <span className="founder-person">
+                  <a
+                    href="https://www.instagram.com/saaanya35/"
+                    target="_blank"
+                  >
+                    Александр Ильин{" "}
+                  </a>
+                  — Сайт{" "}
                 </span>
-                <span className="mobile">
-                  <p>организация гонки.</p>
-                  <p>поиск трассы, помощь в организации.</p>
+                <span className="founder-person">
+                  <a
+                    href="https://www.instagram.com/nocycling/"
+                    target="_blank"
+                  >
+                    ДМИТРИЙ ШЕВЧЕНКО{" "}
+                  </a>
+                  ,{" "}
+                  <a
+                    href=" https://www.instagram.com/i_am_gala/"
+                    target="_blank"
+                  >
+                    Галина Баландина{" "}
+                  </a>
+                  — поиск трассы, помощь в организации
                 </span>
               </div>
             </Founders>
