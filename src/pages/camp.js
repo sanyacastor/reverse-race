@@ -368,17 +368,8 @@ const FaqPage = () => {
           <br />
           <Heading>Ремонт и мастерские:</Heading>
           <Text>
-            За ремонтом велосипедов будут следить сразу три мастерские:
+            За ремонтом велосипедов будут следить две мастерские:
           </Text>
-          <Heading>
-            <a
-              href="https://www.instagram.com/pirate_cycles"
-              target="blank"
-              style={{ display: "inline-block" }}
-            >
-              Pirate Cycles
-            </a>
-          </Heading>
           <Heading>
             <a
               href="https://velomedik.ru"
