@@ -70,8 +70,8 @@ const Header = () => (
       {/* <Link className='shop' to='/shop'>
         Магазин
       </Link> */}
-      <Link className="registration" to="/registration-2021">
-        Регистрация
+      <Link className="registration" to="/camp">
+        лагерь’21
       </Link>
       <BurgerMenu />
     </NavBar>
