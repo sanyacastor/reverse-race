@@ -212,7 +212,7 @@ const FaqPage = () => {
             ЛА-
             <br /> ГЕРЬ
           </Header2>
-          <Heading style={{ marginBottom: "1.57em" }}>
+          <Heading style={{ marginBottom: "1.57em", paddingRight: "80px" }}>
             Ждем всех на берегу озера Тихое (Приозерсий район, Ленинградская
             область) с 16 по 18 июля. Гонка – 17 июля, старт в 10:30 утра.
           </Heading>
@@ -336,7 +336,8 @@ const FaqPage = () => {
               {" "}
               Rébellion Clubhouse
             </a>{" "}
-            будет заваривать фильтр и альтернативу.
+            будет заваривать фильтр и альтернативу, так же в меню колдбрю,
+            эспрессо-бейсд кофе и сладости.
           </Text>
           <Text>
             Передвижной бар{" "}
@@ -367,9 +368,7 @@ const FaqPage = () => {
           </Heading>
           <br />
           <Heading>Ремонт и мастерские:</Heading>
-          <Text>
-            За ремонтом велосипедов будут следить две мастерские:
-          </Text>
+          <Text>За ремонтом велосипедов будут следить две мастерские:</Text>
           <Heading>
             <a
               href="https://velomedik.ru"
@@ -403,10 +402,9 @@ const FaqPage = () => {
             Команда{" "}
             <a
               href="https://silavetra.com/"
-              arget="blank"
+              target="blank"
               style={{ display: "inline-block" }}
             >
-              
               «Сила Ветра»
             </a>{" "}
             привезет на озеро сапборды, арендовать их можно будет бесплатно. На
@@ -539,7 +537,13 @@ const FaqPage = () => {
           </Header2>
           <Heading>
             <span style={{ minWidth: "100px", display: "inline-block" }}>
-              170км
+              <a
+                href="https://www.komoot.com/tour/416560949"
+                target="blank"
+                style={{ display: "inline-block", color: "white" }}
+              >
+                170км
+              </a>
             </span>
             <a
               href="gpx/21_reverse_big.gpx"
@@ -552,7 +556,13 @@ const FaqPage = () => {
           </Heading>
           <Heading style={{ marginBottom: "1.2em" }}>
             <span style={{ minWidth: "100px", display: "inline-block" }}>
-              90км
+              <a
+                href="https://www.komoot.com/tour/416566840"
+                target="blank"
+                style={{ display: "inline-block", color: "white" }}
+              >
+                90км
+              </a>
             </span>
             <a
               href="gpx/21_reverse_small.gpx"
@@ -609,8 +619,8 @@ const FaqPage = () => {
             можно сразу валиться на землю.
           </Text>
           <Text>
-            На трассе организованы три пункта питания для большого круга и один
-            – для малого. Здесь вы можете пополнить запас воды во флягах и
+            На трассе организованы три пункта питания для большого круга и два –
+            для малого. Здесь вы можете пополнить запас воды во флягах и
             углеводов в теле. На всех пунктах питания есть аптечки, насосы и
             ремнаборы с камерами для ваших велосипедов.
           </Text>
