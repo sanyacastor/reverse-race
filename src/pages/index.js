@@ -455,7 +455,7 @@ const YearGallery = styled.ul`
     transform: scale(1) translateX(-50%) translateY(-50%);
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("data:image/svg+xml,%3Csvg width='42' height='48' viewBox='0 0 42 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M42 24L0.750002 47.3827L0.750004 0.617313L42 24Z' fill='white'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg width='42' height='48' viewBox='0 0 42 48' fill='none' xmlns='https://www.w3.org/2000/svg'%3E%3Cpath d='M42 24L0.750002 47.3827L0.750004 0.617313L42 24Z' fill='white'/%3E%3C/svg%3E");
     z-index: 2;
   }
 
@@ -810,31 +810,6 @@ const FaqPage = (props) => {
                 </p>
               </YearTitle>
               <YearGallery>
-                {/* {videoPopup && currentVideo === 2020 && (
-                  <YearMovie
-                    iframeData={{
-                      width: 674,
-                      height: 379,
-                      src: "https://www.youtube.com/embed/wl2ul3yP4y0",
-                      title: "YouTube video player",
-                      frameborder: "0",
-                      allow:
-                        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
-                      allowfullscreen: true,
-                    }}
-                    close={() => closeVideoPopup()}
-                  />
-                )}
-                <li
-                  className="thumb"
-                  onClick={() => {
-                    showVideoPopup(2020);
-                  }}
-                >
-                  <img
-                    src={`http://i3.ytimg.com/vi/wl2ul3yP4y0/maxresdefault.jpg`}
-                  />
-                </li> */}
                 {slides2020.edges.map((s, ndx) => {
                   return (
                     <div
@@ -929,7 +904,7 @@ const FaqPage = (props) => {
                   </InlineLink>
                   ! Год был богат на крупные коллаборации. Специально для
                   Reverse Side of The Road 2020 пивоварня{" "}
-                  <InlineLink href="http://paradox.beer/" target="_blank">
+                  <InlineLink href="https://paradox.beer/" target="_blank">
                     Paradox
                   </InlineLink>{" "}
                   сварила смородиновое гозе,{" "}
@@ -953,7 +928,7 @@ const FaqPage = (props) => {
                   </InlineLink>
                   , была выпущена большая партия фляг{" "}
                   <InlineLink
-                    href="http://www.specializedwaterbottles.com/water-bottles/the-purist"
+                    href="https://www.specializedwaterbottles.com/water-bottles/the-purist"
                     target="_blank"
                   >
                     Purist
@@ -1117,7 +1092,7 @@ const FaqPage = (props) => {
                 >
                   <img
                     alt="Youtube preview"
-                    src={`http://i3.ytimg.com/vi/wl2ul3yP4y0/maxresdefault.jpg`}
+                    src={`https://i3.ytimg.com/vi/wl2ul3yP4y0/maxresdefault.jpg`}
                   />
                 </li>
                 {slides2019.edges.map((s, ndx) => {
@@ -1441,31 +1416,6 @@ const FaqPage = (props) => {
                 </p>
               </YearTitle>
               <YearGallery>
-                {/* {videoPopup && currentVideo === 2017 && (
-                  <YearMovie
-                    iframeData={{
-                      width: 674,
-                      height: 379,
-                      src: "https://www.youtube.com/embed/A0CfYSVzAZI",
-                      title: "YouTube video player",
-                      frameborder: "0",
-                      allow:
-                        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
-                      allowfullscreen: true,
-                    }}
-                    close={() => closeVideoPopup()}
-                  />
-                )}
-                <li
-                  className="thumb"
-                  onClick={() => {
-                    showVideoPopup(2017);
-                  }}
-                >
-                  <img
-                    src={`http://i3.ytimg.com/vi/A0CfYSVzAZI/maxresdefault.jpg`}
-                  />
-                </li> */}
                 {slides2017.edges.map((s, ndx) => {
                   return (
                     <div
