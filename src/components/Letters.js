@@ -40,9 +40,9 @@ export default function Letters(p5) {
   };
 
   p5.draw = () => {
-    let x = 0.9 * (p5.windowWidth / 2) * p5.sin(angle) * cfx;
-    let y = cfx * (p5.windowHeight / 2) * p5.cos(angle) * cfx;
-    angle += 2;
+    let x = .5 * (p5.windowWidth/2) * p5.sin(angle*2)*p5.cos(angle);
+    let y = (p5.windowHeight / 4) * p5.cos(angle/2)*p5.cos(angle);
+    angle += 0.5;
     base = base - 0.2;
 
     if (y < 200 || y > -200) {
