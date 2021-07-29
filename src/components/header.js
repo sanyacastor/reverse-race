@@ -63,15 +63,17 @@ const NavBar = styled.nav`
 const Header = () => (
   <header>
     <NavBar>
-      <Link to="/">Reverse side of the road 16 - 18.07.2021</Link>
+      <Link to="/" style={{ textDecoration: "line-through" }}>
+        Reverse side of the road 16 - 18.07.2021
+      </Link>
       {/* <Link className='faq' to='#faq'>
         Faq
       </Link> */}
       {/* <Link className='shop' to='/shop'>
         Магазин
       </Link> */}
-      <Link className="registration" to="/camp">
-        лагерь’21
+      <Link className="registration" to="/results2021">
+        Результаты 2021
       </Link>
       <BurgerMenu />
     </NavBar>

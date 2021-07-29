@@ -1,0 +1,2144 @@
+{
+  "fixedM": [
+    {
+      "place": 1,
+      "number": 288,
+      "secondName": "Карпекин",
+      "firstName": "👑 Антон",
+      "time": "06:29:21"
+    },
+    {
+      "place": 2,
+      "number": 263,
+      "secondName": "Сергеев",
+      "firstName": "Никита",
+      "time": "06:38:15"
+    },
+    {
+      "place": 3,
+      "number": 257,
+      "secondName": "Богатыреко",
+      "firstName": "Дмитрий",
+      "time": "06:45:45"
+    },
+    {
+      "place": 4,
+      "number": 289,
+      "secondName": "Бегемотов",
+      "firstName": "Вячеслав",
+      "time": "06:58:36"
+    },
+    {
+      "place": 5,
+      "number": 272,
+      "secondName": "Фащевский",
+      "firstName": "Дмитрий",
+      "time": "07:03:43"
+    },
+    {
+      "place": 6,
+      "number": 116,
+      "secondName": "Резниченко",
+      "firstName": "Георгий",
+      "time": "07:12:06"
+    },
+    {
+      "place": 7,
+      "number": 251,
+      "secondName": "Герасимов",
+      "firstName": "Александр",
+      "time": "07:39:43"
+    },
+    {
+      "place": 8,
+      "number": 284,
+      "secondName": "Колоколов",
+      "firstName": "Федор",
+      "time": "07:44:43"
+    },
+    {
+      "place": 9,
+      "number": 255,
+      "secondName": "Старков",
+      "firstName": "Иван",
+      "time": "07:45:26"
+    },
+    {
+      "place": 10,
+      "number": 260,
+      "secondName": "Груздовка",
+      "firstName": "Петя",
+      "time": "07:47:20"
+    },
+    {
+      "place": 11,
+      "number": 264,
+      "secondName": "Бартулев",
+      "firstName": "Фёдор",
+      "time": "07:47:33"
+    },
+    {
+      "place": 12,
+      "number": 287,
+      "secondName": "Елпаев",
+      "firstName": "Макс",
+      "time": "08:08:58"
+    },
+    {
+      "place": 13,
+      "number": 269,
+      "secondName": "Макарычев",
+      "firstName": "Алексей",
+      "time": "08:19:28"
+    },
+    {
+      "place": 14,
+      "number": 259,
+      "secondName": "Морозка Фас",
+      "firstName": "Кот",
+      "time": "08:23:01"
+    },
+    {
+      "place": 15,
+      "number": 265,
+      "secondName": "Устюжанцев",
+      "firstName": "Михаил",
+      "time": "08:33:02"
+    },
+    {
+      "place": 16,
+      "number": 262,
+      "secondName": "Погосян",
+      "firstName": "Роберт",
+      "time": "08:43:40"
+    },
+    {
+      "place": 17,
+      "number": 267,
+      "secondName": "Старков",
+      "firstName": "Даниил",
+      "time": "09:06:19"
+    },
+    {
+      "place": 18,
+      "number": 276,
+      "secondName": "Плеханов",
+      "firstName": "Артем",
+      "time": "09:22:32"
+    },
+    {
+      "place": 19,
+      "number": 258,
+      "secondName": "Дьячков",
+      "firstName": "Сергей",
+      "time": "09:29:22"
+    },
+    {
+      "place": 20,
+      "number": 253,
+      "secondName": "Бондарев",
+      "firstName": "Алексей",
+      "time": "09:39:18"
+    },
+    {
+      "place": "",
+      "number": 252,
+      "secondName": "Luck",
+      "firstName": "L0k1",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 254,
+      "secondName": "Харапут",
+      "firstName": "Роман",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 256,
+      "secondName": "Филатов",
+      "firstName": "Александр",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 266,
+      "secondName": "Абрамов",
+      "firstName": "Паша",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 268,
+      "secondName": "Гусев",
+      "firstName": "Анатолий",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 270,
+      "secondName": "Белов",
+      "firstName": "Олег",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 271,
+      "secondName": "Пилот",
+      "firstName": "Влад",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 273,
+      "secondName": "Пучков",
+      "firstName": "Аркадий",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 274,
+      "secondName": "Vasya",
+      "firstName": "Life",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 275,
+      "secondName": "Клячков",
+      "firstName": "Миша",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 427,
+      "secondName": "Резниченко",
+      "firstName": "Данил",
+      "time": ""
+    }
+  ],
+
+  "singleM": [
+    {
+      "place": 1,
+      "number": 234,
+      "secondName": "Хмельницкий",
+      "firstName": "Владимир",
+      "time": "07:22:06"
+    },
+    {
+      "place": 2,
+      "number": 235,
+      "secondName": "Пискунов",
+      "firstName": "Денис",
+      "time": "07:27:38"
+    },
+    {
+      "place": 3,
+      "number": 394,
+      "secondName": "Красеньков",
+      "firstName": "Денис",
+      "time": "08:39:08"
+    },
+    {
+      "place": 4,
+      "number": 233,
+      "secondName": "Метель",
+      "firstName": "Андрей",
+      "time": "08:50:35"
+    },
+    {
+      "place": 5,
+      "number": 232,
+      "secondName": "Овчинников",
+      "firstName": "Филипп",
+      "time": "08:51:12"
+    }
+  ],
+
+  "multiW": [
+    {
+      "place": 1,
+      "number": 169,
+      "secondName": "Roytman",
+      "firstName": "Mary",
+      "time": "07:01:10"
+    },
+    {
+      "place": 2,
+      "number": 161,
+      "secondName": "Борилкевич",
+      "firstName": "Екатерина",
+      "time": "07:14:15"
+    },
+    {
+      "place": 3,
+      "number": 178,
+      "secondName": "Илларионова",
+      "firstName": "Екатерина",
+      "time": "07:30:57"
+    },
+    {
+      "place": 4,
+      "number": 170,
+      "secondName": "Чудакова",
+      "firstName": "Оля",
+      "time": "07:52:29"
+    },
+    {
+      "place": 5,
+      "number": 177,
+      "secondName": "Тетерина",
+      "firstName": "Валерия",
+      "time": "07:59:00"
+    },
+    {
+      "place": 6,
+      "number": 174,
+      "secondName": "Лаврова",
+      "firstName": "Катя",
+      "time": "08:08:24"
+    },
+    {
+      "place": 7,
+      "number": 162,
+      "secondName": "Маскова",
+      "firstName": "Александра",
+      "time": "08:11:44"
+    },
+    {
+      "place": 8,
+      "number": 166,
+      "secondName": "Filatova",
+      "firstName": "Alena",
+      "time": "08:35:35"
+    },
+    {
+      "place": 9,
+      "number": 527,
+      "secondName": "Шмалько",
+      "firstName": "Варвара",
+      "time": "08:46:12"
+    },
+    {
+      "place": 10,
+      "number": 167,
+      "secondName": "Могиленко",
+      "firstName": "Юля",
+      "time": "08:47:15"
+    },
+    {
+      "place": 11,
+      "number": 179,
+      "secondName": "Фогелева",
+      "firstName": "Екатерина",
+      "time": "08:50:51"
+    },
+    {
+      "place": 12,
+      "number": 164,
+      "secondName": "Кушнир",
+      "firstName": "Оля",
+      "time": "08:51:12"
+    },
+    {
+      "place": "",
+      "number": 160,
+      "secondName": "Докадина",
+      "firstName": "Татьяна",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 163,
+      "secondName": "Григорьева",
+      "firstName": "Женя",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 165,
+      "secondName": "Батон",
+      "firstName": "Юлия",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 168,
+      "secondName": "Аксенова",
+      "firstName": "Инна",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 171,
+      "secondName": "Вольмерсон",
+      "firstName": "Эва",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 172,
+      "secondName": "Гурова",
+      "firstName": "Варя",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 175,
+      "secondName": "Хваткова",
+      "firstName": "Алиса",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 67,
+      "secondName": "Кузьмина",
+      "firstName": "Елена",
+      "time": ""
+    }
+  ],
+
+  "fixedW": [
+    {
+      "place": 1,
+      "number": 280,
+      "secondName": "Фионова",
+      "firstName": "👑 Анна",
+      "time": "08:28:37"
+    },
+    {
+      "place": "",
+      "number": 281,
+      "secondName": "Тихомирова",
+      "firstName": "Алиса",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 282,
+      "secondName": "Папинова",
+      "firstName": "Екатерина",
+      "time": ""
+    }
+  ],
+
+  "small": [
+    {
+      "place": 1,
+      "number": 133,
+      "secondName": "Kovalenkov",
+      "firstName": "Vsevolod",
+      "time": "03:55:39"
+    },
+    {
+      "place": 2,
+      "number": 423,
+      "secondName": "Кузнецов",
+      "firstName": "Иван",
+      "time": "04:06:33"
+    },
+    {
+      "place": 3,
+      "number": 355,
+      "secondName": "Лобанов",
+      "firstName": "Петр",
+      "time": "04:23:55"
+    },
+    {
+      "place": 4,
+      "number": 356,
+      "secondName": "Васильман",
+      "firstName": "Роберт",
+      "time": "04:24:24"
+    },
+    {
+      "place": 5,
+      "number": 399,
+      "secondName": "Шважас",
+      "firstName": "Деймантас",
+      "time": "04:24:49"
+    },
+    {
+      "place": 6,
+      "number": 317,
+      "secondName": "Тишин",
+      "firstName": "Арсений",
+      "time": "04:29:26"
+    },
+    {
+      "place": 7,
+      "number": 373,
+      "secondName": "Анзулатос",
+      "firstName": "Михаил",
+      "time": "04:30:57"
+    },
+    {
+      "place": 8,
+      "number": 55,
+      "secondName": "Патраков",
+      "firstName": "Александр",
+      "time": "04:31:23"
+    },
+    {
+      "place": 9,
+      "number": 321,
+      "secondName": "Попов",
+      "firstName": "Влад",
+      "time": "04:34:29"
+    },
+    {
+      "place": 10,
+      "number": 495,
+      "secondName": "Шишов",
+      "firstName": "Дмитрий",
+      "time": "04:34:49"
+    },
+    {
+      "place": 11,
+      "number": 431,
+      "secondName": "Томашпольский",
+      "firstName": "Кирилл",
+      "time": "04:36:10"
+    },
+    {
+      "place": 12,
+      "number": 347,
+      "secondName": "Воронцов",
+      "firstName": "Глеб",
+      "time": "04:37:30"
+    },
+    {
+      "place": 13,
+      "number": 318,
+      "secondName": "Кунст",
+      "firstName": "Дима",
+      "time": "04:38:50"
+    },
+    {
+      "place": 14,
+      "number": 137,
+      "secondName": "Рева",
+      "firstName": "Егор",
+      "time": "04:40:39"
+    },
+    {
+      "place": 15,
+      "number": 424,
+      "secondName": "Ерин",
+      "firstName": "Павел",
+      "time": "04:41:08"
+    },
+    {
+      "place": 16,
+      "number": 220,
+      "secondName": "Гарик",
+      "firstName": "Тано",
+      "time": "04:42:55"
+    },
+    {
+      "place": 17,
+      "number": 339,
+      "secondName": "Трибушний",
+      "firstName": "Дмитрий",
+      "time": "04:43:11"
+    },
+    {
+      "place": 18,
+      "number": 144,
+      "secondName": "Кузьмин",
+      "firstName": "Женя",
+      "time": "04:43:42"
+    },
+    {
+      "place": 19,
+      "number": 390,
+      "secondName": "Дриго",
+      "firstName": "Илья",
+      "time": "04:47:04"
+    },
+    {
+      "place": 20,
+      "number": 314,
+      "secondName": "Александров",
+      "firstName": "Владимир",
+      "time": "04:49:51"
+    },
+    {
+      "place": 21,
+      "number": 361,
+      "secondName": "Кожевников",
+      "firstName": "Александр",
+      "time": "04:50:53"
+    },
+    {
+      "place": 22,
+      "number": 300,
+      "secondName": "Гумбин",
+      "firstName": "Лёха",
+      "time": "04:51:33"
+    },
+    {
+      "place": 23,
+      "number": 508,
+      "secondName": "Подгорный",
+      "firstName": "Тимофей",
+      "time": "04:52:00"
+    },
+    {
+      "place": 24,
+      "number": 143,
+      "secondName": "Сачик",
+      "firstName": "Георгий",
+      "time": "04:53:29"
+    },
+    {
+      "place": 25,
+      "number": 432,
+      "secondName": "Чадаев",
+      "firstName": "Артем",
+      "time": "04:53:43"
+    },
+    {
+      "place": 26,
+      "number": 420,
+      "secondName": "Пантюхин",
+      "firstName": "Константин",
+      "time": "04:54:08"
+    },
+    {
+      "place": 27,
+      "number": 480,
+      "secondName": "Белоусов",
+      "firstName": "Павел",
+      "time": "04:55:16"
+    },
+    {
+      "place": 28,
+      "number": 308,
+      "secondName": "Павлов",
+      "firstName": "Павел",
+      "time": "04:55:42"
+    },
+    {
+      "place": 29,
+      "number": 301,
+      "secondName": "Французов",
+      "firstName": "Роман",
+      "time": "04:56:10"
+    },
+    {
+      "place": 30,
+      "number": 384,
+      "secondName": "Рябков",
+      "firstName": "Валентин",
+      "time": "04:56:34"
+    },
+    {
+      "place": 31,
+      "number": 298,
+      "secondName": "Кирилл",
+      "firstName": "Харин",
+      "time": "04:56:35"
+    },
+    {
+      "place": 32,
+      "number": 383,
+      "secondName": "Невеский",
+      "firstName": "Иван",
+      "time": "04:59:21"
+    },
+    {
+      "place": 33,
+      "number": 505,
+      "secondName": "Kasay",
+      "firstName": "Andrey",
+      "time": "04:59:23"
+    },
+    {
+      "place": 34,
+      "number": 396,
+      "secondName": "Шевельков",
+      "firstName": "Юрий",
+      "time": "04:59:44"
+    },
+    {
+      "place": 35,
+      "number": 496,
+      "secondName": "Курашов",
+      "firstName": "Леонид",
+      "time": "05:00:28"
+    },
+    {
+      "place": 36,
+      "number": 307,
+      "secondName": "Поляев",
+      "firstName": "Савва",
+      "time": "05:00:40"
+    },
+    {
+      "place": 37,
+      "number": 362,
+      "secondName": "Слугин",
+      "firstName": "Рома",
+      "time": "05:00:40"
+    },
+    {
+      "place": 38,
+      "number": 466,
+      "secondName": "Гумбин",
+      "firstName": "Иван",
+      "time": "05:00:49"
+    },
+    {
+      "place": 39,
+      "number": 295,
+      "secondName": "Гафаров",
+      "firstName": "Дильшод",
+      "time": "05:04:14"
+    },
+    {
+      "place": 40,
+      "number": 18,
+      "secondName": "Морозов",
+      "firstName": "Евгений",
+      "time": "05:04:49"
+    },
+    {
+      "place": 41,
+      "number": 261,
+      "secondName": "Гладышев",
+      "firstName": "Денис",
+      "time": "05:09:40"
+    },
+    {
+      "place": 42,
+      "number": 418,
+      "secondName": "Осипов",
+      "firstName": "Михаил",
+      "time": "05:10:31"
+    },
+    {
+      "place": 43,
+      "number": 474,
+      "secondName": "Земляной",
+      "firstName": "Николай",
+      "time": "05:10:39"
+    },
+    {
+      "place": 44,
+      "number": 445,
+      "secondName": "Потапов",
+      "firstName": "Никита",
+      "time": "05:10:50"
+    },
+    {
+      "place": 45,
+      "number": 429,
+      "secondName": "Сидорин",
+      "firstName": "Юрий",
+      "time": "05:11:38"
+    },
+    {
+      "place": 46,
+      "number": 411,
+      "secondName": "Васильев",
+      "firstName": "Артем",
+      "time": "05:11:59"
+    },
+    {
+      "place": 47,
+      "number": 375,
+      "secondName": "Драчев",
+      "firstName": "Тони",
+      "time": "05:12:06"
+    },
+    {
+      "place": 48,
+      "number": 138,
+      "secondName": "Верехин",
+      "firstName": "Кирилл",
+      "time": "05:12:06"
+    },
+    {
+      "place": 49,
+      "number": 38,
+      "secondName": "Хватов",
+      "firstName": "Артем",
+      "time": "05:13:09"
+    },
+    {
+      "place": 50,
+      "number": 199,
+      "secondName": "Кач",
+      "firstName": "Кач",
+      "time": "05:13:14"
+    },
+    {
+      "place": 51,
+      "number": 360,
+      "secondName": "Беда",
+      "firstName": "Георгий",
+      "time": "05:13:23"
+    },
+    {
+      "place": 52,
+      "number": 491,
+      "secondName": "Лохматов",
+      "firstName": "Саша",
+      "time": "05:13:25"
+    },
+    {
+      "place": 53,
+      "number": 468,
+      "secondName": "Петров",
+      "firstName": "Илья",
+      "time": "05:13:30"
+    },
+    {
+      "place": 54,
+      "number": 388,
+      "secondName": "Кузнецов",
+      "firstName": "Дмитрий",
+      "time": "05:16:09"
+    },
+    {
+      "place": 55,
+      "number": 409,
+      "secondName": "Голубев",
+      "firstName": "Алексей",
+      "time": "05:17:08"
+    },
+    {
+      "place": 56,
+      "number": 104,
+      "secondName": "Исаев",
+      "firstName": "Дмитрий",
+      "time": "05:17:35"
+    },
+    {
+      "place": 57,
+      "number": 475,
+      "secondName": "Кочергин",
+      "firstName": "Макс",
+      "time": "05:18:18"
+    },
+    {
+      "place": 58,
+      "number": 357,
+      "secondName": "Максимов",
+      "firstName": "Иван",
+      "time": "05:19:39"
+    },
+    {
+      "place": 59,
+      "number": 46,
+      "secondName": "Соловьев",
+      "firstName": "Владимир",
+      "time": "05:19:49"
+    },
+    {
+      "place": 60,
+      "number": 408,
+      "secondName": "Лёзов",
+      "firstName": "Андрей",
+      "time": "05:20:29"
+    },
+    {
+      "place": 61,
+      "number": 533,
+      "secondName": "Ешаков",
+      "firstName": "Павел",
+      "time": "05:20:36"
+    },
+    {
+      "place": 62,
+      "number": 498,
+      "secondName": "Дягилев",
+      "firstName": "Игорь",
+      "time": "05:22:08"
+    },
+    {
+      "place": 63,
+      "number": 306,
+      "secondName": "Кордюков",
+      "firstName": "Глеб",
+      "time": "05:23:26"
+    },
+    {
+      "place": 64,
+      "number": 460,
+      "secondName": "Матвеев",
+      "firstName": "Степан",
+      "time": "05:23:31"
+    },
+    {
+      "place": 65,
+      "number": 443,
+      "secondName": "Антаринов",
+      "firstName": "Сергей",
+      "time": "05:23:35"
+    },
+    {
+      "place": 66,
+      "number": 395,
+      "secondName": "Александров",
+      "firstName": "Павел",
+      "time": "05:23:38"
+    },
+    {
+      "place": 67,
+      "number": 440,
+      "secondName": "Евгений",
+      "firstName": "Кауров",
+      "time": "05:23:42"
+    },
+    {
+      "place": 68,
+      "number": 479,
+      "secondName": "Болога",
+      "firstName": "Вован",
+      "time": "05:23:46"
+    },
+    {
+      "place": 69,
+      "number": 379,
+      "secondName": "Багров",
+      "firstName": "Михаил",
+      "time": "05:24:39"
+    },
+    {
+      "place": 70,
+      "number": 506,
+      "secondName": "Корляков",
+      "firstName": "Кирилл",
+      "time": "05:28:08"
+    },
+    {
+      "place": 71,
+      "number": 412,
+      "secondName": "Козак",
+      "firstName": "Васиний",
+      "time": "05:28:49"
+    },
+    {
+      "place": 72,
+      "number": 131,
+      "secondName": "Катков",
+      "firstName": "Евгений",
+      "time": "05:28:50"
+    },
+    {
+      "place": 73,
+      "number": 487,
+      "secondName": "Судьин",
+      "firstName": "Николай",
+      "time": "05:30:11"
+    },
+    {
+      "place": 74,
+      "number": 478,
+      "secondName": "Черепанов",
+      "firstName": "Артем",
+      "time": "05:30:29"
+    },
+    {
+      "place": 75,
+      "number": 354,
+      "secondName": "Кулаков",
+      "firstName": "Егор",
+      "time": "05:31:46"
+    },
+    {
+      "place": 76,
+      "number": 372,
+      "secondName": "Логинов",
+      "firstName": "Алексей",
+      "time": "05:31:46"
+    },
+    {
+      "place": 77,
+      "number": 389,
+      "secondName": "Marachevskiy",
+      "firstName": "Anton",
+      "time": "05:33:33"
+    },
+    {
+      "place": 78,
+      "number": 309,
+      "secondName": "Гурьяшов",
+      "firstName": "Илья",
+      "time": "05:36:18"
+    },
+    {
+      "place": 79,
+      "number": 482,
+      "secondName": "Гусманов",
+      "firstName": "Даниил",
+      "time": "05:37:42"
+    },
+    {
+      "place": 80,
+      "number": 342,
+      "secondName": "Балашов",
+      "firstName": "Алексей",
+      "time": "05:37:48"
+    },
+    {
+      "place": 81,
+      "number": 374,
+      "secondName": "Лебедев",
+      "firstName": "Владислав",
+      "time": "05:37:50"
+    },
+    {
+      "place": 82,
+      "number": 365,
+      "secondName": "Блинов",
+      "firstName": "Олег",
+      "time": "05:38:49"
+    },
+    {
+      "place": 83,
+      "number": 190,
+      "secondName": "Яковлев",
+      "firstName": "Евгений",
+      "time": "05:42:19"
+    },
+    {
+      "place": 84,
+      "number": 454,
+      "secondName": "Jeroe",
+      "firstName": "Aleksey",
+      "time": "05:42:52"
+    },
+    {
+      "place": 85,
+      "number": 435,
+      "secondName": "Гайдаров",
+      "firstName": "Сергей",
+      "time": "05:42:59"
+    },
+    {
+      "place": 86,
+      "number": 464,
+      "secondName": "Попов",
+      "firstName": "Евгений",
+      "time": "05:43:11"
+    },
+    {
+      "place": 87,
+      "number": 348,
+      "secondName": "Сиротин",
+      "firstName": "Артём",
+      "time": "05:43:19"
+    },
+    {
+      "place": 88,
+      "number": 352,
+      "secondName": "Панов",
+      "firstName": "Алексей",
+      "time": "05:43:23"
+    },
+    {
+      "place": 89,
+      "number": 330,
+      "secondName": "Рольгейзер",
+      "firstName": "Кирилл",
+      "time": "05:43:47"
+    },
+    {
+      "place": 90,
+      "number": 507,
+      "secondName": "Гусев",
+      "firstName": "Олег",
+      "time": "05:46:00"
+    },
+    {
+      "place": 91,
+      "number": 304,
+      "secondName": "Шестаков",
+      "firstName": "Саша",
+      "time": "05:46:43"
+    },
+    {
+      "place": 92,
+      "number": 483,
+      "secondName": "Гусев",
+      "firstName": "Александр",
+      "time": "05:47:49"
+    },
+    {
+      "place": 93,
+      "number": 364,
+      "secondName": "Остапенко",
+      "firstName": "Сергей",
+      "time": "05:49:12"
+    },
+    {
+      "place": 94,
+      "number": 499,
+      "secondName": "Анатолий",
+      "firstName": "Григорьев",
+      "time": "05:49:58"
+    },
+    {
+      "place": 95,
+      "number": 332,
+      "secondName": "Разгуляев",
+      "firstName": "Павел",
+      "time": "05:49:59"
+    },
+    {
+      "place": 96,
+      "number": 223,
+      "secondName": "Пятернев",
+      "firstName": "Артем",
+      "time": "05:50:49"
+    },
+    {
+      "place": 97,
+      "number": 198,
+      "secondName": "Мартьянов",
+      "firstName": "Филипп",
+      "time": "05:50:56"
+    },
+    {
+      "place": 98,
+      "number": 359,
+      "secondName": "Зиновьев",
+      "firstName": "Алексей",
+      "time": "05:52:09"
+    },
+    {
+      "place": 99,
+      "number": 404,
+      "secondName": "Бизюков",
+      "firstName": "Александр",
+      "time": "05:54:26"
+    },
+    {
+      "place": 100,
+      "number": 335,
+      "secondName": "Морозов",
+      "firstName": "Максим",
+      "time": "05:56:30"
+    },
+    {
+      "place": 101,
+      "number": 494,
+      "secondName": "Вахромов",
+      "firstName": "Алексей",
+      "time": "05:57:48"
+    },
+    {
+      "place": 102,
+      "number": 449,
+      "secondName": "Kucherov",
+      "firstName": "Lev",
+      "time": "05:57:59"
+    },
+    {
+      "place": 103,
+      "number": 358,
+      "secondName": "Манн",
+      "firstName": "Кирилл",
+      "time": "05:58:03"
+    },
+    {
+      "place": 104,
+      "number": 51,
+      "secondName": "Мельников",
+      "firstName": "Макс",
+      "time": "05:58:38"
+    },
+    {
+      "place": 105,
+      "number": 328,
+      "secondName": "Радченко",
+      "firstName": "Павел",
+      "time": "05:59:40"
+    },
+    {
+      "place": 106,
+      "number": 492,
+      "secondName": "Strizhkov",
+      "firstName": "Artem",
+      "time": "06:00:02"
+    },
+    {
+      "place": 107,
+      "number": 310,
+      "secondName": "Жженов",
+      "firstName": "Максим",
+      "time": "06:01:01"
+    },
+    {
+      "place": 108,
+      "number": 187,
+      "secondName": "Масков",
+      "firstName": "Владислав",
+      "time": "06:01:27"
+    },
+    {
+      "place": 109,
+      "number": 461,
+      "secondName": "Васильев",
+      "firstName": "Михаил",
+      "time": "06:03:24"
+    },
+    {
+      "place": 110,
+      "number": 486,
+      "secondName": "Mikheev",
+      "firstName": "Pavel",
+      "time": "06:03:26"
+    },
+    {
+      "place": 111,
+      "number": 381,
+      "secondName": "Егоров",
+      "firstName": "Денис",
+      "time": "06:04:27"
+    },
+    {
+      "place": 112,
+      "number": 367,
+      "secondName": "Ким",
+      "firstName": "Костя",
+      "time": "06:05:02"
+    },
+    {
+      "place": 113,
+      "number": 457,
+      "secondName": "Егоров",
+      "firstName": "Евгений",
+      "time": "06:05:09"
+    },
+    {
+      "place": 114,
+      "number": 343,
+      "secondName": "Койков",
+      "firstName": "Вадим",
+      "time": "06:05:40"
+    },
+    {
+      "place": 115,
+      "number": 503,
+      "secondName": "Садчиков",
+      "firstName": "Сергей",
+      "time": "06:05:44"
+    },
+    {
+      "place": 116,
+      "number": 325,
+      "secondName": "Привалович",
+      "firstName": "Дмитрий",
+      "time": "06:06:07"
+    },
+    {
+      "place": 117,
+      "number": 350,
+      "secondName": "Гареев",
+      "firstName": "Риваль",
+      "time": "06:06:20"
+    },
+    {
+      "place": 118,
+      "number": 400,
+      "secondName": "Курочкин",
+      "firstName": "Илья",
+      "time": "06:06:33"
+    },
+    {
+      "place": 119,
+      "number": 370,
+      "secondName": "Сергеев",
+      "firstName": "Никита",
+      "time": "06:06:55"
+    },
+    {
+      "place": 120,
+      "number": 371,
+      "secondName": "Масянов",
+      "firstName": "Андрей",
+      "time": "06:07:24"
+    },
+    {
+      "place": 121,
+      "number": 340,
+      "secondName": "Комин",
+      "firstName": "Игорь",
+      "time": "06:07:37"
+    },
+    {
+      "place": 122,
+      "number": 345,
+      "secondName": "Исалиев",
+      "firstName": "Алексей",
+      "time": "06:08:14"
+    },
+    {
+      "place": 123,
+      "number": 385,
+      "secondName": "Яковлев",
+      "firstName": "Андрей",
+      "time": "06:08:25"
+    },
+    {
+      "place": 124,
+      "number": 433,
+      "secondName": "Онищук",
+      "firstName": "Борис",
+      "time": "06:09:14"
+    },
+    {
+      "place": 125,
+      "number": 417,
+      "secondName": "Рысаков",
+      "firstName": "Илья",
+      "time": "06:11:29"
+    },
+    {
+      "place": 126,
+      "number": 500,
+      "secondName": "Алексеевич",
+      "firstName": "Артемий",
+      "time": "06:11:45"
+    },
+    {
+      "place": 127,
+      "number": 327,
+      "secondName": "Руцкий",
+      "firstName": "Даниил",
+      "time": "06:11:48"
+    },
+    {
+      "place": 128,
+      "number": 320,
+      "secondName": "Шерер",
+      "firstName": "Артём",
+      "time": "06:12:03"
+    },
+    {
+      "place": 129,
+      "number": 351,
+      "secondName": "Онучин",
+      "firstName": "Илья",
+      "time": "06:12:05"
+    },
+    {
+      "place": 130,
+      "number": 450,
+      "secondName": "Седачев",
+      "firstName": "Александр",
+      "time": "06:12:23"
+    },
+    {
+      "place": 131,
+      "number": 398,
+      "secondName": "Ильченко",
+      "firstName": "Сергей",
+      "time": "06:12:57"
+    },
+    {
+      "place": 132,
+      "number": 405,
+      "secondName": "Фомин",
+      "firstName": "Сергей",
+      "time": "06:16:15"
+    },
+    {
+      "place": 133,
+      "number": 58,
+      "secondName": "Марценюк",
+      "firstName": "Алексей",
+      "time": "06:16:34"
+    },
+    {
+      "place": 134,
+      "number": 401,
+      "secondName": "Лагуткин",
+      "firstName": "Иван",
+      "time": "06:16:34"
+    },
+    {
+      "place": 135,
+      "number": 186,
+      "secondName": "Родионов",
+      "firstName": "Дмитрий",
+      "time": "06:16:45"
+    },
+    {
+      "place": 136,
+      "number": 458,
+      "secondName": "Политов",
+      "firstName": "Илья",
+      "time": "06:17:37"
+    },
+    {
+      "place": 137,
+      "number": 305,
+      "secondName": "Мартыненко",
+      "firstName": "Свят",
+      "time": "06:18:00"
+    },
+    {
+      "place": 138,
+      "number": 294,
+      "secondName": "Усатый",
+      "firstName": "Данила",
+      "time": "06:18:36"
+    },
+    {
+      "place": 139,
+      "number": 118,
+      "secondName": "Леонтьев",
+      "firstName": "Алексей",
+      "time": "06:20:44"
+    },
+    {
+      "place": 140,
+      "number": 438,
+      "secondName": "Ковалёв",
+      "firstName": "Станислав",
+      "time": "06:20:50"
+    },
+    {
+      "place": 141,
+      "number": 363,
+      "secondName": "Абдулин",
+      "firstName": "Марат",
+      "time": "06:21:39"
+    },
+    {
+      "place": 142,
+      "number": 291,
+      "secondName": "Виктор",
+      "firstName": "Черкасский",
+      "time": "06:21:59"
+    },
+    {
+      "place": 143,
+      "number": 303,
+      "secondName": "Семенов",
+      "firstName": "Антон",
+      "time": "06:22:11"
+    },
+    {
+      "place": 144,
+      "number": 369,
+      "secondName": "Фагерев",
+      "firstName": "Денис",
+      "time": "06:22:38"
+    },
+    {
+      "place": 145,
+      "number": 111,
+      "secondName": "Кожемекий",
+      "firstName": "Никита",
+      "time": "06:22:40"
+    },
+    {
+      "place": 146,
+      "number": 382,
+      "secondName": "Иванов",
+      "firstName": "Леонид",
+      "time": "06:24:04"
+    },
+    {
+      "place": 147,
+      "number": 323,
+      "secondName": "Лемешко",
+      "firstName": "Олег",
+      "time": "06:24:52"
+    },
+    {
+      "place": 148,
+      "number": 467,
+      "secondName": "Зуев",
+      "firstName": "Алексей",
+      "time": "06:25:19"
+    },
+    {
+      "place": 149,
+      "number": 293,
+      "secondName": "Михайлов",
+      "firstName": "Павел",
+      "time": "06:26:01"
+    },
+    {
+      "place": 150,
+      "number": 414,
+      "secondName": "Филимонов",
+      "firstName": "Александр",
+      "time": "06:26:43"
+    },
+    {
+      "place": 151,
+      "number": 349,
+      "secondName": "Сорокин",
+      "firstName": "Андрей",
+      "time": "06:27:02"
+    },
+    {
+      "place": 152,
+      "number": 481,
+      "secondName": "Пургин",
+      "firstName": "Николай",
+      "time": "06:27:02"
+    },
+    {
+      "place": 153,
+      "number": 336,
+      "secondName": "Калинин",
+      "firstName": "Павел",
+      "time": "06:30:38"
+    },
+    {
+      "place": 154,
+      "number": 194,
+      "secondName": "Стапанов",
+      "firstName": "Игорь",
+      "time": "06:31:39"
+    },
+    {
+      "place": 155,
+      "number": 311,
+      "secondName": "Шмыков",
+      "firstName": "Алексей",
+      "time": "06:33:25"
+    },
+    {
+      "place": 156,
+      "number": 476,
+      "secondName": "Есюнин",
+      "firstName": "Никита",
+      "time": "06:33:25"
+    },
+    {
+      "place": 157,
+      "number": 329,
+      "secondName": "Невейкин",
+      "firstName": "Артемка",
+      "time": "06:33:42"
+    },
+    {
+      "place": 158,
+      "number": 485,
+      "secondName": "Согачеёв",
+      "firstName": "Виктор",
+      "time": "06:33:44"
+    },
+    {
+      "place": 159,
+      "number": 316,
+      "secondName": "Сопильняк",
+      "firstName": "Дмитрий",
+      "time": "06:33:58"
+    },
+    {
+      "place": 160,
+      "number": 419,
+      "secondName": "Мишин",
+      "firstName": "Даниил",
+      "time": "06:34:32"
+    },
+    {
+      "place": 161,
+      "number": 338,
+      "secondName": "Балабанов",
+      "firstName": "Иван",
+      "time": "06:34:39"
+    },
+    {
+      "place": 162,
+      "number": 451,
+      "secondName": "Пешков",
+      "firstName": "Матвей",
+      "time": "06:35:57"
+    },
+    {
+      "place": 163,
+      "number": 502,
+      "secondName": "Степанов",
+      "firstName": "Владимир",
+      "time": "06:36:02"
+    },
+    {
+      "place": 164,
+      "number": 410,
+      "secondName": "Смирнов",
+      "firstName": "Павел",
+      "time": "06:36:16"
+    },
+    {
+      "place": 165,
+      "number": 312,
+      "secondName": "Укустов",
+      "firstName": "Александр",
+      "time": "06:36:48"
+    },
+    {
+      "place": 166,
+      "number": 473,
+      "secondName": "Мельников",
+      "firstName": "Дима",
+      "time": "06:38:20"
+    },
+    {
+      "place": 167,
+      "number": 54,
+      "secondName": "Щелков",
+      "firstName": "Алексей",
+      "time": "06:41:30"
+    },
+    {
+      "place": 168,
+      "number": 33,
+      "secondName": "Флудков",
+      "firstName": "Валерий",
+      "time": "06:42:59"
+    },
+    {
+      "place": 169,
+      "number": 470,
+      "secondName": "Плотников",
+      "firstName": "Никита",
+      "time": "06:43:13"
+    },
+    {
+      "place": 170,
+      "number": 472,
+      "secondName": "Палаткин",
+      "firstName": "Данил",
+      "time": "06:43:32"
+    },
+    {
+      "place": 171,
+      "number": 469,
+      "secondName": "Фатюшин",
+      "firstName": "Егор",
+      "time": "06:44:56"
+    },
+    {
+      "place": 172,
+      "number": 292,
+      "secondName": "Морозов",
+      "firstName": "Денис",
+      "time": "06:46:35"
+    },
+    {
+      "place": 173,
+      "number": 392,
+      "secondName": "Федоров",
+      "firstName": "Сергей",
+      "time": "06:46:35"
+    },
+    {
+      "place": 174,
+      "number": 428,
+      "secondName": "Матвеев",
+      "firstName": "Павел",
+      "time": "06:48:20"
+    },
+    {
+      "place": 175,
+      "number": 322,
+      "secondName": "Ильин",
+      "firstName": "Антон",
+      "time": "06:48:24"
+    },
+    {
+      "place": 176,
+      "number": 459,
+      "secondName": "Крастер",
+      "firstName": "Роман",
+      "time": "06:48:31"
+    },
+    {
+      "place": 177,
+      "number": 297,
+      "secondName": "Колесов",
+      "firstName": "Василий",
+      "time": "06:48:36"
+    },
+    {
+      "place": 178,
+      "number": 341,
+      "secondName": "Каленчук",
+      "firstName": "Павел",
+      "time": "06:49:49"
+    },
+    {
+      "place": 179,
+      "number": 344,
+      "secondName": "Гончаров",
+      "firstName": "Юрий",
+      "time": "06:49:50"
+    },
+    {
+      "place": 180,
+      "number": 444,
+      "secondName": "Решетняк",
+      "firstName": "Лев",
+      "time": "06:52:35"
+    },
+    {
+      "place": 181,
+      "number": 462,
+      "secondName": "Васецкий",
+      "firstName": "Ярослав",
+      "time": "06:52:36"
+    },
+    {
+      "place": 182,
+      "number": 346,
+      "secondName": "Бездетко",
+      "firstName": "Игорь",
+      "time": "06:52:43"
+    },
+    {
+      "place": 183,
+      "number": 313,
+      "secondName": "Михеев",
+      "firstName": "Дмитрий",
+      "time": "06:54:15"
+    },
+    {
+      "place": 184,
+      "number": 397,
+      "secondName": "Рогачев",
+      "firstName": "Михаил",
+      "time": "06:56:53"
+    },
+    {
+      "place": 185,
+      "number": 224,
+      "secondName": "Кочанов",
+      "firstName": "Тимофей",
+      "time": "07:00:08"
+    },
+    {
+      "place": 186,
+      "number": 331,
+      "secondName": "Крутиков",
+      "firstName": "Макс",
+      "time": "07:00:55"
+    },
+    {
+      "place": 187,
+      "number": 437,
+      "secondName": "Лавров",
+      "firstName": "Игорь",
+      "time": "07:01:11"
+    },
+    {
+      "place": 188,
+      "number": 504,
+      "secondName": "Клен",
+      "firstName": "Илья",
+      "time": "07:02:04"
+    },
+    {
+      "place": 189,
+      "number": 434,
+      "secondName": "Истомин",
+      "firstName": "Илья",
+      "time": "07:04:31"
+    },
+    {
+      "place": 190,
+      "number": 334,
+      "secondName": "Кайдаш",
+      "firstName": "Иван",
+      "time": "07:04:45"
+    },
+    {
+      "place": 191,
+      "number": 501,
+      "secondName": "Мешков",
+      "firstName": "Александр",
+      "time": "07:05:30"
+    },
+    {
+      "place": 192,
+      "number": 380,
+      "secondName": "Змиев",
+      "firstName": "Кирилл",
+      "time": "07:08:36"
+    },
+    {
+      "place": 193,
+      "number": 426,
+      "secondName": "Лемешев",
+      "firstName": "Максим",
+      "time": "07:10:22"
+    },
+    {
+      "place": 194,
+      "number": 103,
+      "secondName": "Гойдышев",
+      "firstName": "Иван",
+      "time": "07:13:21"
+    },
+    {
+      "place": 195,
+      "number": 333,
+      "secondName": "Самсонов",
+      "firstName": "Иван",
+      "time": "07:15:38"
+    },
+    {
+      "place": 196,
+      "number": 497,
+      "secondName": "Разуваев",
+      "firstName": "Николай",
+      "time": "07:16:15"
+    },
+    {
+      "place": 197,
+      "number": 315,
+      "secondName": "Батраков",
+      "firstName": "Олег",
+      "time": "07:17:24"
+    },
+    {
+      "place": 198,
+      "number": 452,
+      "secondName": "Гузаиров",
+      "firstName": "Тимур",
+      "time": "07:18:26"
+    },
+    {
+      "place": 199,
+      "number": 421,
+      "secondName": "Лысак",
+      "firstName": "Алексей",
+      "time": "07:24:18"
+    },
+    {
+      "place": 200,
+      "number": 471,
+      "secondName": "Шестаков",
+      "firstName": "Артем",
+      "time": "07:27:54"
+    },
+    {
+      "place": 201,
+      "number": 296,
+      "secondName": "Симкин",
+      "firstName": "Михаил",
+      "time": "07:29:22"
+    },
+    {
+      "place": 202,
+      "number": 299,
+      "secondName": "Кравченко",
+      "firstName": "Михаил",
+      "time": "07:29:22"
+    },
+    {
+      "place": 203,
+      "number": 197,
+      "secondName": "",
+      "firstName": "",
+      "time": "07:30:29"
+    },
+    {
+      "place": 204,
+      "number": 463,
+      "secondName": "Martynov",
+      "firstName": "Serge",
+      "time": "07:37:28"
+    },
+    {
+      "place": 205,
+      "number": 192,
+      "secondName": "Филиппов",
+      "firstName": "Кирилл",
+      "time": "07:40:08"
+    },
+    {
+      "place": 206,
+      "number": 402,
+      "secondName": "Красненков",
+      "firstName": "Савелий",
+      "time": "07:40:09"
+    },
+    {
+      "place": 207,
+      "number": 490,
+      "secondName": "Воронов",
+      "firstName": "Данил",
+      "time": "07:49:16"
+    },
+    {
+      "place": 208,
+      "number": 436,
+      "secondName": "Бондарев",
+      "firstName": "Иван",
+      "time": "07:50:10"
+    },
+    {
+      "place": 209,
+      "number": 484,
+      "secondName": "Миронов",
+      "firstName": "Илья",
+      "time": "07:50:20"
+    },
+    {
+      "place": 210,
+      "number": 324,
+      "secondName": "Курчашов",
+      "firstName": "Иван",
+      "time": "07:51:34"
+    },
+    {
+      "place": 211,
+      "number": 377,
+      "secondName": "Пивоваров",
+      "firstName": "Сергей",
+      "time": "07:58:16"
+    },
+    {
+      "place": 212,
+      "number": 353,
+      "secondName": "Лапин",
+      "firstName": "Вячеслав",
+      "time": "08:01:43"
+    },
+    {
+      "place": 213,
+      "number": 453,
+      "secondName": "Филиппов",
+      "firstName": "Косточка",
+      "time": "08:10:43"
+    },
+    {
+      "place": 214,
+      "number": 394,
+      "secondName": "Красеньков",
+      "firstName": "Денис",
+      "time": "08:39:08"
+    },
+    {
+      "place": 215,
+      "number": 403,
+      "secondName": "Степанов",
+      "firstName": "Андрей",
+      "time": "08:40:51"
+    },
+    {
+      "place": 216,
+      "number": 448,
+      "secondName": "Фролов",
+      "firstName": "Александр",
+      "time": "08:40:56"
+    },
+    {
+      "place": 217,
+      "number": 80,
+      "secondName": "Сюзев",
+      "firstName": "Владимир",
+      "time": "08:41:49"
+    },
+    {
+      "place": 218,
+      "number": 488,
+      "secondName": "Назукин",
+      "firstName": "Михаил",
+      "time": "08:42:40"
+    },
+    {
+      "place": 219,
+      "number": 493,
+      "secondName": "Liavonchyk",
+      "firstName": "Ivan",
+      "time": "08:44:19"
+    },
+    {
+      "place": 220,
+      "number": 41,
+      "secondName": "Балахтин",
+      "firstName": "Кирилл",
+      "time": "08:46:12"
+    },
+    {
+      "place": 221,
+      "number": 509,
+      "secondName": "Джохар",
+      "firstName": "Али",
+      "time": "08:46:58"
+    },
+    {
+      "place": 222,
+      "number": 430,
+      "secondName": "Башлаков",
+      "firstName": "Иван",
+      "time": "09:06:13"
+    },
+    {
+      "place": 223,
+      "number": 378,
+      "secondName": "Привалов",
+      "firstName": "Николай",
+      "time": "09:06:19"
+    },
+    {
+      "place": 224,
+      "number": 387,
+      "secondName": "Мотичев",
+      "firstName": "Александр",
+      "time": "09:08:54"
+    },
+    {
+      "place": 225,
+      "number": 386,
+      "secondName": "Мотичев",
+      "firstName": "Михаил",
+      "time": "09:08:55"
+    },
+    {
+      "place": 226,
+      "number": 366,
+      "secondName": "Клименко",
+      "firstName": "Иван",
+      "time": "09:16:11"
+    },
+    {
+      "place": 227,
+      "number": 406,
+      "secondName": "Андреев",
+      "firstName": "Кирилл",
+      "time": "09:24:28"
+    },
+    {
+      "place": 228,
+      "number": 337,
+      "secondName": "Пест",
+      "firstName": "Саша",
+      "time": "09:51:28"
+    },
+    {
+      "place": 229,
+      "number": 368,
+      "secondName": "Sukharev",
+      "firstName": "Konstantin",
+      "time": "09:53:34"
+    },
+    {
+      "place": "",
+      "number": 326,
+      "secondName": "Мелихов",
+      "firstName": "Андрей",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 391,
+      "secondName": "Боксер",
+      "firstName": "Дмитрий",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 407,
+      "secondName": "Богданов",
+      "firstName": "Никита",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 413,
+      "secondName": "Маркосов",
+      "firstName": "Андрей",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 415,
+      "secondName": "Лилло",
+      "firstName": "Филипп",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 422,
+      "secondName": "Герасимов",
+      "firstName": "Алексей",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 425,
+      "secondName": "Фураев",
+      "firstName": "Александр",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 439,
+      "secondName": "Редьков",
+      "firstName": "Алексей",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 441,
+      "secondName": "Ражиев",
+      "firstName": "Олег",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 442,
+      "secondName": "Ганешин",
+      "firstName": "Василий",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 446,
+      "secondName": "Чмигаль",
+      "firstName": "Гоша",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 447,
+      "secondName": "Комунжиев",
+      "firstName": "Максим",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 465,
+      "secondName": "Архипов",
+      "firstName": "Виктор",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 477,
+      "secondName": "Житков",
+      "firstName": "Константин",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 489,
+      "secondName": "Zelenkov",
+      "firstName": "Nikita",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 248,
+      "secondName": "Киров",
+      "firstName": "Сергей",
+      "time": ""
+    }
+  ]
+}
