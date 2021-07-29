@@ -1295,7 +1295,7 @@ const FaqPage = (props) => {
                 >
                   <img
                     alt="Vimeo preview"
-                    src={`https://i.vimeocdn.com/video/766071458?mw=960&mh=540`}
+                    src={`https://i.vimeocdn.com/video/766071458?mw=1280&mh=720`}
                   />
                 </li>
                 {slides2018.edges.map((s, ndx) => {
