@@ -1853,7 +1853,7 @@ export const query = graphql`
         node {
           id
           childImageSharp {
-            gatsbyImageData(quality: 50, layout: FULL_WIDTH)
+            gatsbyImageData(quality: 50, layout: FULL_WIDTH, aspectRatio: 1.77)
           }
         }
       }
@@ -1863,7 +1863,7 @@ export const query = graphql`
         node {
           id
           childImageSharp {
-            gatsbyImageData(quality: 50, layout: FULL_WIDTH)
+            gatsbyImageData(quality: 50, layout: FULL_WIDTH, aspectRatio: 1.77)
           }
         }
       }
@@ -1873,7 +1873,7 @@ export const query = graphql`
         node {
           id
           childImageSharp {
-            gatsbyImageData(quality: 50, layout: FULL_WIDTH)
+            gatsbyImageData(quality: 50, layout: FULL_WIDTH, aspectRatio: 1.77)
           }
         }
       }
@@ -1883,7 +1883,7 @@ export const query = graphql`
         node {
           id
           childImageSharp {
-            gatsbyImageData(quality: 50, layout: FULL_WIDTH)
+            gatsbyImageData(quality: 50, layout: FULL_WIDTH, aspectRatio: 1.77)
           }
         }
       }
