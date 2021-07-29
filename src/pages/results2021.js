@@ -191,7 +191,8 @@ const ResultsPage = () => {
               <Category header="Фикс муж." users={JSONAll.fixedM} />
               <Category header="Фикс жен." users={JSONAll.fixedW} one two/>
               <Category header="Cингл муж." users={JSONAll.singleM} />
-              <Category header="90км" users={JSONAll.small} />
+              <Category header="90км муж." users={JSONAll.smallM} />
+              <Category header="90км жен." users={JSONAll.smallW} />
             </ResultsContainer>
           </motion.div>
         )}

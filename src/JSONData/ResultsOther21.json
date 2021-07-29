@@ -424,7 +424,7 @@
     }
   ],
 
-  "small": [
+  "smallM": [
     {
       "place": 1,
       "number": 133,
@@ -2138,6 +2138,393 @@
       "number": 248,
       "secondName": "Киров",
       "firstName": "Сергей",
+      "time": ""
+    }
+  ],
+  "smallW": [
+    {
+      "place": 1,
+      "number": 204,
+      "secondName": "Прокопчик",
+      "firstName": "Наталия",
+      "time": "05:03:48"
+    },
+    {
+      "place": 2,
+      "number": 538,
+      "secondName": "Улюкина",
+      "firstName": "Саша",
+      "time": "05:12:01"
+    },
+    {
+      "place": 3,
+      "number": 514,
+      "secondName": "Пашкова",
+      "firstName": "Мария",
+      "time": "05:20:27"
+    },
+    {
+      "place": 4,
+      "number": 209,
+      "secondName": "Тю",
+      "firstName": "Юлия",
+      "time": "05:22:20"
+    },
+    {
+      "place": 5,
+      "number": 515,
+      "secondName": "Вяльяк",
+      "firstName": "Яна",
+      "time": "05:37:45"
+    },
+    {
+      "place": 6,
+      "number": 213,
+      "secondName": "Бронникова",
+      "firstName": "Даша",
+      "time": "05:39:42"
+    },
+    {
+      "place": 7,
+      "number": 526,
+      "secondName": "Ко",
+      "firstName": "Ксеня",
+      "time": "05:47:49"
+    },
+    {
+      "place": 8,
+      "number": 541,
+      "secondName": "Преснякова",
+      "firstName": "Кира",
+      "time": "06:01:52"
+    },
+    {
+      "place": 9,
+      "number": 205,
+      "secondName": "Пек",
+      "firstName": "Оля",
+      "time": "06:05:02"
+    },
+    {
+      "place": 10,
+      "number": 214,
+      "secondName": "Муравьева",
+      "firstName": "Полина",
+      "time": "06:06:27"
+    },
+    {
+      "place": 11,
+      "number": 206,
+      "secondName": "Григорьева",
+      "firstName": "Ирина",
+      "time": "06:15:12"
+    },
+    {
+      "place": 12,
+      "number": 516,
+      "secondName": "Кромина",
+      "firstName": "Александра",
+      "time": "06:20:01"
+    },
+    {
+      "place": 13,
+      "number": 539,
+      "secondName": "Кирилова",
+      "firstName": "Ксюша",
+      "time": "06:21:38"
+    },
+    {
+      "place": 14,
+      "number": 512,
+      "secondName": "Данилова",
+      "firstName": "Женя",
+      "time": "06:22:20"
+    },
+    {
+      "place": 15,
+      "number": 537,
+      "secondName": "Tarasova",
+      "firstName": "Kseniia",
+      "time": "06:22:34"
+    },
+    {
+      "place": 16,
+      "number": 513,
+      "secondName": "Чурюмова",
+      "firstName": "Ольга",
+      "time": "06:33:07"
+    },
+    {
+      "place": 17,
+      "number": 456,
+      "secondName": "Кучерова",
+      "firstName": "Елена",
+      "time": "06:33:24"
+    },
+    {
+      "place": 18,
+      "number": 510,
+      "secondName": "Комарова",
+      "firstName": "Ксения",
+      "time": "06:34:49"
+    },
+    {
+      "place": 19,
+      "number": 176,
+      "secondName": "Голованова",
+      "firstName": "Алина",
+      "time": "06:35:11"
+    },
+    {
+      "place": 20,
+      "number": 173,
+      "secondName": "Сенькова",
+      "firstName": "Анна",
+      "time": "06:35:33"
+    },
+    {
+      "place": 21,
+      "number": 518,
+      "secondName": "Самарская",
+      "firstName": "Виктория",
+      "time": "06:43:02"
+    },
+    {
+      "place": 22,
+      "number": 519,
+      "secondName": "Masiukova",
+      "firstName": "Elena",
+      "time": "06:43:30"
+    },
+    {
+      "place": 23,
+      "number": 221,
+      "secondName": "Лисовская",
+      "firstName": "Валерия",
+      "time": "06:53:51"
+    },
+    {
+      "place": 24,
+      "number": 210,
+      "secondName": "Сурикова",
+      "firstName": "Полина",
+      "time": "06:54:14"
+    },
+    {
+      "place": 25,
+      "number": 531,
+      "secondName": "Алпеева",
+      "firstName": "Алина",
+      "time": "07:06:02"
+    },
+    {
+      "place": 26,
+      "number": 211,
+      "secondName": "Михайлова",
+      "firstName": "Екатерина",
+      "time": "07:14:11"
+    },
+    {
+      "place": 27,
+      "number": 528,
+      "secondName": "Борисова",
+      "firstName": "Зинаида",
+      "time": "07:23:21"
+    },
+    {
+      "place": 28,
+      "number": 511,
+      "secondName": "Мишина",
+      "firstName": "Софья",
+      "time": "07:27:09"
+    },
+    {
+      "place": 29,
+      "number": 517,
+      "secondName": "Дульцева",
+      "firstName": "Елена",
+      "time": "07:27:09"
+    },
+    {
+      "place": 30,
+      "number": 534,
+      "secondName": "Ягубова",
+      "firstName": "Люсия",
+      "time": "07:33:21"
+    },
+    {
+      "place": 31,
+      "number": 521,
+      "secondName": "Симакова",
+      "firstName": "Ульяна",
+      "time": "07:39:56"
+    },
+    {
+      "place": 32,
+      "number": 530,
+      "secondName": "Пим",
+      "firstName": "Мария",
+      "time": "07:43:05"
+    },
+    {
+      "place": 33,
+      "number": 217,
+      "secondName": "Таммур",
+      "firstName": "Алёна",
+      "time": "07:44:18"
+    },
+    {
+      "place": 34,
+      "number": 523,
+      "secondName": "Alymova",
+      "firstName": "Olga",
+      "time": "07:46:08"
+    },
+    {
+      "place": 35,
+      "number": 535,
+      "secondName": "Базлова",
+      "firstName": "Евдокия",
+      "time": "07:55:53"
+    },
+    {
+      "place": 36,
+      "number": 200,
+      "secondName": "Шулакова",
+      "firstName": "Татьяна",
+      "time": "07:55:57"
+    },
+    {
+      "place": 37,
+      "number": 529,
+      "secondName": "Фахретдинова",
+      "firstName": "Регина",
+      "time": "07:59:15"
+    },
+    {
+      "place": 38,
+      "number": 532,
+      "secondName": "Наумович",
+      "firstName": "Елизавета",
+      "time": "08:13:14"
+    },
+    {
+      "place": 39,
+      "number": 201,
+      "secondName": "Фролова",
+      "firstName": "Марина",
+      "time": "08:40:50"
+    },
+    {
+      "place": 40,
+      "number": 216,
+      "secondName": "Зеленина",
+      "firstName": "Анна",
+      "time": "08:41:12"
+    },
+    {
+      "place": 41,
+      "number": 203,
+      "secondName": "Козловская",
+      "firstName": "Алина",
+      "time": "08:41:59"
+    },
+    {
+      "place": 42,
+      "number": 208,
+      "secondName": "Строгая",
+      "firstName": "Даша",
+      "time": "09:15:41"
+    },
+    {
+      "place": 43,
+      "number": 522,
+      "secondName": "Кускова",
+      "firstName": "Валерия",
+      "time": "09:23:40"
+    },
+    {
+      "place": 44,
+      "number": 215,
+      "secondName": "Горбачёва",
+      "firstName": "Виктория",
+      "time": "09:24:27"
+    },
+    {
+      "place": 45,
+      "number": 536,
+      "secondName": "Абдуллаева",
+      "firstName": "Сабрина",
+      "time": "09:51:27"
+    },
+    {
+      "place": 46,
+      "number": 524,
+      "secondName": "Семёнова",
+      "firstName": "Анна",
+      "time": "09:51:28"
+    },
+    {
+      "place": 47,
+      "number": 525,
+      "secondName": "Колодяжная",
+      "firstName": "Екатерина",
+      "time": "09:53:34"
+    },
+    {
+      "place": "",
+      "number": 520,
+      "secondName": "Чили",
+      "firstName": "Виктория",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 540,
+      "secondName": "Ворник",
+      "firstName": "Валерия",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 202,
+      "secondName": "Манучарян",
+      "firstName": "Ирина",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 207,
+      "secondName": "Каленова",
+      "firstName": "Асель",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 212,
+      "secondName": "Шерстнёва",
+      "firstName": "Алёна",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 218,
+      "secondName": "Боб",
+      "firstName": "Анна",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 180,
+      "secondName": "Куприянова",
+      "firstName": "Анна",
+      "time": ""
+    },
+    {
+      "place": "",
+      "number": 193,
+      "secondName": "Павлеченко",
+      "firstName": "Лада",
       "time": ""
     }
   ]
